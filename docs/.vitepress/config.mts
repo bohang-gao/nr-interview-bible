@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 // 8 个章节目录名（与 PLAN.md 第 5 节一致）
 const chapters = [
@@ -13,7 +14,7 @@ const chapters = [
   '09-NTN卫星通信'
 ]
 
-export default defineConfig({
+export default withMermaid(defineConfig({
   lang: 'zh-CN',
   title: 'NR通信面试宝典',
   description: '5G NR 通信面试知识库：8 大知识域、300+ 题，覆盖物理层、MIMO、空口协议栈、信令流程、组网架构、射频网优等高频面试考点',
@@ -75,6 +76,10 @@ export default defineConfig({
           }
         }
       }
+    },
+    mermaidPlugin: {
+      class: 'mermaid'
     }
   }
-})
+}))
+

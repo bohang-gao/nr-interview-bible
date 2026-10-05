@@ -13283,6 +13283,17 @@ STAR 是行为面试法的经典结构，四个要素各有讲究：
 └── 对齐关系：所有 μ 的时隙边界都对齐到子帧边界
 ```
 
+层级递进关系一图串起来（以 μ=1、30 kHz 为例）：
+
+```mermaid
+graph LR
+  F["无线帧 10ms<br/>SFN 0~1023 循环 10.24s"] -->|"10 个子帧"| S0["子帧 0 ~ 9<br/>每个固定 1ms"]
+  S0 -->|"每子帧时隙数 = 2^μ"| T0["时隙 0 / 时隙 1<br/>μ=1 时各 0.5ms"]
+  T0 -->|"每时隙符号数"| SY["14 个 OFDM 符号<br/>常规 CP"]
+  T0 -.->|"μ=0/1/2 → 1/2/4 个时隙"| MU["SCS 15/30/60 kHz"]
+  SY -.->|"mini-slot"| MS["2 / 4 / 7 符号<br/>URLLC 快速调度"]
+```
+
 **第二步：边画边标的关键参数**
 
 | 参数 | 取值 | 标注要点 |
@@ -13350,6 +13361,24 @@ UE                                              gNB
 │   TC-RNTI → C-RNTI, 接入成功                    │
 ```
 
+同一条流程用标准时序图表达（面试白板可照此画）：
+
+```mermaid
+sequenceDiagram
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: 按 SSB 波束选 RO 与前导索引
+    UE->>gNB: msg1 PRACH 前导（preamble id + RO，功率爬升）
+    Note over UE,gNB: ra-ResponseWindow 内用 RA-RNTI 盲检 PDCCH
+    gNB->>UE: msg2 RAR（PDSCH 上的 MAC RAR）：TA + UL grant + TC-RNTI
+    UE->>gNB: msg3 PUSCH（CCCH SDU：RRCSetupRequest，S-TMSI 或随机值）
+    Note over UE,gNB: ra-ContentionResolutionTimer 内用 TC-RNTI 盲检 PDCCH
+    gNB->>UE: msg4 竞争解决（回显 msg3 内容，如 RRCSetup）
+    Note over UE: TC-RNTI 升级为 C-RNTI，接入成功
+```
+
+> **CFRA 分叉说明**：非竞争接入（CFRA）的前导由网络专属分配（如切换命令携带 rach-ConfigDedicated），不存在竞争，流程到 msg1 + msg2 即完成——没有 msg3/msg4，也就没有竞争解决环节。
+
 **逐步标注要点**：
 
 | 步骤 | 信道 | 关键内容 | 失败处理 |
@@ -13391,6 +13420,21 @@ UE                                              gNB
 链路预算手撕题考两件事：一是能否默写"发射端功率与增益 − 各项损耗 − 接收端灵敏度 = 最大允许路径损耗（MAPL, Maximum Allowable Path Loss）"的完整账目并解释每项含义；二是能否说清 5G 相对 4G 新增的关键项——波束赋形增益、更大的穿透损耗与阴影余量、TDD 上行受限。口径：MAPL = EIRP − 接收灵敏度 + 接收天线增益 − 穿透/人体等损耗 − 阴影/干扰/衰落余量，通常按上行（终端→基站）计算，因为上行是覆盖瓶颈。
 
 ## 详细展开
+
+**白板画法：先把链路预算画成一条"加加减减"的流水线**（数值与下表一致，3.5 GHz 城区上行）：
+
+```mermaid
+graph LR
+  A["UE 发射功率<br/>23 dBm"] --> B["gNB 接收增益<br/>+25 dB"]
+  B --> C["减：穿透损耗<br/>−20~30 dB"]
+  C --> D["减：人体/线损<br/>−0~3 dB"]
+  D --> E["减：阴影余量<br/>−8~10 dB"]
+  E --> F["减：干扰余量<br/>−1~6 dB"]
+  F --> G["减：快衰落余量<br/>−1~2 dB"]
+  G --> H{"信号 ≥ 灵敏度<br/>≈ −112 dBm ?"}
+  H -->|"是"| I["链路闭合 ✓"]
+  H -->|"否"| J["MAPL 不足<br/>查穿透/余量/带宽"]
+```
 
 **上行链路预算总账（3.5 GHz 城区通识量级）**：
 
@@ -13448,6 +13492,18 @@ MAPL = EIRP_UE + G_NB(接收) − S_NB(灵敏度)
 香农容量公式 C = B × log₂(1 + S/N)：信道容量等于带宽乘以以信噪比为变量的对数项。手撕题通常给信噪比（SNR, Signal-to-Noise Ratio）求频谱效率，核心两个换算要熟练：SNR 从线性值换 dB（10lg）再换回来（10^(dB/10)），以及"频谱效率 = log₂(1+SNR) bit/s/Hz"。典型锚点值要背：SNR=0 dB → 1 bit/s/Hz，10 dB → 约 3.46，20 dB → 约 6.66，30 dB → 约 10。
 
 ## 详细展开
+
+**白板画法：一条容量链 + 一张 SNR↔频谱效率对照**：
+
+```mermaid
+graph TD
+  A["C = B · log₂(1+SNR)"] --> B["B：带宽分支<br/>100 MHz → RE/s≈91.7M<br/>（273×12 子载波×30 kHz）"]
+  A --> C["SNR：频谱效率分支<br/>η = log₂(1+SNR)"]
+  C --> D["SNR 0 dB → η≈1 bit/Hz"]
+  C --> E["SNR 10 dB → η≈3.5 bit/Hz"]
+  C --> F["SNR 20 dB → η≈4.4+ bit/Hz<br/>实际受实现损耗打折"]
+  B --> G["相乘≈容量<br/>再乘流数/TDD占比/码率"]
+```
 
 **公式与单位**：
 

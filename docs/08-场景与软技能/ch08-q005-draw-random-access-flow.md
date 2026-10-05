@@ -36,6 +36,24 @@ UE                                              gNB
 │   TC-RNTI → C-RNTI, 接入成功                    │
 ```
 
+同一条流程用标准时序图表达（面试白板可照此画）：
+
+```mermaid
+sequenceDiagram
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: 按 SSB 波束选 RO 与前导索引
+    UE->>gNB: msg1 PRACH 前导（preamble id + RO，功率爬升）
+    Note over UE,gNB: ra-ResponseWindow 内用 RA-RNTI 盲检 PDCCH
+    gNB->>UE: msg2 RAR（PDSCH 上的 MAC RAR）：TA + UL grant + TC-RNTI
+    UE->>gNB: msg3 PUSCH（CCCH SDU：RRCSetupRequest，S-TMSI 或随机值）
+    Note over UE,gNB: ra-ContentionResolutionTimer 内用 TC-RNTI 盲检 PDCCH
+    gNB->>UE: msg4 竞争解决（回显 msg3 内容，如 RRCSetup）
+    Note over UE: TC-RNTI 升级为 C-RNTI，接入成功
+```
+
+> **CFRA 分叉说明**：非竞争接入（CFRA）的前导由网络专属分配（如切换命令携带 rach-ConfigDedicated），不存在竞争，流程到 msg1 + msg2 即完成——没有 msg3/msg4，也就没有竞争解决环节。
+
 **逐步标注要点**：
 
 | 步骤 | 信道 | 关键内容 | 失败处理 |
