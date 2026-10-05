@@ -4855,5 +4855,325 @@
       "知识体系",
       "求职方法"
     ]
+  },
+  {
+    "id": "ch09-q001",
+    "file": "09-NTN卫星通信/ch09-q001-ntn-concept-r17-motivation.md",
+    "url": "/09-NTN卫星通信/ch09-q001-ntn-concept-r17-motivation",
+    "title": "什么是 NTN？R17 为什么引入非地面网络？",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "卫星",
+      "概念"
+    ]
+  },
+  {
+    "id": "ch09-q002",
+    "file": "09-NTN卫星通信/ch09-q002-transparent-vs-regenerative.md",
+    "url": "/09-NTN卫星通信/ch09-q002-transparent-vs-regenerative",
+    "title": "NTN 弯管（transparent）与再生（regenerative）两种架构的区别",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "卫星",
+      "架构"
+    ]
+  },
+  {
+    "id": "ch09-q003",
+    "file": "09-NTN卫星通信/ch09-q003-geo-meo-leo-orbits.md",
+    "url": "/09-NTN卫星通信/ch09-q003-geo-meo-leo-orbits",
+    "title": "GEO/MEO/LEO 轨道特点及其对通信系统设计的影响",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 3,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "卫星",
+      "轨道"
+    ]
+  },
+  {
+    "id": "ch09-q004",
+    "file": "09-NTN卫星通信/ch09-q004-doppler-delay-analysis.md",
+    "url": "/09-NTN卫星通信/ch09-q004-doppler-delay-analysis",
+    "title": "NTN 与地面 5G 的核心差异：多普勒与传播时延的量级分析",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 4,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "多普勒",
+      "时延"
+    ]
+  },
+  {
+    "id": "ch09-q005",
+    "file": "09-NTN卫星通信/ch09-q005-38821-reference-scenarios.md",
+    "url": "/09-NTN卫星通信/ch09-q005-38821-reference-scenarios",
+    "title": "TR 38.821 的 NTN 参考场景（场景 A/B/C/D）与链路类型",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "参考场景"
+    ]
+  },
+  {
+    "id": "ch09-q006",
+    "file": "09-NTN卫星通信/ch09-q006-satellite-ephemeris.md",
+    "url": "/09-NTN卫星通信/ch09-q006-satellite-ephemeris",
+    "title": "卫星星历（ephemeris）与星历有效期的概念",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "卫星",
+      "星历"
+    ]
+  },
+  {
+    "id": "ch09-q007",
+    "file": "09-NTN卫星通信/ch09-q007-common-ta-ue-location.md",
+    "url": "/09-NTN卫星通信/ch09-q007-common-ta-ue-location",
+    "title": "NTN 公共 TA（ta-Common）与 UE 位置参考的作用",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "定时",
+      "TA"
+    ]
+  },
+  {
+    "id": "ch09-q008",
+    "file": "09-NTN卫星通信/ch09-q008-k-offset-definition.md",
+    "url": "/09-NTN卫星通信/ch09-q008-k-offset-definition",
+    "title": "K-offset（k_offset）的定义、用途与取值来源",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 8,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "调度",
+      "时序"
+    ]
+  },
+  {
+    "id": "ch09-q009",
+    "file": "09-NTN卫星通信/ch09-q009-uplink-timing-precompensation.md",
+    "url": "/09-NTN卫星通信/ch09-q009-uplink-timing-precompensation",
+    "title": "NTN 上行定时预补偿流程（ta-Common + 自主 TA + GNSS 位置）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 9,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "定时",
+      "上行同步"
+    ]
+  },
+  {
+    "id": "ch09-q010",
+    "file": "09-NTN卫星通信/ch09-q010-harq-disable-ntn.md",
+    "url": "/09-NTN卫星通信/ch09-q010-harq-disable-ntn",
+    "title": "NTN 中 HARQ 的去激活/禁用与时延的关系",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 10,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NTN",
+      "HARQ",
+      "时延"
+    ]
+  },
+  {
+    "id": "ch09-q011",
+    "file": "09-NTN卫星通信/ch09-q011-random-access-ntn.md",
+    "url": "/09-NTN卫星通信/ch09-q011-random-access-ntn",
+    "title": "NTN 随机接入的特殊考虑（长时延、波束对准与星历辅助）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "随机接入",
+      "PRACH"
+    ]
+  },
+  {
+    "id": "ch09-q012",
+    "file": "09-NTN卫星通信/ch09-q012-feeder-link-switchover.md",
+    "url": "/09-NTN卫星通信/ch09-q012-feeder-link-switchover",
+    "title": "馈电链路与用户链路及馈电切换（feeder link switchover）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "馈电切换"
+    ]
+  },
+  {
+    "id": "ch09-q013",
+    "file": "09-NTN卫星通信/ch09-q013-earth-fixed-vs-moving-cells.md",
+    "url": "/09-NTN卫星通信/ch09-q013-earth-fixed-vs-moving-cells",
+    "title": "NTN 小区设计：大波束、移动波束与地球固定小区",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "小区设计"
+    ]
+  },
+  {
+    "id": "ch09-q014",
+    "file": "09-NTN卫星通信/ch09-q014-frequency-planning-mss.md",
+    "url": "/09-NTN卫星通信/ch09-q014-frequency-planning-mss",
+    "title": "NTN 的频率规划：S 频段与 MSS 频谱（n255/n256 等）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 14,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "频率"
+    ]
+  },
+  {
+    "id": "ch09-q015",
+    "file": "09-NTN卫星通信/ch09-q015-gnb-du-satellite-regenerative.md",
+    "url": "/09-NTN卫星通信/ch09-q015-gnb-du-satellite-regenerative",
+    "title": "再生架构下的 gNB 上星部署（gNB-DU 与卫星平台）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 15,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "NTN",
+      "卫星",
+      "架构"
+    ]
+  },
+  {
+    "id": "ch09-q016",
+    "file": "09-NTN卫星通信/ch09-q016-ntn-mobility-handover.md",
+    "url": "/09-NTN卫星通信/ch09-q016-ntn-mobility-handover",
+    "title": "NTN 的移动性管理：无距离依赖切换与卫星间切换",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 16,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "移动性",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch09-q017",
+    "file": "09-NTN卫星通信/ch09-q017-ntn-ue-capabilities.md",
+    "url": "/09-NTN卫星通信/ch09-q017-ntn-ue-capabilities",
+    "title": "R17 NTN 对 UE 能力的新要求（38.306 相关 IE 概览）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "UE能力",
+      "终端"
+    ]
+  },
+  {
+    "id": "ch09-q018",
+    "file": "09-NTN卫星通信/ch09-q018-ntn-direct-to-phone.md",
+    "url": "/09-NTN卫星通信/ch09-q018-ntn-direct-to-phone",
+    "title": "NTN 直连手机（direct-to-device）的现状与挑战",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 18,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "直连手机"
+    ]
+  },
+  {
+    "id": "ch09-q019",
+    "file": "09-NTN卫星通信/ch09-q019-ntn-link-budget-leo.md",
+    "url": "/09-NTN卫星通信/ch09-q019-ntn-link-budget-leo",
+    "title": "NTN 链路预算手算：LEO 覆盖半径与路径损耗量级",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 19,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "链路预算",
+      "卫星"
+    ]
+  },
+  {
+    "id": "ch09-q020",
+    "file": "09-NTN卫星通信/ch09-q020-ntn-applications-commercial.md",
+    "url": "/09-NTN卫星通信/ch09-q020-ntn-applications-commercial",
+    "title": "NTN 的典型应用与商用进展（海洋/航空/应急/物联网）",
+    "chapter": 9,
+    "chapterName": "NTN卫星通信",
+    "qnum": 20,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "NTN",
+      "卫星",
+      "应用"
+    ]
   }
 ]

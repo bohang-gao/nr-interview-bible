@@ -9,7 +9,8 @@ const chapters = [
   '05-关键信令流程',
   '06-组网与架构',
   '07-射频与网优',
-  '08-场景与软技能'
+  '08-场景与软技能',
+  '09-NTN卫星通信'
 ]
 
 export default defineConfig({

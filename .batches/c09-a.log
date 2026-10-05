@@ -1,0 +1,68 @@
+第 9 章第 1 批（q001–q020）完成，lint 0 error。
+
+## 本批创建的文件清单
+
+| 文件 | 题目 |
+|---|---|
+| ch09-q001-ntn-concept-r17-motivation.md | NTN 概念与 R17 引入动机 |
+| ch09-q002-transparent-vs-regenerative.md | 弯管 vs 再生架构 |
+| ch09-q003-geo-meo-leo-orbits.md | GEO/MEO/LEO 轨道特点 |
+| ch09-q004-doppler-delay-analysis.md | 多普勒与时延量级分析 |
+| ch09-q005-38821-reference-scenarios.md | TR 38.821 场景 A–D 与链路类型 |
+| ch09-q006-satellite-ephemeris.md | 星历与有效期 |
+| ch09-q007-common-ta-ue-location.md | 公共 TA 与 UE 位置参考 |
+| ch09-q008-k-offset-definition.md | K-offset 定义/用途/取值 |
+| ch09-q009-uplink-timing-precompensation.md | 上行定时预补偿流程 |
+| ch09-q010-harq-disable-ntn.md | HARQ 去激活/禁用 |
+| ch09-q011-random-access-ntn.md | 随机接入特殊考虑 |
+| ch09-q012-feeder-link-switchover.md | 馈电链路与馈电切换 |
+| ch09-q013-earth-fixed-vs-moving-cells.md | 大波束/移动波束/地球固定小区 |
+| ch09-q014-frequency-planning-mss.md | S 频段与 MSS 频率规划 |
+| ch09-q015-gnb-du-satellite-regenerative.md | 再生架构 gNB 上星 |
+| ch09-q016-ntn-mobility-handover.md | NTN 移动性与卫星间切换 |
+| ch09-q017-ntn-ue-capabilities.md | R17 UE 能力新增（38.306） |
+| ch09-q018-ntn-direct-to-phone.md | 直连手机现状与挑战 |
+| ch09-q019-ntn-link-budget-leo.md | 链路预算手算（覆盖半径/路径损耗） |
+| ch09-q020-ntn-applications-commercial.md | 典型应用与商用进展 |
+
+## 每题使用的检索关键词一览
+
+- q001：`non-terrestrial network --spec 38821`、`transparent --spec 38821`
+- q002：`regenerative --spec 38821`、`regenerative payload --spec 38821`
+- q003：`geostationary --spec 38811`、`altitude --spec 38811`（500–2000 km LEO 定义、35786 km GEO）
+- q004：`doppler --spec 38811`、`propagation delay --spec 38811`
+- q005：`scenario A --spec 38821`（场景 A–D 矩阵/Table 4.2-2）、`feeder link --spec 38821`
+- q006：`ephemeris --spec 38331`、`epoch --spec 38331`、`validity duration --spec 38331`
+- q007：`ta-Common --spec 38213`（TACommon/Drift/Variant 公式）、`UE autonomous --limit`（38.306 开环描述）
+- q008：`K offset --spec 38331`、`cellSpecificKoffset`
+- q009：`timing advance --spec 38213`、`reference location`、`UE autonomous`
+- q010：`HARQ --spec 38821`（"number of HARQ processes is assumed to be RTT/T_slot"原文）
+- q011：`random access --spec 38821`、`PRACH --spec 38821`
+- q012：`feeder link switchover`（38.300 定义原文）、`ISL --spec 38821`
+- q013：`earth fixed`/`earth moving`（38.300 三类 service link、quasi-earth-fixed 测量）、`tracking area --spec 38300`
+- q014：`S band --spec 38811`、`MSS`（38.863 频段）、`n256`/`n255 --spec 38101`
+- q015：`regenerative payload --spec 38821`、`gNB --spec 38821`（On board NTN gNB、§8.7.1.3.1）
+- q016：`handover --spec 38821`（RACH-less、Measurement Validity、Inter-Satellite Xn）
+- q017：`UE capability --spec 38306`、`ntn --spec 38306`（nonTerrestrialNetwork-r17、GSO/NGSO 字段）
+- q018：`handheld --spec 38811`、`IoT NTN`（R18 分段上行讨论）
+- q019：`FSPL`（38.863 表：GEO 189.5 / LEO-1200 160.1 / LEO-600 154.0 dB）、`coupling loss --spec 38811`（UE NF 7 dB）
+- q020：`eMTC --spec 38821`、`link budget --spec 38821`
+
+（注：连字符词如 `earth-fixed`/`ntn-Config` 会被 FTS 误拆报错，已改用空格形式检索等效结果。）
+
+## lint 输出结尾
+
+```
+共扫描题目 320 道，期望 320 道
+
+各章题量（当前/期望）：
+  第1章  30/30  ✓
+  第2章  55/55  ✓
+  ...
+  第9章  20/20  ✓
+
+校验通过：0 error，0 个 warning
+```
+
+未运行站点构建，未改动 scripts/ 与 .vitepress/。
+EXIT_CODE=0

@@ -12,10 +12,11 @@ HERE = Path(__file__).parent
 
 
 def main():
-    if len(sys.argv) != 2:
-        sys.exit("usage: gen-batch.py <cNN-x>")
+    if len(sys.argv) < 2:
+        sys.exit("usage: gen-batch.py <cNN-x> [template]")
     batch_id = sys.argv[1]
-    ch_num, letter = batch_id[1:3], batch_id[4]
+    template_name = sys.argv[2] if len(sys.argv) > 2 else "content-template.md"
+    ch_num, letter = int(batch_id[1:3]), batch_id[4]
     ch_num = int(ch_num)
 
     chapters = json.loads((HERE / "chapters.json").read_text(encoding="utf-8"))["chapters"]
@@ -28,7 +29,7 @@ def main():
         sys.exit(f"topic count mismatch for {batch_id}")
     topics_block = "\n".join(f"{i}. {t}" for i, t in enumerate(topics, start=start))
 
-    template = (HERE / "content-template.md").read_text(encoding="utf-8")
+    template = (HERE / template_name).read_text(encoding="utf-8")
     prompt = (
         template.replace("{{CH_NUM2}}", f"{ch_num:02d}")
         .replace("{{CH_NUM}}", str(ch_num))
