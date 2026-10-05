@@ -1,1 +1,43 @@
 /* 全局微调（P0 占位） */
+
+/* ---------- 打印 / 导出 PDF（print.md 专用） ---------- */
+@media print {
+  /* 隐藏站点框架与交互元素 */
+  .VPNav,
+  .VPSidebar,
+  .VPBackTop,
+  .VPDocFooter,
+  .aside,
+  .VPContentHasSidebar .VPNavBarTitle.has-sidebar .title,
+  .vp-doc .header-anchor {
+    display: none !important;
+  }
+
+  /* 交互按钮（打印场景无意义，仅限正文内容区） */
+  .VPContent .vp-doc button {
+    display: none !important;
+  }
+
+  /* 正文满宽，去掉侧边让出的留白 */
+  .VPContent.is-sidebar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .vp-doc {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .container > .content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* 每题（一级标题）从新页开始，首个除外 */
+  .vp-doc h1 {
+    break-before: page;
+  }
+  .vp-doc h1:first-of-type {
+    break-before: auto;
+  }
+}

@@ -3,13 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:index": "node scripts/gen-index.mjs && node scripts/gen-chapter-toc.mjs",
+    "docs:index": "node scripts/gen-index.mjs && node scripts/gen-chapter-toc.mjs && node scripts/gen-quiz.mjs && node scripts/gen-print.mjs",
     "docs:dev": "npm run docs:index && vitepress dev docs",
     "docs:build": "npm run docs:index && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:lint": "python scripts/lint-content.py"
   },
   "devDependencies": {
+    "markdown-it": "^15.0.2",
     "vitepress": "^1.6.3",
     "vue": "^3.5.0"
   }

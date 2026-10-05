@@ -21,7 +21,9 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '题库', link: '/bank' },
-      { text: '每日一题', link: '/daily' }
+      { text: '每日一题', link: '/daily' },
+      { text: '自测', link: '/selftest' },
+      { text: '打印/PDF', link: '/print' }
     ],
     sidebar: [
       {
@@ -29,7 +31,9 @@ export default defineConfig({
         items: [
           { text: '首页', link: '/' },
           { text: '题库', link: '/bank' },
-          { text: '每日一题', link: '/daily' }
+          { text: '每日一题', link: '/daily' },
+          { text: '自测', link: '/selftest' },
+          { text: '打印/PDF', link: '/print' }
         ]
       },
       ...chapters.map((dir) => ({
