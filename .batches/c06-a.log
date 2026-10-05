@@ -1,0 +1,36 @@
+## 本批创建文件清单（第 6 章 q001–q015，共 15 题）
+
+| 文件 | 标题 | 难度/频率 |
+|---|---|---|
+| ch06-q001-gnb-cu-du-split.md | gNB 逻辑架构：CU/DU 分离的动机与切分点 | 中/高 |
+| ch06-q002-f1-cucp-cuup.md | F1 接口与 CU-CP/CU-UP 进一步分离 | 中/中 |
+| ch06-q003-5gc-nf-overview.md | 5GC 网络功能总览（AMF/SMF/UPF/UDM/PCF/AUSF/NSSF/NRF） | 易/高 |
+| ch06-q004-amf-smf-responsibilities.md | AMF 与 SMF 的职责区分及协作 | 易/高 |
+| ch06-q005-upf-position-deployment.md | UPF 的位置、作用与下沉部署（边缘计算） | 中/高 |
+| ch06-q006-sba-service-based-architecture.md | SBA 服务化架构与网络功能接口 | 中/中 |
+| ch06-q007-ng-n3-xn-interfaces.md | N2/N3/Xn 接口的作用与协议栈 | 中/高 |
+| ch06-q008-pdu-session-establishment.md | PDU 会话建立流程涉及的功能与接口 | 难/高 |
+| ch06-q009-snssai-structure.md | 网络切片 S-NSSAI 的结构与配置 | 中/高 |
+| ch06-q010-slice-selection-nssf.md | 切片选择流程（NSSF 与 AMF 的分工） | 难/中 |
+| ch06-q011-slice-5qi-qos.md | 切片与 5QI/QoS 策略的关系 | 中/中 |
+| ch06-q012-5qi-gbr-non-gbr.md | 5QI 标准化取值与 GBR/非 GBR 分类 | 中/高 |
+| ch06-q013-qos-flow-drb-session.md | QoS flow、DRB、PDU session 的层级关系 | 中/高 |
+| ch06-q014-dynamic-pcc-pcf.md | 动态 PCC 与 PCF 策略下发 | 难/中 |
+| ch06-q015-n26-interworking.md | 4G/5G 融合核心网与互操作（N26 接口） | 中/高 |
+
+难度分布：易 2（13%）、中 10（67%）、难 3（20%）。title 均不与本批及已有题目重复；关联考点链接均已核对目标文件存在。
+
+## lint 输出结尾
+
+```
+错误（error）：
+  - title 重复：「连接去激活流程与两侧状态保持」 -> 05-关键信令流程/ch05-q031-connection-deactivation.md 与 05-关键信令流程/ch05-q031-connection-deactivation-state-keep.md
+  - title 重复：「TAU 跟踪区更新与周期性 TAU」 -> 05-关键信令流程/ch05-q032-tau-tracking-update.md 与 05-关键信令流程/ch05-q032-tau-periodic-update.md
+  - title 重复：「波束失败恢复 BFR 的信令流程」 -> 05-关键信令流程/ch05-q033-bfr-signaling.md 与 05-关键信令流程/ch05-q033-bfr-signaling-flow.md
+  - 第5章题量超出：43/40
+
+校验失败：4 个 error，3 个 warning
+```
+
+**说明**：4 个 error 全部涉及第 5 章既有文件（q031–q033 各存在两份重复题、第 5 章超量 3 题），不属于本批范围，按要求未修改，仅在此报告。本批 15 道第 6 章题目 0 error；题量 warning（第 6 章 15/30、第 7/8 章未完成）属分批构建中正常现象。
+EXIT_CODE=0

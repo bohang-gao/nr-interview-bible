@@ -1,0 +1,35 @@
+P9 完成。
+
+## 修改文件清单
+
+| 文件 | 内容 |
+|---|---|
+| `docs/.vitepress/components/QuestionBank.vue` | 重写：章节下拉（全部+8章）、难度/频率单选按钮组、564 个去重标签按频次降序的多选 chips，全部 AND 组合实时过滤；「共 N 题」计数；按章节分组（章名+题数），空章节自动隐藏；每题一行 = 序号 + 站内链接 + 难度徽标（易绿/中黄/难红）+ 频率徽标 + tags 灰底小标签；空结果显示「无匹配题目」；全部默认值时展示完整 300 题分组列表 |
+| `docs/.vitepress/components/DailyQuestion.vue` | 重写：本地日期 `YYYY-MM-DD` 字符 31 进制累乘 hash（`>>> 0` 保无符号）对 300 取模选每日题；顶部 zh-CN 日期（含星期）；章节徽标 + 难度/频率徽标 + tags + 题目大标题链接；「查看完整解析」主按钮 + 「随机一题」按钮；hydration 安全——SSR 首渲染以 `questions[0]` 占位，`onMounted` 后绑定真实每日题（构建期与访问日不同也不会 mismatch），全程无 window/document |
+
+两处细节修正：
+- VitePress 1.6 变量名是 `--vp-c-green-1` / `--vp-c-yellow-1` / `--vp-c-red-1`（已从 node_modules/vars.css 核实，旧的 `--vp-c-green` 会失效），全部用 VP 变量、零第三方库
+- 首轮构建 SSR 报 `onMounted is not defined`，补导入后通过
+
+## docs:build 实际结尾输出
+
+```
+[gen-index] 已生成 D:\Download\code\hermes_prj\docs\.vitepress\generated\questions.json，共 300 题
+[gen-chapter-toc] 更新 8 章，跳过 0 章
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollup.js.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this build.chunkSizeWarningLimit.
+✓ building client + server bundles...
+- rendering pages...
+✓ rendering pages...
+build complete in 9.21s.
+```
+
+- `docs:index`：300 题、8 章导读更新，无 error
+- 构建零死链、零报错（chunk >500kB 仅为常规提示，来自题目数据体量）；产物 `docs/.vitepress/dist/` 已生成（含 `bank.html`、`daily.html` 等 15 个条目）
+EXIT_CODE=0

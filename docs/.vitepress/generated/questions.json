@@ -1,0 +1,4859 @@
+[
+  {
+    "id": "ch01-q001",
+    "file": "01-无线基础与演进/ch01-q001-nr-vs-lte-design.md",
+    "url": "/01-无线基础与演进/ch01-q001-nr-vs-lte-design",
+    "title": "5G NR 与 LTE 相比的主要设计目标与技术差异",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "演进",
+      "LTE",
+      "设计目标"
+    ]
+  },
+  {
+    "id": "ch01-q002",
+    "file": "01-无线基础与演进/ch01-q002-three-scenarios-embb-urllc-mmtc.md",
+    "url": "/01-无线基础与演进/ch01-q002-three-scenarios-embb-urllc-mmtc",
+    "title": "eMBB/uRLLC/mMTC 三大应用场景及各自关键指标",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 2,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "应用场景",
+      "eMBB",
+      "uRLLC",
+      "mMTC"
+    ]
+  },
+  {
+    "id": "ch01-q003",
+    "file": "01-无线基础与演进/ch01-q003-nsa-vs-sa-evolution.md",
+    "url": "/01-无线基础与演进/ch01-q003-nsa-vs-sa-evolution",
+    "title": "NSA 与 SA 组网架构的区别及演进路径",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 3,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "组网",
+      "NSA",
+      "SA"
+    ]
+  },
+  {
+    "id": "ch01-q004",
+    "file": "01-无线基础与演进/ch01-q004-deployment-options.md",
+    "url": "/01-无线基础与演进/ch01-q004-deployment-options",
+    "title": "NSA/SA 常见部署选项 Option 3/3a/3x 与 Option 2 的差异",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 4,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "组网",
+      "Option",
+      "NSA",
+      "SA"
+    ]
+  },
+  {
+    "id": "ch01-q005",
+    "file": "01-无线基础与演进/ch01-q005-en-dc-architecture.md",
+    "url": "/01-无线基础与演进/ch01-q005-en-dc-architecture",
+    "title": "EN-DC 双连接的基本概念与整体架构",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "EN-DC",
+      "双连接",
+      "NSA"
+    ]
+  },
+  {
+    "id": "ch01-q006",
+    "file": "01-无线基础与演进/ch01-q006-en-dc-cp-up.md",
+    "url": "/01-无线基础与演进/ch01-q006-en-dc-cp-up",
+    "title": "EN-DC 中控制面与用户面的走向（锚点与承载分拆）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "EN-DC",
+      "控制面",
+      "用户面",
+      "承载"
+    ]
+  },
+  {
+    "id": "ch01-q007",
+    "file": "01-无线基础与演进/ch01-q007-bearer-types.md",
+    "url": "/01-无线基础与演进/ch01-q007-bearer-types",
+    "title": "MCG bearer、SCG bearer 与 split bearer 的区别及选择",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "EN-DC",
+      "承载",
+      "MCG",
+      "SCG"
+    ]
+  },
+  {
+    "id": "ch01-q008",
+    "file": "01-无线基础与演进/ch01-q008-scg-procedures.md",
+    "url": "/01-无线基础与演进/ch01-q008-scg-procedures",
+    "title": "SCG 添加、修改、变更与失败的典型流程",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 8,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "EN-DC",
+      "SCG",
+      "信令流程"
+    ]
+  },
+  {
+    "id": "ch01-q009",
+    "file": "01-无线基础与演进/ch01-q009-fr1-fr2-bands.md",
+    "url": "/01-无线基础与演进/ch01-q009-fr1-fr2-bands",
+    "title": "FR1 与 FR2 频段范围、传播特点及典型频段号",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 9,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "频段",
+      "FR1",
+      "FR2"
+    ]
+  },
+  {
+    "id": "ch01-q010",
+    "file": "01-无线基础与演进/ch01-q010-china-operator-bands.md",
+    "url": "/01-无线基础与演进/ch01-q010-china-operator-bands",
+    "title": "中国运营商主流 5G 频段与组网策略（移动/电信/联通/广电）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 10,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "频段",
+      "运营商",
+      "组网策略"
+    ]
+  },
+  {
+    "id": "ch01-q011",
+    "file": "01-无线基础与演进/ch01-q011-ca-vs-dc.md",
+    "url": "/01-无线基础与演进/ch01-q011-ca-vs-dc",
+    "title": "载波聚合（CA）与双连接（DC）的区别与联系",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "载波聚合",
+      "双连接",
+      "CA",
+      "DC"
+    ]
+  },
+  {
+    "id": "ch01-q012",
+    "file": "01-无线基础与演进/ch01-q012-lte-nr-frame-structure-diff.md",
+    "url": "/01-无线基础与演进/ch01-q012-lte-nr-frame-structure-diff",
+    "title": "LTE 与 NR 帧结构设计差异（灵活参数集与自包含子帧）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "帧结构",
+      "参数集",
+      "自包含子帧"
+    ]
+  },
+  {
+    "id": "ch01-q013",
+    "file": "01-无线基础与演进/ch01-q013-ldpc-polar-codes.md",
+    "url": "/01-无线基础与演进/ch01-q013-ldpc-polar-codes",
+    "title": "LDPC 与 Polar 码在 NR 中的分工及相对 LTE Turbo 码的优势",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 13,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "信道编码",
+      "LDPC",
+      "Polar"
+    ]
+  },
+  {
+    "id": "ch01-q014",
+    "file": "01-无线基础与演进/ch01-q014-nsa-measurement-b1-b3.md",
+    "url": "/01-无线基础与演进/ch01-q014-nsa-measurement-b1-b3",
+    "title": "NSA 终端如何驻留 LTE 并测量 NR（B1/B3 事件与系统消息配合）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 14,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "NSA",
+      "测量",
+      "B1事件",
+      "EN-DC"
+    ]
+  },
+  {
+    "id": "ch01-q015",
+    "file": "01-无线基础与演进/ch01-q015-nsa-voice-eps-fallback.md",
+    "url": "/01-无线基础与演进/ch01-q015-nsa-voice-eps-fallback",
+    "title": "NSA 语音方案：EPS fallback 与 VoLTE 的关系",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 15,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NSA",
+      "语音",
+      "VoLTE",
+      "EPS fallback"
+    ]
+  },
+  {
+    "id": "ch01-q016",
+    "file": "01-无线基础与演进/ch01-q016-vonr-vs-eps-fallback.md",
+    "url": "/01-无线基础与演进/ch01-q016-vonr-vs-eps-fallback",
+    "title": "SA 语音方案：VoNR 与 EPS fallback 的对比",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "SA",
+      "语音",
+      "VoNR",
+      "EPS fallback"
+    ]
+  },
+  {
+    "id": "ch01-q017",
+    "file": "01-无线基础与演进/ch01-q017-4g-5g-interworking.md",
+    "url": "/01-无线基础与演进/ch01-q017-4g-5g-interworking",
+    "title": "4G/5G 互操作：EPC 与 5GC 间的切换与重选",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "互操作",
+      "切换",
+      "重选",
+      "4G/5G"
+    ]
+  },
+  {
+    "id": "ch01-q018",
+    "file": "01-无线基础与演进/ch01-q018-n26-interface.md",
+    "url": "/01-无线基础与演进/ch01-q018-n26-interface",
+    "title": "N26 接口的作用与无 N26 互操作的区别",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 18,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "N26",
+      "5GC",
+      "互操作",
+      "EPC"
+    ]
+  },
+  {
+    "id": "ch01-q019",
+    "file": "01-无线基础与演进/ch01-q019-sgnb-change-mnb-change.md",
+    "url": "/01-无线基础与演进/ch01-q019-sgnb-change-mnb-change",
+    "title": "SgNB 变更与锚点更换的触发场景",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 19,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "EN-DC",
+      "SgNB 变更",
+      "双连接"
+    ]
+  },
+  {
+    "id": "ch01-q020",
+    "file": "01-无线基础与演进/ch01-q020-cell-search-vs-lte.md",
+    "url": "/01-无线基础与演进/ch01-q020-cell-search-vs-lte",
+    "title": "5G 小区搜索与 LTE 的异同",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 20,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "小区搜索",
+      "SSB",
+      "同步"
+    ]
+  },
+  {
+    "id": "ch01-q021",
+    "file": "01-无线基础与演进/ch01-q021-rel15-16-17-features.md",
+    "url": "/01-无线基础与演进/ch01-q021-rel15-16-17-features",
+    "title": "R15/R16/R17 各版本主要特性演进（含 RedCap 与覆盖增强）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "标准演进",
+      "R15",
+      "R16",
+      "R17"
+    ]
+  },
+  {
+    "id": "ch01-q022",
+    "file": "01-无线基础与演进/ch01-q022-5ga-r18-directions.md",
+    "url": "/01-无线基础与演进/ch01-q022-5ga-r18-directions",
+    "title": "5G-A（R18）关键方向：通感一体、AI 空口与 RedCap 增强",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 22,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "5G-A",
+      "R18",
+      "通感一体",
+      "AI"
+    ]
+  },
+  {
+    "id": "ch01-q023",
+    "file": "01-无线基础与演进/ch01-q023-sul-uplink-decoupling.md",
+    "url": "/01-无线基础与演进/ch01-q023-sul-uplink-decoupling",
+    "title": "上下行解耦（SUL 频段）的概念与应用场景",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "SUL",
+      "上下行解耦",
+      "补充上行"
+    ]
+  },
+  {
+    "id": "ch01-q024",
+    "file": "01-无线基础与演进/ch01-q024-dss-dynamic-spectrum-sharing.md",
+    "url": "/01-无线基础与演进/ch01-q024-dss-dynamic-spectrum-sharing",
+    "title": "DSS 动态频谱共享原理与部署价值",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 24,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "DSS",
+      "频谱共享",
+      "重耕"
+    ]
+  },
+  {
+    "id": "ch01-q025",
+    "file": "01-无线基础与演进/ch01-q025-nsa-to-sa-upgrade.md",
+    "url": "/01-无线基础与演进/ch01-q025-nsa-to-sa-upgrade",
+    "title": "NSA 升级 SA 对现网设备与终端的要求",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 25,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "SA 升级",
+      "现网改造",
+      "终端"
+    ]
+  },
+  {
+    "id": "ch01-q026",
+    "file": "01-无线基础与演进/ch01-q026-ue-capability-dual-mode.md",
+    "url": "/01-无线基础与演进/ch01-q026-ue-capability-dual-mode",
+    "title": "终端能力上报与 NSA/SA 双模终端的工作模式",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 26,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "终端能力",
+      "双模终端",
+      "UE 能力"
+    ]
+  },
+  {
+    "id": "ch01-q027",
+    "file": "01-无线基础与演进/ch01-q027-5g-vs-wifi6.md",
+    "url": "/01-无线基础与演进/ch01-q027-5g-vs-wifi6",
+    "title": "5G 与 WiFi6 的竞争与互补关系",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 27,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "WiFi6",
+      "5G",
+      "组网对比"
+    ]
+  },
+  {
+    "id": "ch01-q028",
+    "file": "01-无线基础与演进/ch01-q028-network-sharing-china.md",
+    "url": "/01-无线基础与演进/ch01-q028-network-sharing-china",
+    "title": "中国 5G 共建共享策略（电联共享与移动广电共享）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "共建共享",
+      "运营商",
+      "电联",
+      "移动广电"
+    ]
+  },
+  {
+    "id": "ch01-q029",
+    "file": "01-无线基础与演进/ch01-q029-tdd-fdd-nr-diff.md",
+    "url": "/01-无线基础与演进/ch01-q029-tdd-fdd-nr-diff",
+    "title": "TDD 与 FDD 在 NR 中的应用差异与同步要求",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 29,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "TDD",
+      "FDD",
+      "双工",
+      "帧同步"
+    ]
+  },
+  {
+    "id": "ch01-q030",
+    "file": "01-无线基础与演进/ch01-q030-private-network-vs-public.md",
+    "url": "/01-无线基础与演进/ch01-q030-private-network-vs-public",
+    "title": "5G 行业专网与公网的差异（组网模式与隔离方式）",
+    "chapter": 1,
+    "chapterName": "无线基础与演进",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "行业专网",
+      "网络切片",
+      "组网模式"
+    ]
+  },
+  {
+    "id": "ch02-q001",
+    "file": "02-物理层/ch02-q001-frame-structure.md",
+    "url": "/02-物理层/ch02-q001-frame-structure",
+    "title": "NR 无线帧、子帧、时隙与符号的时间结构",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "帧结构",
+      "物理层"
+    ]
+  },
+  {
+    "id": "ch02-q002",
+    "file": "02-物理层/ch02-q002-numerology-scs.md",
+    "url": "/02-物理层/ch02-q002-numerology-scs",
+    "title": "参数集（Numerology）与子载波间隔的对应关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 2,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "Numerology",
+      "子载波间隔"
+    ]
+  },
+  {
+    "id": "ch02-q003",
+    "file": "02-物理层/ch02-q003-scs-slot-calculation.md",
+    "url": "/02-物理层/ch02-q003-scs-slot-calculation",
+    "title": "不同子载波间隔下时隙与符号数的计算",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 3,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "帧结构",
+      "手算题"
+    ]
+  },
+  {
+    "id": "ch02-q004",
+    "file": "02-物理层/ch02-q004-slot-format-tdd.md",
+    "url": "/02-物理层/ch02-q004-slot-format-tdd",
+    "title": "NR 时隙格式与 TDD 上下行配置方式",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 4,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "帧结构",
+      "TDD"
+    ]
+  },
+  {
+    "id": "ch02-q005",
+    "file": "02-物理层/ch02-q005-tdd-pattern-impact.md",
+    "url": "/02-物理层/ch02-q005-tdd-pattern-impact",
+    "title": "上下行配比（如 DDDSU）对网络性能的影响",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 5,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "TDD",
+      "帧结构",
+      "网络性能"
+    ]
+  },
+  {
+    "id": "ch02-q006",
+    "file": "02-物理层/ch02-q006-mini-slot-urllc.md",
+    "url": "/02-物理层/ch02-q006-mini-slot-urllc",
+    "title": "mini-slot 非时隙调度与 URLLC 短时延",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "URLLC",
+      "调度",
+      "低时延"
+    ]
+  },
+  {
+    "id": "ch02-q007",
+    "file": "02-物理层/ch02-q007-bwp-basics.md",
+    "url": "/02-物理层/ch02-q007-bwp-basics",
+    "title": "BWP 的概念、作用与四类 BWP 配置",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "BWP",
+      "带宽部分"
+    ]
+  },
+  {
+    "id": "ch02-q008",
+    "file": "02-物理层/ch02-q008-bwp-switching.md",
+    "url": "/02-物理层/ch02-q008-bwp-switching",
+    "title": "BWP 激活与切换机制",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 8,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "BWP",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch02-q009",
+    "file": "02-物理层/ch02-q009-initial-bwp-sib1.md",
+    "url": "/02-物理层/ch02-q009-initial-bwp-sib1",
+    "title": "初始 BWP 与 SIB1 中 BWP 配置的关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 9,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "BWP",
+      "SIB1",
+      "小区选择"
+    ]
+  },
+  {
+    "id": "ch02-q010",
+    "file": "02-物理层/ch02-q010-ssb-composition.md",
+    "url": "/02-物理层/ch02-q010-ssb-composition",
+    "title": "SSB 的组成（PSS/SSS/PBCH）与时频位置",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 10,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "SSB",
+      "同步",
+      "小区搜索"
+    ]
+  },
+  {
+    "id": "ch02-q011",
+    "file": "02-物理层/ch02-q011-ssb-burst-beam-sweep.md",
+    "url": "/02-物理层/ch02-q011-ssb-burst-beam-sweep",
+    "title": "SSB 突发集与波束扫描（L_max 与频段的对应）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "SSB",
+      "波束赋形",
+      "波束扫描"
+    ]
+  },
+  {
+    "id": "ch02-q012",
+    "file": "02-物理层/ch02-q012-ssb-period-gscn.md",
+    "url": "/02-物理层/ch02-q012-ssb-period-gscn",
+    "title": "SSB 周期、GSCN 频栅与小区搜索的关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SSB",
+      "小区搜索",
+      "同步栅格"
+    ]
+  },
+  {
+    "id": "ch02-q013",
+    "file": "02-物理层/ch02-q013-pbch-mib-dmrs.md",
+    "url": "/02-物理层/ch02-q013-pbch-mib-dmrs",
+    "title": "PBCH 内容（MIB）与 PBCH DMRS 设计",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PBCH",
+      "MIB",
+      "参考信号"
+    ]
+  },
+  {
+    "id": "ch02-q014",
+    "file": "02-物理层/ch02-q014-pss-sss-pci-planning.md",
+    "url": "/02-物理层/ch02-q014-pss-sss-pci-planning",
+    "title": "PSS/SSS 序列设计与小区 ID 规划（1008 个 PCI）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 14,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PCI",
+      "同步信号",
+      "序列设计"
+    ]
+  },
+  {
+    "id": "ch02-q015",
+    "file": "02-物理层/ch02-q015-rmsi-sib1-ssb-mux.md",
+    "url": "/02-物理层/ch02-q015-rmsi-sib1-ssb-mux",
+    "title": "RMSI/SIB1 调度与 SSB 的时频复用关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 15,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "SIB1",
+      "RMSI",
+      "SSB"
+    ]
+  },
+  {
+    "id": "ch02-q016",
+    "file": "02-物理层/ch02-q016-si-window-on-demand.md",
+    "url": "/02-物理层/ch02-q016-si-window-on-demand",
+    "title": "系统信息 SI window 与 on-demand SI 机制",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "系统信息",
+      "SIB",
+      "广播"
+    ]
+  },
+  {
+    "id": "ch02-q017",
+    "file": "02-物理层/ch02-q017-pdcch-coreset-css.md",
+    "url": "/02-物理层/ch02-q017-pdcch-coreset-css",
+    "title": "PDCCH 的 CORESET 与搜索空间（公共/专用）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PDCCH",
+      "CORESET",
+      "搜索空间"
+    ]
+  },
+  {
+    "id": "ch02-q018",
+    "file": "02-物理层/ch02-q018-al-blind-decode.md",
+    "url": "/02-物理层/ch02-q018-al-blind-decode",
+    "title": "聚合等级与 PDCCH 盲检次数的限制",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 18,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PDCCH",
+      "盲检",
+      "聚合等级"
+    ]
+  },
+  {
+    "id": "ch02-q019",
+    "file": "02-物理层/ch02-q019-dci-formats.md",
+    "url": "/02-物理层/ch02-q019-dci-formats",
+    "title": "DCI 常见格式（0_0/0_1/1_0/1_1）与调度信息字段",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 19,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "DCI",
+      "PDCCH",
+      "调度"
+    ]
+  },
+  {
+    "id": "ch02-q020",
+    "file": "02-物理层/ch02-q020-rnti-types-pdcch-scrambling.md",
+    "url": "/02-物理层/ch02-q020-rnti-types-pdcch-scrambling",
+    "title": "RNTI 类型（SI-RNTI/RA-RNTI/C-RNTI 等）与 PDCCH 加扰的作用",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 20,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "RNTI",
+      "PDCCH",
+      "加扰"
+    ]
+  },
+  {
+    "id": "ch02-q021",
+    "file": "02-物理层/ch02-q021-pucch-formats.md",
+    "url": "/02-物理层/ch02-q021-pucch-formats",
+    "title": "PUCCH 五种格式（Format 0-4）的区别与适用场景",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PUCCH",
+      "UCI",
+      "上行控制"
+    ]
+  },
+  {
+    "id": "ch02-q022",
+    "file": "02-物理层/ch02-q022-uci-content-mux-coding.md",
+    "url": "/02-物理层/ch02-q022-uci-content-mux-coding",
+    "title": "UCI 承载内容：SR/HARQ-ACK/CSI 的复用与编码",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 22,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "UCI",
+      "HARQ-ACK",
+      "CSI"
+    ]
+  },
+  {
+    "id": "ch02-q023",
+    "file": "02-物理层/ch02-q023-pusch-dmrs.md",
+    "url": "/02-物理层/ch02-q023-pusch-dmrs",
+    "title": "PUSCH 信道结构与 DMRS（类型1/类型2、前置 DMRS）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PUSCH",
+      "DMRS",
+      "上行"
+    ]
+  },
+  {
+    "id": "ch02-q024",
+    "file": "02-物理层/ch02-q024-pdsch-dmrs-mapping-type.md",
+    "url": "/02-物理层/ch02-q024-pdsch-dmrs-mapping-type",
+    "title": "PDSCH 传输与 DMRS 配置（映射类型 A/B）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 24,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PDSCH",
+      "DMRS",
+      "映射类型"
+    ]
+  },
+  {
+    "id": "ch02-q025",
+    "file": "02-物理层/ch02-q025-ptrs-fr2-phase-noise.md",
+    "url": "/02-物理层/ch02-q025-ptrs-fr2-phase-noise",
+    "title": "PTRS 的作用与 FR2 相位噪声补偿",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 25,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PTRS",
+      "相位噪声",
+      "FR2"
+    ]
+  },
+  {
+    "id": "ch02-q026",
+    "file": "02-物理层/ch02-q026-modulation-pi2-bpsk-dfts-ofdm.md",
+    "url": "/02-物理层/ch02-q026-modulation-pi2-bpsk-dfts-ofdm",
+    "title": "调制方式：上行 π/2-BPSK、DFT-s-OFDM 与高阶 QAM 的使用条件",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 26,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "调制",
+      "DFT-s-OFDM",
+      "覆盖"
+    ]
+  },
+  {
+    "id": "ch02-q027",
+    "file": "02-物理层/ch02-q027-ldpc-cbs-data-channel.md",
+    "url": "/02-物理层/ch02-q027-ldpc-cbs-data-channel",
+    "title": "LDPC 编码在 NR 数据信道的应用与码块分割",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 27,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "LDPC",
+      "编码",
+      "码块分割"
+    ]
+  },
+  {
+    "id": "ch02-q028",
+    "file": "02-物理层/ch02-q028-polar-pbch-pdcch.md",
+    "url": "/02-物理层/ch02-q028-polar-pbch-pdcch",
+    "title": "Polar 码用于 PBCH/PDCCH 的原因与特点",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "Polar 码",
+      "编码",
+      "控制信道"
+    ]
+  },
+  {
+    "id": "ch02-q029",
+    "file": "02-物理层/ch02-q029-rate-matching-rv-harq.md",
+    "url": "/02-物理层/ch02-q029-rate-matching-rv-harq",
+    "title": "速率匹配与冗余版本 RV 在 HARQ 重传中的作用",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 29,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "HARQ",
+      "冗余版本",
+      "速率匹配"
+    ]
+  },
+  {
+    "id": "ch02-q030",
+    "file": "02-物理层/ch02-q030-csi-rs-config-usage.md",
+    "url": "/02-物理层/ch02-q030-csi-rs-config-usage",
+    "title": "CSI-RS 的资源配置与用途（测量/跟踪/零功率/移动性）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CSI-RS",
+      "参考信号",
+      "测量"
+    ]
+  },
+  {
+    "id": "ch02-q031",
+    "file": "02-物理层/ch02-q031-csi-report-quantities.md",
+    "url": "/02-物理层/ch02-q031-csi-report-quantities",
+    "title": "CSI 上报量 CQI/PMI/RI/LI/CRI 的含义与关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 31,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CQI",
+      "PMI",
+      "CSI"
+    ]
+  },
+  {
+    "id": "ch02-q032",
+    "file": "02-物理层/ch02-q032-csi-report-triggering.md",
+    "url": "/02-物理层/ch02-q032-csi-report-triggering",
+    "title": "CSI 报告的周期/半持续/非周期三种触发方式",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 32,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "CSI",
+      "上报配置",
+      "触发"
+    ]
+  },
+  {
+    "id": "ch02-q033",
+    "file": "02-物理层/ch02-q033-srs-usage-antenna-switching.md",
+    "url": "/02-物理层/ch02-q033-srs-usage-antenna-switching",
+    "title": "SRS 的功能类型与天线切换发送（SRS 资源集）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 33,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SRS",
+      "天线切换",
+      "上行参考"
+    ]
+  },
+  {
+    "id": "ch02-q034",
+    "file": "02-物理层/ch02-q034-wideband-subband-cqi.md",
+    "url": "/02-物理层/ch02-q034-wideband-subband-cqi",
+    "title": "宽带与子带 CQI 及频率选择性调度",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 34,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "CQI",
+      "子带",
+      "调度"
+    ]
+  },
+  {
+    "id": "ch02-q035",
+    "file": "02-物理层/ch02-q035-harq-process-rtt.md",
+    "url": "/02-物理层/ch02-q035-harq-process-rtt",
+    "title": "HARQ 进程数与往返时延 RTT 的关系（手算题）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 35,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "HARQ",
+      "RTT",
+      "手算"
+    ]
+  },
+  {
+    "id": "ch02-q036",
+    "file": "02-物理层/ch02-q036-sps-cg-scheduling.md",
+    "url": "/02-物理层/ch02-q036-sps-cg-scheduling",
+    "title": "动态调度与半静态调度 SPS/CG 的应用场景",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 36,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "SPS",
+      "CG",
+      "调度"
+    ]
+  },
+  {
+    "id": "ch02-q037",
+    "file": "02-物理层/ch02-q037-k0-k1-timing.md",
+    "url": "/02-物理层/ch02-q037-k0-k1-timing",
+    "title": "下行调度时序 K0/K1 与 UE 处理时间线",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 37,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "K0",
+      "K1",
+      "调度时序"
+    ]
+  },
+  {
+    "id": "ch02-q038",
+    "file": "02-物理层/ch02-q038-k2-pusch-prep-time.md",
+    "url": "/02-物理层/ch02-q038-k2-pusch-prep-time",
+    "title": "上行调度时序 K2 与 PUSCH 准备时间 N2",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 38,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "上行调度",
+      "K2",
+      "PUSCH"
+    ]
+  },
+  {
+    "id": "ch02-q039",
+    "file": "02-物理层/ch02-q039-uplink-power-control.md",
+    "url": "/02-物理层/ch02-q039-uplink-power-control",
+    "title": "上行功控基本公式：开环路损补偿与闭环 TPC 修正",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 39,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "功控",
+      "上行",
+      "路损补偿"
+    ]
+  },
+  {
+    "id": "ch02-q040",
+    "file": "02-物理层/ch02-q040-phr-types-trigger.md",
+    "url": "/02-物理层/ch02-q040-phr-types-trigger",
+    "title": "功率余量报告 PHR 的类型、触发与作用",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 40,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PHR",
+      "功控",
+      "MAC"
+    ]
+  },
+  {
+    "id": "ch02-q041",
+    "file": "02-物理层/ch02-q041-cp-ofdm-vs-dft-s-ofdm.md",
+    "url": "/02-物理层/ch02-q041-cp-ofdm-vs-dft-s-ofdm",
+    "title": "上行两种波形 CP-OFDM 与 DFT-s-OFDM 的选择",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 41,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "波形",
+      "CP-OFDM",
+      "DFT-s-OFDM"
+    ]
+  },
+  {
+    "id": "ch02-q042",
+    "file": "02-物理层/ch02-q042-prach-long-short-format.md",
+    "url": "/02-物理层/ch02-q042-prach-long-short-format",
+    "title": "PRACH 长格式与短格式的区别及适用场景",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 42,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PRACH",
+      "随机接入",
+      "前导格式"
+    ]
+  },
+  {
+    "id": "ch02-q043",
+    "file": "02-物理层/ch02-q043-prach-ro-calculation.md",
+    "url": "/02-物理层/ch02-q043-prach-ro-calculation",
+    "title": "PRACH 时频资源与 RACH occasion 的计算",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 43,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PRACH",
+      "RACH occasion",
+      "资源计算"
+    ]
+  },
+  {
+    "id": "ch02-q044",
+    "file": "02-物理层/ch02-q044-measurement-gap-config.md",
+    "url": "/02-物理层/ch02-q044-measurement-gap-config",
+    "title": "测量间隙 GAP 的配置（per-UE/per-FR）与测量行为",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 44,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "测量间隙",
+      "GAP",
+      "移动性"
+    ]
+  },
+  {
+    "id": "ch02-q045",
+    "file": "02-物理层/ch02-q045-timing-advance.md",
+    "url": "/02-物理层/ch02-q045-timing-advance",
+    "title": "定时提前 TA 的获取与调整（随机接入与 TA 命令）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 45,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "定时提前",
+      "TA",
+      "上行同步"
+    ]
+  },
+  {
+    "id": "ch02-q046",
+    "file": "02-物理层/ch02-q046-c-drx-parameters.md",
+    "url": "/02-物理层/ch02-q046-c-drx-parameters",
+    "title": "C-DRX 的关键参数与功耗/时延折中",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 46,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "C-DRX",
+      "功耗",
+      "非连续接收"
+    ]
+  },
+  {
+    "id": "ch02-q047",
+    "file": "02-物理层/ch02-q047-wus-pei-wakeup.md",
+    "url": "/02-物理层/ch02-q047-wus-pei-wakeup",
+    "title": "WUS/PEI 唤醒信号如何降低 PDCCH 监听功耗",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 47,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "WUS",
+      "PEI",
+      "功耗"
+    ]
+  },
+  {
+    "id": "ch02-q048",
+    "file": "02-物理层/ch02-q048-rb-re-bandwidth-calc.md",
+    "url": "/02-物理层/ch02-q048-rb-re-bandwidth-calc",
+    "title": "RB/PRB/RE 的频域量化关系与带宽计算（手算题）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 48,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "RE",
+      "PRB",
+      "带宽计算"
+    ]
+  },
+  {
+    "id": "ch02-q049",
+    "file": "02-物理层/ch02-q049-antenna-port-qcl.md",
+    "url": "/02-物理层/ch02-q049-antenna-port-qcl",
+    "title": "天线端口与准共址 QCL 的基本概念",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 49,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "天线端口",
+      "QCL",
+      "波束"
+    ]
+  },
+  {
+    "id": "ch02-q050",
+    "file": "02-物理层/ch02-q050-ssb-vs-data-coverage.md",
+    "url": "/02-物理层/ch02-q050-ssb-vs-data-coverage",
+    "title": "SSB 覆盖与数据信道覆盖的差异及边缘体验",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 50,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "SSB",
+      "覆盖",
+      "边缘体验"
+    ]
+  },
+  {
+    "id": "ch02-q051",
+    "file": "02-物理层/ch02-q051-ul-alignment-guard-period.md",
+    "url": "/02-物理层/ch02-q051-ul-alignment-guard-period",
+    "title": "上行符号对齐与保护符号/GP 的设置",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 51,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "TDD",
+      "保护间隔",
+      "GP"
+    ]
+  },
+  {
+    "id": "ch02-q052",
+    "file": "02-物理层/ch02-q052-ssb-prach-association.md",
+    "url": "/02-物理层/ch02-q052-ssb-prach-association",
+    "title": "SSB 与 PRACH 资源的关联及 RAR 波束指向",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 52,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "SSB",
+      "PRACH",
+      "波束互指"
+    ]
+  },
+  {
+    "id": "ch02-q053",
+    "file": "02-物理层/ch02-q053-tdd-frame-offset-cross-interference.md",
+    "url": "/02-物理层/ch02-q053-tdd-frame-offset-cross-interference",
+    "title": "TDD 帧偏移与上下行交叉干扰的产生",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 53,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "TDD",
+      "交叉干扰",
+      "帧同步"
+    ]
+  },
+  {
+    "id": "ch02-q054",
+    "file": "02-物理层/ch02-q054-256qam-mcs-spectral-efficiency.md",
+    "url": "/02-物理层/ch02-q054-256qam-mcs-spectral-efficiency",
+    "title": "256QAM 的引入条件与 MCS、频谱效率的关系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 54,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "256QAM",
+      "MCS",
+      "频谱效率"
+    ]
+  },
+  {
+    "id": "ch02-q055",
+    "file": "02-物理层/ch02-q055-shannon-vs-actual-se.md",
+    "url": "/02-物理层/ch02-q055-shannon-vs-actual-se",
+    "title": "香农公式与实际频谱效率的差距分析（理论计算题）",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 55,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "香农公式",
+      "频谱效率",
+      "理论计算"
+    ]
+  },
+  {
+    "id": "ch03-q001",
+    "file": "03-MIMO与波束管理/ch03-q001-massive-mimo-definition.md",
+    "url": "/03-MIMO与波束管理/ch03-q001-massive-mimo-definition",
+    "title": "什么是 Massive MIMO？相对 4G MIMO 有哪些演进点？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "Massive MIMO",
+      "多天线"
+    ]
+  },
+  {
+    "id": "ch03-q002",
+    "file": "03-MIMO与波束管理/ch03-q002-channel-port-layer.md",
+    "url": "/03-MIMO与波束管理/ch03-q002-channel-port-layer",
+    "title": "64T64R AAU 中通道数、端口数与流数是什么关系？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "Massive MIMO",
+      "AAU"
+    ]
+  },
+  {
+    "id": "ch03-q003",
+    "file": "03-MIMO与波束管理/ch03-q003-analog-digital-hybrid.md",
+    "url": "/03-MIMO与波束管理/ch03-q003-analog-digital-hybrid",
+    "title": "模拟、数字与混合波束赋形的结构与成本权衡",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 3,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "波束赋形",
+      "AAU"
+    ]
+  },
+  {
+    "id": "ch03-q004",
+    "file": "03-MIMO与波束管理/ch03-q004-array-aperture-gain.md",
+    "url": "/03-MIMO与波束管理/ch03-q004-array-aperture-gain",
+    "title": "波束赋形增益与阵列孔径、阵元数的关系",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 4,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "波束赋形",
+      "天线原理"
+    ]
+  },
+  {
+    "id": "ch03-q005",
+    "file": "03-MIMO与波束管理/ch03-q005-beam-management-flow.md",
+    "url": "/03-MIMO与波束管理/ch03-q005-beam-management-flow",
+    "title": "NR 波束管理整体流程是怎样的？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "波束管理",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q006",
+    "file": "03-MIMO与波束管理/ch03-q006-beam-p1-p2-p3.md",
+    "url": "/03-MIMO与波束管理/ch03-q006-beam-p1-p2-p3",
+    "title": "P1/P2/P3 波束过程分别解决什么问题？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "波束管理",
+      "CSI"
+    ]
+  },
+  {
+    "id": "ch03-q007",
+    "file": "03-MIMO与波束管理/ch03-q007-qcl-types.md",
+    "url": "/03-MIMO与波束管理/ch03-q007-qcl-types",
+    "title": "QCL 的四种类型及对应参数含义",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "QCL",
+      "波束管理"
+    ]
+  },
+  {
+    "id": "ch03-q008",
+    "file": "03-MIMO与波束管理/ch03-q008-tci-activation.md",
+    "url": "/03-MIMO与波束管理/ch03-q008-tci-activation",
+    "title": "TCI 状态的配置与激活机制（RRC / MAC CE / DCI）",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 8,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "TCI",
+      "QCL",
+      "波束管理"
+    ]
+  },
+  {
+    "id": "ch03-q009",
+    "file": "03-MIMO与波束管理/ch03-q009-qcl-type-d-example.md",
+    "url": "/03-MIMO与波束管理/ch03-q009-qcl-type-d-example",
+    "title": "QCL Type D 在波束指示中的应用实例",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "QCL",
+      "TCI",
+      "波束管理"
+    ]
+  },
+  {
+    "id": "ch03-q010",
+    "file": "03-MIMO与波束管理/ch03-q010-bfd-cbf-criteria.md",
+    "url": "/03-MIMO与波束管理/ch03-q010-bfd-cbf-criteria",
+    "title": "波束失败检测 BFD 与候选波束 CBF 的判定条件",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 10,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "波束失败",
+      "BFR"
+    ]
+  },
+  {
+    "id": "ch03-q011",
+    "file": "03-MIMO与波束管理/ch03-q011-bfr-procedure.md",
+    "url": "/03-MIMO与波束管理/ch03-q011-bfr-procedure",
+    "title": "波束失败恢复 BFR 的完整流程",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 11,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "波束失败",
+      "BFR",
+      "随机接入"
+    ]
+  },
+  {
+    "id": "ch03-q012",
+    "file": "03-MIMO与波束管理/ch03-q012-csi-type1-type2.md",
+    "url": "/03-MIMO与波束管理/ch03-q012-csi-type1-type2",
+    "title": "CSI 反馈 Type I 与 Type II 码本有什么差异？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CSI",
+      "码本",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q013",
+    "file": "03-MIMO与波束管理/ch03-q013-pmi-selection.md",
+    "url": "/03-MIMO与波束管理/ch03-q013-pmi-selection",
+    "title": "PMI 预编码矩阵指示的选择逻辑",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CSI",
+      "码本",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q014",
+    "file": "03-MIMO与波束管理/ch03-q014-rank-adaptation-ri.md",
+    "url": "/03-MIMO与波束管理/ch03-q014-rank-adaptation-ri",
+    "title": "Rank 自适应 RI 与传输层数怎么选？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 14,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CSI",
+      "多天线",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q015",
+    "file": "03-MIMO与波束管理/ch03-q015-mu-mimo-pairing.md",
+    "url": "/03-MIMO与波束管理/ch03-q015-mu-mimo-pairing",
+    "title": "MU-MIMO 的配对条件与配对后干扰抑制",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 15,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "MU-MIMO",
+      "调度",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q016",
+    "file": "03-MIMO与波束管理/ch03-q016-su-mu-switching.md",
+    "url": "/03-MIMO与波束管理/ch03-q016-su-mu-switching",
+    "title": "SU-MIMO 与 MU-MIMO 之间的切换依据是什么？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "MU-MIMO",
+      "调度",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q017",
+    "file": "03-MIMO与波束管理/ch03-q017-srs-beam-reciprocity.md",
+    "url": "/03-MIMO与波束管理/ch03-q017-srs-beam-reciprocity",
+    "title": "SRS 如何用于上行波束管理与信道互易性估计？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "SRS",
+      "波束管理",
+      "互易性"
+    ]
+  },
+  {
+    "id": "ch03-q018",
+    "file": "03-MIMO与波束管理/ch03-q018-tdd-fdd-reciprocity.md",
+    "url": "/03-MIMO与波束管理/ch03-q018-tdd-fdd-reciprocity",
+    "title": "TDD 信道互易性与 FDD 预编码获取的差异",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 18,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "互易性",
+      "波束赋形",
+      "FDD"
+    ]
+  },
+  {
+    "id": "ch03-q019",
+    "file": "03-MIMO与波束管理/ch03-q019-antenna-calibration.md",
+    "url": "/03-MIMO与波束管理/ch03-q019-antenna-calibration",
+    "title": "天线校准的作用是什么？校准误差会带来哪些影响？",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 19,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "天线校准",
+      "互易性",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q020",
+    "file": "03-MIMO与波束管理/ch03-q020-fd-mimo-vertical-beamforming.md",
+    "url": "/03-MIMO与波束管理/ch03-q020-fd-mimo-vertical-beamforming",
+    "title": "垂直维赋形 FD-MIMO 与立体覆盖",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 20,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "FD-MIMO",
+      "波束赋形",
+      "覆盖"
+    ]
+  },
+  {
+    "id": "ch03-q021",
+    "file": "03-MIMO与波束管理/ch03-q021-broadcast-traffic-beam-weights.md",
+    "url": "/03-MIMO与波束管理/ch03-q021-broadcast-traffic-beam-weights",
+    "title": "广播波束与业务波束的权值差异",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "广播波束",
+      "业务波束",
+      "波束赋形"
+    ]
+  },
+  {
+    "id": "ch03-q022",
+    "file": "03-MIMO与波束管理/ch03-q022-antenna-weight-planning.md",
+    "url": "/03-MIMO与波束管理/ch03-q022-antenna-weight-planning",
+    "title": "天线权值规划（方位角/下倾/波束宽度）对覆盖的影响",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 22,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "网优",
+      "权值规划",
+      "覆盖"
+    ]
+  },
+  {
+    "id": "ch03-q023",
+    "file": "03-MIMO与波束管理/ch03-q023-cross-polarized-antenna.md",
+    "url": "/03-MIMO与波束管理/ch03-q023-cross-polarized-antenna",
+    "title": "交叉极化 ±45° 天线与极化分集增益",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "极化",
+      "分集",
+      "天线"
+    ]
+  },
+  {
+    "id": "ch03-q024",
+    "file": "03-MIMO与波束管理/ch03-q024-ptrs-phase-noise-fr2.md",
+    "url": "/03-MIMO与波束管理/ch03-q024-ptrs-phase-noise-fr2",
+    "title": "相位噪声对 FR2 高阶调制的影响与 PTRS 配合",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 24,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PTRS",
+      "相位噪声",
+      "FR2"
+    ]
+  },
+  {
+    "id": "ch03-q025",
+    "file": "03-MIMO与波束管理/ch03-q025-1024qam-requirements.md",
+    "url": "/03-MIMO与波束管理/ch03-q025-1024qam-requirements",
+    "title": "1024QAM 对信道质量、设备与部署的要求",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 25,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "1024QAM",
+      "调制",
+      "热点容量"
+    ]
+  },
+  {
+    "id": "ch03-q026",
+    "file": "03-MIMO与波束管理/ch03-q026-beam-correspondence.md",
+    "url": "/03-MIMO与波束管理/ch03-q026-beam-correspondence",
+    "title": "波束对应关系 beam correspondence 与接收波束训练",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 26,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "波束对应",
+      "波束管理",
+      "QCL"
+    ]
+  },
+  {
+    "id": "ch03-q027",
+    "file": "03-MIMO与波束管理/ch03-q027-multi-panel-ue.md",
+    "url": "/03-MIMO与波束管理/ch03-q027-multi-panel-ue",
+    "title": "多面板终端 multi-panel 的发送/接收选择",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 27,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "多面板",
+      "FR2",
+      "波束管理"
+    ]
+  },
+  {
+    "id": "ch03-q028",
+    "file": "03-MIMO与波束管理/ch03-q028-analog-beam-switching-latency.md",
+    "url": "/03-MIMO与波束管理/ch03-q028-analog-beam-switching-latency",
+    "title": "模拟波束切换时延及其对调度的影响",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "模拟波束",
+      "波束切换",
+      "调度"
+    ]
+  },
+  {
+    "id": "ch03-q029",
+    "file": "03-MIMO与波束管理/ch03-q029-spatial-mux-rate-calc.md",
+    "url": "/03-MIMO与波束管理/ch03-q029-spatial-mux-rate-calc",
+    "title": "空分复用速率计算（多流峰值速率手算题）",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 29,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "空分复用",
+      "峰值速率",
+      "手算"
+    ]
+  },
+  {
+    "id": "ch03-q030",
+    "file": "03-MIMO与波束管理/ch03-q030-mimo-capacity-gain.md",
+    "url": "/03-MIMO与波束管理/ch03-q030-mimo-capacity-gain",
+    "title": "多天线容量增益估算（对比 2T2R/4T4R/64T64R）",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "容量增益",
+      "Massive MIMO",
+      "手算"
+    ]
+  },
+  {
+    "id": "ch03-q031",
+    "file": "03-MIMO与波束管理/ch03-q031-ai-beam-management.md",
+    "url": "/03-MIMO与波束管理/ch03-q031-ai-beam-management",
+    "title": "AI 波束管理（R18 方向）与波束预测思想",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 31,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "AI",
+      "波束管理",
+      "R18"
+    ]
+  },
+  {
+    "id": "ch03-q032",
+    "file": "03-MIMO与波束管理/ch03-q032-ris-concept.md",
+    "url": "/03-MIMO与波束管理/ch03-q032-ris-concept",
+    "title": "RIS 智能超表面的概念与应用前景",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 32,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "RIS",
+      "新技术",
+      "覆盖增强"
+    ]
+  },
+  {
+    "id": "ch03-q033",
+    "file": "03-MIMO与波束管理/ch03-q033-csirs-ssb-beam-mapping.md",
+    "url": "/03-MIMO与波束管理/ch03-q033-csirs-ssb-beam-mapping",
+    "title": "CSI-RS 波束与 SSB 波束的对应关系",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 33,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "CSI-RS",
+      "SSB",
+      "波束管理"
+    ]
+  },
+  {
+    "id": "ch03-q034",
+    "file": "03-MIMO与波束管理/ch03-q034-channel-aging-precode-update.md",
+    "url": "/03-MIMO与波束管理/ch03-q034-channel-aging-precode-update",
+    "title": "时变信道下的信道老化与预编码更新",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 34,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "信道老化",
+      "预编码",
+      "时变信道"
+    ]
+  },
+  {
+    "id": "ch03-q035",
+    "file": "03-MIMO与波束管理/ch03-q035-mimo-calc-templates.md",
+    "url": "/03-MIMO与波束管理/ch03-q035-mimo-calc-templates",
+    "title": "MIMO 相关常见手算/画图题的答题模板",
+    "chapter": 3,
+    "chapterName": "MIMO与波束管理",
+    "qnum": 35,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "手算模板",
+      "答题技巧",
+      "面试"
+    ]
+  },
+  {
+    "id": "ch04-q001",
+    "file": "04-空口协议栈/ch04-q001-up-stack-overview.md",
+    "url": "/04-空口协议栈/ch04-q001-up-stack-overview",
+    "title": "NR 用户面协议栈总览与各层职责",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "协议栈",
+      "用户面",
+      "SDAP",
+      "分层"
+    ]
+  },
+  {
+    "id": "ch04-q002",
+    "file": "04-空口协议栈/ch04-q002-cp-stack-nas-rrc.md",
+    "url": "/04-空口协议栈/ch04-q002-cp-stack-nas-rrc",
+    "title": "NR 控制面协议栈与 NAS/RRC 的分层关系",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 2,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "协议栈",
+      "控制面",
+      "RRC",
+      "NAS"
+    ]
+  },
+  {
+    "id": "ch04-q003",
+    "file": "04-空口协议栈/ch04-q003-sdap-qos-flow-drb.md",
+    "url": "/04-空口协议栈/ch04-q003-sdap-qos-flow-drb",
+    "title": "SDAP 层的引入与 QoS flow 到 DRB 的映射",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 3,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SDAP",
+      "QoS",
+      "DRB",
+      "映射"
+    ]
+  },
+  {
+    "id": "ch04-q004",
+    "file": "04-空口协议栈/ch04-q004-reflective-qos.md",
+    "url": "/04-空口协议栈/ch04-q004-reflective-qos",
+    "title": "反射 QoS（RQA）的工作机制",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 4,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "SDAP",
+      "反射QoS",
+      "RQA"
+    ]
+  },
+  {
+    "id": "ch04-q005",
+    "file": "04-空口协议栈/ch04-q005-pdcp-functions-sn.md",
+    "url": "/04-空口协议栈/ch04-q005-pdcp-functions-sn",
+    "title": "PDCP 层主要功能与 PDCP SN 长度选择",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 5,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "PDCP",
+      "序列号",
+      "头压缩"
+    ]
+  },
+  {
+    "id": "ch04-q006",
+    "file": "04-空口协议栈/ch04-q006-pdcp-reordering.md",
+    "url": "/04-空口协议栈/ch04-q006-pdcp-reordering",
+    "title": "PDCP 重排序与按序递交（含重建/切换场景）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PDCP",
+      "重排序",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch04-q007",
+    "file": "04-空口协议栈/ch04-q007-pdcp-ciphering-integrity.md",
+    "url": "/04-空口协议栈/ch04-q007-pdcp-ciphering-integrity",
+    "title": "PDCP 加密与完整性保护范围（AS 层哪些加密哪些不加密）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PDCP",
+      "安全",
+      "加密",
+      "完整性保护"
+    ]
+  },
+  {
+    "id": "ch04-q008",
+    "file": "04-空口协议栈/ch04-q008-rohc-header-compression.md",
+    "url": "/04-空口协议栈/ch04-q008-rohc-header-compression",
+    "title": "ROHC 头压缩的收益与配置",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 8,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PDCP",
+      "ROHC",
+      "头压缩",
+      "VoNR"
+    ]
+  },
+  {
+    "id": "ch04-q009",
+    "file": "04-空口协议栈/ch04-q009-pdcp-duplication.md",
+    "url": "/04-空口协议栈/ch04-q009-pdcp-duplication",
+    "title": "PDCP duplication 的作用与适用场景",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PDCP",
+      "duplication",
+      "可靠性",
+      "URLLC"
+    ]
+  },
+  {
+    "id": "ch04-q010",
+    "file": "04-空口协议栈/ch04-q010-rlc-modes.md",
+    "url": "/04-空口协议栈/ch04-q010-rlc-modes",
+    "title": "RLC 三种模式 TM/UM/AM 的适用承载类型",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 10,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "RLC",
+      "TM",
+      "UM",
+      "AM"
+    ]
+  },
+  {
+    "id": "ch04-q011",
+    "file": "04-空口协议栈/ch04-q011-rlc-am-retransmission.md",
+    "url": "/04-空口协议栈/ch04-q011-rlc-am-retransmission",
+    "title": "RLC AM 的重传与状态 PDU（注意 NR 无重分段）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RLC",
+      "ARQ",
+      "状态PDU",
+      "重分段"
+    ]
+  },
+  {
+    "id": "ch04-q012",
+    "file": "04-空口协议栈/ch04-q012-rlc-mac-function-split.md",
+    "url": "/04-空口协议栈/ch04-q012-rlc-mac-function-split",
+    "title": "RLC 与 MAC 的功能划分变化（相对 LTE 的取舍）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RLC",
+      "MAC",
+      "功能划分",
+      "LTE对比"
+    ]
+  },
+  {
+    "id": "ch04-q013",
+    "file": "04-空口协议栈/ch04-q013-mac-functions-mux.md",
+    "url": "/04-空口协议栈/ch04-q013-mac-functions-mux",
+    "title": "MAC 层主要功能与逻辑信道复用",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 13,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "MAC",
+      "复用",
+      "调度",
+      "逻辑信道"
+    ]
+  },
+  {
+    "id": "ch04-q014",
+    "file": "04-空口协议栈/ch04-q014-lcp-priority.md",
+    "url": "/04-空口协议栈/ch04-q014-lcp-priority",
+    "title": "逻辑信道优先级 LCP 与资源分配顺序",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 14,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "MAC",
+      "LCP",
+      "调度",
+      "优先级"
+    ]
+  },
+  {
+    "id": "ch04-q015",
+    "file": "04-空口协议栈/ch04-q015-sr-config-trigger.md",
+    "url": "/04-空口协议栈/ch04-q015-sr-config-trigger",
+    "title": "调度请求 SR 的配置、触发与禁止机制",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 15,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "MAC",
+      "SR",
+      "PUCCH",
+      "调度"
+    ]
+  },
+  {
+    "id": "ch04-q016",
+    "file": "04-空口协议栈/ch04-q016-bsr-types-trigger.md",
+    "url": "/04-空口协议栈/ch04-q016-bsr-types-trigger",
+    "title": "BSR 缓存状态报告的类型与触发条件",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "MAC",
+      "BSR",
+      "上行调度"
+    ]
+  },
+  {
+    "id": "ch04-q017",
+    "file": "04-空口协议栈/ch04-q017-phr-trigger.md",
+    "url": "/04-空口协议栈/ch04-q017-phr-trigger",
+    "title": "功率余量报告 PHR 的触发与作用",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "MAC",
+      "PHR",
+      "功控",
+      "上行调度"
+    ]
+  },
+  {
+    "id": "ch04-q018",
+    "file": "04-空口协议栈/ch04-q018-mac-ce-types.md",
+    "url": "/04-空口协议栈/ch04-q018-mac-ce-types",
+    "title": "MAC CE 的常见类型与用途",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 18,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "MAC",
+      "MAC CE",
+      "快速控制"
+    ]
+  },
+  {
+    "id": "ch04-q019",
+    "file": "04-空口协议栈/ch04-q019-harq-process.md",
+    "url": "/04-空口协议栈/ch04-q019-harq-process",
+    "title": "HARQ 实体与进程管理（上下行差异）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 19,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "HARQ",
+      "MAC",
+      "进程数",
+      "上下行"
+    ]
+  },
+  {
+    "id": "ch04-q020",
+    "file": "04-空口协议栈/ch04-q020-harq-arq-split.md",
+    "url": "/04-空口协议栈/ch04-q020-harq-arq-split",
+    "title": "HARQ 与 RLC ARQ 的分工协作关系",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 20,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "HARQ",
+      "ARQ",
+      "重传",
+      "分层"
+    ]
+  },
+  {
+    "id": "ch04-q021",
+    "file": "04-空口协议栈/ch04-q021-rrc-three-states.md",
+    "url": "/04-空口协议栈/ch04-q021-rrc-three-states",
+    "title": "RRC 三种状态及各状态下的行为差异",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 21,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "RRC",
+      "状态机",
+      "连接管理"
+    ]
+  },
+  {
+    "id": "ch04-q022",
+    "file": "04-空口协议栈/ch04-q022-rrc-inactive-vs-lte-idle.md",
+    "url": "/04-空口协议栈/ch04-q022-rrc-inactive-vs-lte-idle",
+    "title": "RRC INACTIVE 与 LTE IDLE 的区别及 RNA 概念",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 22,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "RRC",
+      "INACTIVE",
+      "RNA",
+      "状态机"
+    ]
+  },
+  {
+    "id": "ch04-q023",
+    "file": "04-空口协议栈/ch04-q023-rrc-state-transition-signaling.md",
+    "url": "/04-空口协议栈/ch04-q023-rrc-state-transition-signaling",
+    "title": "RRC 状态转换流程与涉及信令",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RRC",
+      "状态机",
+      "信令流程"
+    ]
+  },
+  {
+    "id": "ch04-q024",
+    "file": "04-空口协议栈/ch04-q024-srb0-to-srb3.md",
+    "url": "/04-空口协议栈/ch04-q024-srb0-to-srb3",
+    "title": "SRB0–SRB3 的用途与差异",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 24,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "RRC",
+      "SRB",
+      "信令承载"
+    ]
+  },
+  {
+    "id": "ch04-q025",
+    "file": "04-空口协议栈/ch04-q025-drb-qos-flow-mapping.md",
+    "url": "/04-空口协议栈/ch04-q025-drb-qos-flow-mapping",
+    "title": "DRB 与 QoS flow 的映射关系（含主辅节点拆分）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 25,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "QoS",
+      "DRB",
+      "SDAP",
+      "双连接"
+    ]
+  },
+  {
+    "id": "ch04-q026",
+    "file": "04-空口协议栈/ch04-q026-nr-key-hierarchy.md",
+    "url": "/04-空口协议栈/ch04-q026-nr-key-hierarchy",
+    "title": "NR 安全密钥体系（K 到 KgNB/KAMF 的推导链）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 26,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "安全",
+      "密钥",
+      "5G-AKA"
+    ]
+  },
+  {
+    "id": "ch04-q027",
+    "file": "04-空口协议栈/ch04-q027-as-nas-security-activation.md",
+    "url": "/04-空口协议栈/ch04-q027-as-nas-security-activation",
+    "title": "AS 安全与 NAS 安全的激活时机与流程",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 27,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "安全",
+      "AS 安全",
+      "NAS 安全"
+    ]
+  },
+  {
+    "id": "ch04-q028",
+    "file": "04-空口协议栈/ch04-q028-handover-key-update.md",
+    "url": "/04-空口协议栈/ch04-q028-handover-key-update",
+    "title": "切换中的密钥更新（KgNB 刷新与水平/垂直推导）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 28,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "安全",
+      "切换",
+      "密钥",
+      "NCC"
+    ]
+  },
+  {
+    "id": "ch04-q029",
+    "file": "04-空口协议栈/ch04-q029-timers-t300-t311.md",
+    "url": "/04-空口协议栈/ch04-q029-timers-t300-t311",
+    "title": "关键计时器 T300/T301/T310/T311 的作用",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 29,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "计时器",
+      "RRC",
+      "连接管理"
+    ]
+  },
+  {
+    "id": "ch04-q030",
+    "file": "04-空口协议栈/ch04-q030-rlf-declaration-recovery.md",
+    "url": "/04-空口协议栈/ch04-q030-rlf-declaration-recovery",
+    "title": "无线链路失败 RLF 的判定条件与后续动作",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "RLF",
+      "连接管理",
+      "无线链路监控"
+    ]
+  },
+  {
+    "id": "ch04-q031",
+    "file": "04-空口协议栈/ch04-q031-rrc-reestablishment-srb0.md",
+    "url": "/04-空口协议栈/ch04-q031-rrc-reestablishment-srb0",
+    "title": "RRC 重建的条件、流程与 SRB0 的使用",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 31,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "RRC",
+      "重建",
+      "SRB0"
+    ]
+  },
+  {
+    "id": "ch04-q032",
+    "file": "04-空口协议栈/ch04-q032-nr-paging-pf-po.md",
+    "url": "/04-空口协议栈/ch04-q032-nr-paging-pf-po",
+    "title": "NR 寻呼机制与 PF/PO 的计算",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 32,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "寻呼",
+      "DRX",
+      "PF",
+      "PO"
+    ]
+  },
+  {
+    "id": "ch04-q033",
+    "file": "04-空口协议栈/ch04-q033-edrx-extended-paging.md",
+    "url": "/04-空口协议栈/ch04-q033-edrx-extended-paging",
+    "title": "eDRX 扩展寻呼周期与功耗优化",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 33,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "eDRX",
+      "省电",
+      "寻呼",
+      "IoT"
+    ]
+  },
+  {
+    "id": "ch04-q034",
+    "file": "04-空口协议栈/ch04-q034-en-dc-mn-sn-stack.md",
+    "url": "/04-空口协议栈/ch04-q034-en-dc-mn-sn-stack",
+    "title": "EN-DC 下主节点/辅节点协议栈的差异",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 34,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "EN-DC",
+      "双连接",
+      "协议栈"
+    ]
+  },
+  {
+    "id": "ch04-q035",
+    "file": "04-空口协议栈/ch04-q035-cg-type1-type2.md",
+    "url": "/04-空口协议栈/ch04-q035-cg-type1-type2",
+    "title": "上行免调度 CG 类型1/类型2 的配置与使用",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 35,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "CG",
+      "免调度",
+      "上行",
+      "URLLC"
+    ]
+  },
+  {
+    "id": "ch04-q036",
+    "file": "04-空口协议栈/ch04-q036-rlc-um-vonr.md",
+    "url": "/04-空口协议栈/ch04-q036-rlc-um-vonr",
+    "title": "RLC UM 与 VoNR 语音承载的适配",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 36,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RLC",
+      "UM",
+      "VoNR",
+      "语音"
+    ]
+  },
+  {
+    "id": "ch04-q037",
+    "file": "04-空口协议栈/ch04-q037-service-request-mob-data.md",
+    "url": "/04-空口协议栈/ch04-q037-service-request-mob-data",
+    "title": "数据到达触发的连接建立全链路（service request 视角）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 37,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "服务请求",
+      "连接建立",
+      "NAS",
+      "信令流程"
+    ]
+  },
+  {
+    "id": "ch04-q038",
+    "file": "04-空口协议栈/ch04-q038-pdcp-discard-timer.md",
+    "url": "/04-空口协议栈/ch04-q038-pdcp-discard-timer",
+    "title": "PDCP 丢包处理与 SDU 丢弃定时器",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 38,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PDCP",
+      "discardTimer",
+      "丢包"
+    ]
+  },
+  {
+    "id": "ch04-q039",
+    "file": "04-空口协议栈/ch04-q039-nr-lte-stack-diff.md",
+    "url": "/04-空口协议栈/ch04-q039-nr-lte-stack-diff",
+    "title": "NR 与 LTE 协议栈主要差异总结（高频对比题）",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 39,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "协议栈",
+      "LTE 对比",
+      "总结"
+    ]
+  },
+  {
+    "id": "ch04-q040",
+    "file": "04-空口协议栈/ch04-q040-stack-layer-resource-mapping.md",
+    "url": "/04-空口协议栈/ch04-q040-stack-layer-resource-mapping",
+    "title": "协议栈各层与空口调度资源的对应关系",
+    "chapter": 4,
+    "chapterName": "空口协议栈",
+    "qnum": 40,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "调度",
+      "协议栈",
+      "资源映射"
+    ]
+  },
+  {
+    "id": "ch05-q001",
+    "file": "05-关键信令流程/ch05-q001-cell-search-full-procedure.md",
+    "url": "/05-关键信令流程/ch05-q001-cell-search-full-procedure",
+    "title": "NR 小区搜索完整流程：从 SSB 检测到读取 SIB1",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 1,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "小区搜索",
+      "SSB",
+      "SIB1"
+    ]
+  },
+  {
+    "id": "ch05-q002",
+    "file": "05-关键信令流程/ch05-q002-cell-selection-s-criteria.md",
+    "url": "/05-关键信令流程/ch05-q002-cell-selection-s-criteria",
+    "title": "小区选择 S 准则的判决条件与计算",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "小区选择",
+      "S 准则",
+      "RSRP"
+    ]
+  },
+  {
+    "id": "ch05-q003",
+    "file": "05-关键信令流程/ch05-q003-cell-reselection-r-criteria.md",
+    "url": "/05-关键信令流程/ch05-q003-cell-reselection-r-criteria",
+    "title": "小区重选 R 准则与同频/异频/异系统重选",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 3,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "小区重选",
+      "R 准则",
+      "优先级"
+    ]
+  },
+  {
+    "id": "ch05-q004",
+    "file": "05-关键信令流程/ch05-q004-reselection-priority-params.md",
+    "url": "/05-关键信令流程/ch05-q004-reselection-priority-params",
+    "title": "重选频率优先级与重选参数的配置来源",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 4,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "小区重选",
+      "优先级",
+      "系统信息"
+    ]
+  },
+  {
+    "id": "ch05-q005",
+    "file": "05-关键信令流程/ch05-q005-si-acquisition-validity.md",
+    "url": "/05-关键信令流程/ch05-q005-si-acquisition-validity",
+    "title": "系统信息的获取流程与有效性判断",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "系统信息",
+      "SIB1",
+      "有效性"
+    ]
+  },
+  {
+    "id": "ch05-q006",
+    "file": "05-关键信令流程/ch05-q006-ra-trigger-scenarios.md",
+    "url": "/05-关键信令流程/ch05-q006-ra-trigger-scenarios",
+    "title": "随机接入的触发场景枚举",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 6,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "随机接入",
+      "RACH",
+      "触发场景"
+    ]
+  },
+  {
+    "id": "ch05-q007",
+    "file": "05-关键信令流程/ch05-q007-cbra-four-step.md",
+    "url": "/05-关键信令流程/ch05-q007-cbra-four-step",
+    "title": "CBRA 竞争随机接入四步流程（msg1–msg4 细节）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "随机接入",
+      "CBRA",
+      "RAR"
+    ]
+  },
+  {
+    "id": "ch05-q008",
+    "file": "05-关键信令流程/ch05-q008-cfra-scenarios.md",
+    "url": "/05-关键信令流程/ch05-q008-cfra-scenarios",
+    "title": "CFRA 免竞争随机接入与使用场景（切换/波束恢复）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 8,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "随机接入",
+      "CFRA",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch05-q009",
+    "file": "05-关键信令流程/ch05-q009-rar-content-ul-grant.md",
+    "url": "/05-关键信令流程/ch05-q009-rar-content-ul-grant",
+    "title": "随机接入响应 RAR 的内容与 UL grant",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "随机接入",
+      "RAR",
+      "UL grant"
+    ]
+  },
+  {
+    "id": "ch05-q010",
+    "file": "05-关键信令流程/ch05-q010-contention-resolution-failure.md",
+    "url": "/05-关键信令流程/ch05-q010-contention-resolution-failure",
+    "title": "竞争解决失败的表现与定位",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 10,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "随机接入",
+      "竞争解决",
+      "故障排查"
+    ]
+  },
+  {
+    "id": "ch05-q011",
+    "file": "05-关键信令流程/ch05-q011-two-step-ra.md",
+    "url": "/05-关键信令流程/ch05-q011-two-step-ra",
+    "title": "两步随机接入（2-step RA）与四步流程对比",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 11,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "随机接入",
+      "2-step RA",
+      "MsgA"
+    ]
+  },
+  {
+    "id": "ch05-q012",
+    "file": "05-关键信令流程/ch05-q012-rrc-establishment.md",
+    "url": "/05-关键信令流程/ch05-q012-rrc-establishment",
+    "title": "RRC 建立流程与建立原因值",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 12,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "RRC",
+      "RRC 建立",
+      "建立原因"
+    ]
+  },
+  {
+    "id": "ch05-q013",
+    "file": "05-关键信令流程/ch05-q013-nas-registration-flow.md",
+    "url": "/05-关键信令流程/ch05-q013-nas-registration-flow",
+    "title": "NAS 注册流程要点（鉴权/安全模式/注册区域更新）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "NAS",
+      "注册",
+      "5GC"
+    ]
+  },
+  {
+    "id": "ch05-q014",
+    "file": "05-关键信令流程/ch05-q014-5g-aka.md",
+    "url": "/05-关键信令流程/ch05-q014-5g-aka",
+    "title": "5G-AKA 鉴权流程概览",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 14,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "鉴权",
+      "5G-AKA",
+      "安全"
+    ]
+  },
+  {
+    "id": "ch05-q015",
+    "file": "05-关键信令流程/ch05-q015-nas-security-mode.md",
+    "url": "/05-关键信令流程/ch05-q015-nas-security-mode",
+    "title": "NAS 安全模式命令与激活流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 15,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NAS 安全",
+      "安全模式",
+      "加密"
+    ]
+  },
+  {
+    "id": "ch05-q016",
+    "file": "05-关键信令流程/ch05-q016-service-request.md",
+    "url": "/05-关键信令流程/ch05-q016-service-request",
+    "title": "Service Request 流程（寻呼响应/上行数据触发）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "Service Request",
+      "寻呼",
+      "状态迁移"
+    ]
+  },
+  {
+    "id": "ch05-q017",
+    "file": "05-关键信令流程/ch05-q017-rrc-release-suspend.md",
+    "url": "/05-关键信令流程/ch05-q017-rrc-release-suspend",
+    "title": "RRC Release with suspend 与进入 INACTIVE",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RRC_INACTIVE",
+      "suspend",
+      "RNA"
+    ]
+  },
+  {
+    "id": "ch05-q018",
+    "file": "05-关键信令流程/ch05-q018-rna-update.md",
+    "url": "/05-关键信令流程/ch05-q018-rna-update",
+    "title": "RNA 更新的两种方式",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 18,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "RNA",
+      "RRC_INACTIVE",
+      "RNA 更新"
+    ]
+  },
+  {
+    "id": "ch05-q019",
+    "file": "05-关键信令流程/ch05-q019-meas-config-gap.md",
+    "url": "/05-关键信令流程/ch05-q019-meas-config-gap",
+    "title": "测量配置三要素（测量对象/报告配置/测量标识）与 GAP",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 19,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "测量配置",
+      "measObject",
+      "reportConfig",
+      "测量 GAP"
+    ]
+  },
+  {
+    "id": "ch05-q020",
+    "file": "05-关键信令流程/ch05-q020-events-a1-a6.md",
+    "url": "/05-关键信令流程/ch05-q020-events-a1-a6",
+    "title": "事件 A1–A6 的含义与典型使用场景",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 20,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "测量事件",
+      "A3",
+      "A5",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch05-q021",
+    "file": "05-关键信令流程/ch05-q021-b1-b2-events.md",
+    "url": "/05-关键信令流程/ch05-q021-b1-b2-events",
+    "title": "事件 B1/B2 的含义与异系统测量流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 21,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "测量事件",
+      "异系统",
+      "B1",
+      "B2"
+    ]
+  },
+  {
+    "id": "ch05-q022",
+    "file": "05-关键信令流程/ch05-q022-meas-report-types.md",
+    "url": "/05-关键信令流程/ch05-q022-meas-report-types",
+    "title": "测量上报的方式（周期/事件触发）与上报内容",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 22,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "测量上报",
+      "reportConfig",
+      "RSRP"
+    ]
+  },
+  {
+    "id": "ch05-q023",
+    "file": "05-关键信令流程/ch05-q023-xn-handover-procedure.md",
+    "url": "/05-关键信令流程/ch05-q023-xn-handover-procedure",
+    "title": "Xn 接口切换的完整流程（含数据前转与路径切换）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 23,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "Xn切换",
+      "数据前转",
+      "路径切换"
+    ]
+  },
+  {
+    "id": "ch05-q024",
+    "file": "05-关键信令流程/ch05-q024-ng-vs-xn-handover.md",
+    "url": "/05-关键信令流程/ch05-q024-ng-vs-xn-handover",
+    "title": "NG 接口切换与 Xn 切换的差异",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 24,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NG切换",
+      "Xn切换",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch05-q025",
+    "file": "05-关键信令流程/ch05-q025-conditional-handover.md",
+    "url": "/05-关键信令流程/ch05-q025-conditional-handover",
+    "title": "条件切换 CHO 的机制与价值",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 25,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "CHO",
+      "条件切换",
+      "切换"
+    ]
+  },
+  {
+    "id": "ch05-q026",
+    "file": "05-关键信令流程/ch05-q026-ho-failure-rlf.md",
+    "url": "/05-关键信令流程/ch05-q026-ho-failure-rlf",
+    "title": "切换失败与 RLF 的关联处理（重建/回退源小区）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 26,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "切换失败",
+      "RLF",
+      "重建立"
+    ]
+  },
+  {
+    "id": "ch05-q027",
+    "file": "05-关键信令流程/ch05-q027-sn-addition.md",
+    "url": "/05-关键信令流程/ch05-q027-sn-addition",
+    "title": "SN Addition 辅节点添加流程与信令",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 27,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "SN Addition",
+      "EN-DC",
+      "SCG"
+    ]
+  },
+  {
+    "id": "ch05-q028",
+    "file": "05-关键信令流程/ch05-q028-pscell-modify-sn-release.md",
+    "url": "/05-关键信令流程/ch05-q028-pscell-modify-sn-release",
+    "title": "PSCell 修改与辅节点释放流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "PSCell",
+      "SN Release",
+      "SCG"
+    ]
+  },
+  {
+    "id": "ch05-q029",
+    "file": "05-关键信令流程/ch05-q029-sn-change.md",
+    "url": "/05-关键信令流程/ch05-q029-sn-change",
+    "title": "SN change 辅节点变更的触发与流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 29,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "SN change",
+      "辅节点变更",
+      "EN-DC"
+    ]
+  },
+  {
+    "id": "ch05-q030",
+    "file": "05-关键信令流程/ch05-q030-rrc-reestablishment.md",
+    "url": "/05-关键信令流程/ch05-q030-rrc-reestablishment",
+    "title": "RRC 重建立流程详解",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "重建立",
+      "RLF",
+      "SRB1"
+    ]
+  },
+  {
+    "id": "ch05-q031",
+    "file": "05-关键信令流程/ch05-q031-connection-deactivation.md",
+    "url": "/05-关键信令流程/ch05-q031-connection-deactivation",
+    "title": "连接去激活流程与两侧状态保持",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 31,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "去激活",
+      "RRC Release",
+      "状态保持"
+    ]
+  },
+  {
+    "id": "ch05-q032",
+    "file": "05-关键信令流程/ch05-q032-tau-tracking-update.md",
+    "url": "/05-关键信令流程/ch05-q032-tau-tracking-update",
+    "title": "TAU 跟踪区更新与周期性 TAU",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 32,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "TAU",
+      "跟踪区",
+      "注册更新"
+    ]
+  },
+  {
+    "id": "ch05-q033",
+    "file": "05-关键信令流程/ch05-q033-bfr-signaling.md",
+    "url": "/05-关键信令流程/ch05-q033-bfr-signaling",
+    "title": "波束失败恢复 BFR 的信令流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 33,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "BFR",
+      "波束失败",
+      "恢复"
+    ]
+  },
+  {
+    "id": "ch05-q034",
+    "file": "05-关键信令流程/ch05-q034-scg-failure-report.md",
+    "url": "/05-关键信令流程/ch05-q034-scg-failure-report",
+    "title": "SCG failure 流程与失败信息上报",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 34,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SCG failure",
+      "双连接",
+      "失败上报"
+    ]
+  },
+  {
+    "id": "ch05-q035",
+    "file": "05-关键信令流程/ch05-q035-nr-paging-flow.md",
+    "url": "/05-关键信令流程/ch05-q035-nr-paging-flow",
+    "title": "NR 寻呼完整流程（核心网寻呼与 RAN 寻呼）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 35,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "寻呼",
+      "CN Paging",
+      "RAN Paging"
+    ]
+  },
+  {
+    "id": "ch05-q036",
+    "file": "05-关键信令流程/ch05-q036-endc-nr-measurement.md",
+    "url": "/05-关键信令流程/ch05-q036-endc-nr-measurement",
+    "title": "EN-DC 下 NR 的测量与 B1/B2 事件使用",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 36,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "EN-DC",
+      "测量",
+      "B1",
+      "B2"
+    ]
+  },
+  {
+    "id": "ch05-q037",
+    "file": "05-关键信令流程/ch05-q037-ul-out-of-sync.md",
+    "url": "/05-关键信令流程/ch05-q037-ul-out-of-sync",
+    "title": "上行失步的判定与恢复流程",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 37,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "上行失步",
+      "定时提前",
+      "重建立"
+    ]
+  },
+  {
+    "id": "ch05-q038",
+    "file": "05-关键信令流程/ch05-q038-rrc-reconfig-fallback.md",
+    "url": "/05-关键信令流程/ch05-q038-rrc-reconfig-fallback",
+    "title": "RRC 重配置流程与失败后的回退行为",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 38,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "RRC重配置",
+      "失败回退",
+      "SRB1"
+    ]
+  },
+  {
+    "id": "ch05-q039",
+    "file": "05-关键信令流程/ch05-q039-ra-failure-troubleshooting.md",
+    "url": "/05-关键信令流程/ch05-q039-ra-failure-troubleshooting",
+    "title": "随机接入失败的综合定位思路（案例向）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 39,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "随机接入失败",
+      "案例分析",
+      "定位"
+    ]
+  },
+  {
+    "id": "ch05-q040",
+    "file": "05-关键信令流程/ch05-q040-full-call-flow.md",
+    "url": "/05-关键信令流程/ch05-q040-full-call-flow",
+    "title": "完整呼通流程串讲（开机到建立业务）",
+    "chapter": 5,
+    "chapterName": "关键信令流程",
+    "qnum": 40,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "呼通流程",
+      "注册",
+      "业务建立"
+    ]
+  },
+  {
+    "id": "ch06-q001",
+    "file": "06-组网与架构/ch06-q001-gnb-cu-du-split.md",
+    "url": "/06-组网与架构/ch06-q001-gnb-cu-du-split",
+    "title": "gNB 逻辑架构：CU/DU 分离的动机与切分点",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 1,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "CU/DU",
+      "gNB架构",
+      "F1"
+    ]
+  },
+  {
+    "id": "ch06-q002",
+    "file": "06-组网与架构/ch06-q002-f1-cucp-cuup.md",
+    "url": "/06-组网与架构/ch06-q002-f1-cucp-cuup",
+    "title": "F1 接口与 CU-CP/CU-UP 进一步分离",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "F1",
+      "CU/DU",
+      "控制面用户面分离"
+    ]
+  },
+  {
+    "id": "ch06-q003",
+    "file": "06-组网与架构/ch06-q003-5gc-nf-overview.md",
+    "url": "/06-组网与架构/ch06-q003-5gc-nf-overview",
+    "title": "5GC 网络功能总览（AMF/SMF/UPF/UDM/PCF/AUSF/NSSF/NRF）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 3,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "5GC",
+      "SBA",
+      "网络功能"
+    ]
+  },
+  {
+    "id": "ch06-q004",
+    "file": "06-组网与架构/ch06-q004-amf-smf-responsibilities.md",
+    "url": "/06-组网与架构/ch06-q004-amf-smf-responsibilities",
+    "title": "AMF 与 SMF 的职责区分及协作",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 4,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "AMF",
+      "SMF",
+      "会话管理"
+    ]
+  },
+  {
+    "id": "ch06-q005",
+    "file": "06-组网与架构/ch06-q005-upf-position-deployment.md",
+    "url": "/06-组网与架构/ch06-q005-upf-position-deployment",
+    "title": "UPF 的位置、作用与下沉部署（边缘计算）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "UPF",
+      "边缘计算",
+      "CUPS"
+    ]
+  },
+  {
+    "id": "ch06-q006",
+    "file": "06-组网与架构/ch06-q006-sba-service-based-architecture.md",
+    "url": "/06-组网与架构/ch06-q006-sba-service-based-architecture",
+    "title": "SBA 服务化架构与网络功能接口",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 6,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SBA",
+      "服务化",
+      "5GC"
+    ]
+  },
+  {
+    "id": "ch06-q007",
+    "file": "06-组网与架构/ch06-q007-ng-n3-xn-interfaces.md",
+    "url": "/06-组网与架构/ch06-q007-ng-n3-xn-interfaces",
+    "title": "N2/N3/Xn 接口的作用与协议栈",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "N2",
+      "N3",
+      "Xn",
+      "接口协议栈"
+    ]
+  },
+  {
+    "id": "ch06-q008",
+    "file": "06-组网与架构/ch06-q008-pdu-session-establishment.md",
+    "url": "/06-组网与架构/ch06-q008-pdu-session-establishment",
+    "title": "PDU 会话建立流程涉及的功能与接口",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 8,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "PDU会话",
+      "会话管理",
+      "SMF",
+      "UPF"
+    ]
+  },
+  {
+    "id": "ch06-q009",
+    "file": "06-组网与架构/ch06-q009-snssai-structure.md",
+    "url": "/06-组网与架构/ch06-q009-snssai-structure",
+    "title": "网络切片 S-NSSAI 的结构与配置",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "网络切片",
+      "S-NSSAI",
+      "切片标识"
+    ]
+  },
+  {
+    "id": "ch06-q010",
+    "file": "06-组网与架构/ch06-q010-slice-selection-nssf.md",
+    "url": "/06-组网与架构/ch06-q010-slice-selection-nssf",
+    "title": "切片选择流程（NSSF 与 AMF 的分工）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 10,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "网络切片",
+      "NSSF",
+      "AMF选择"
+    ]
+  },
+  {
+    "id": "ch06-q011",
+    "file": "06-组网与架构/ch06-q011-slice-5qi-qos.md",
+    "url": "/06-组网与架构/ch06-q011-slice-5qi-qos",
+    "title": "切片与 5QI/QoS 策略的关系",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "网络切片",
+      "5QI",
+      "QoS策略",
+      "PCF"
+    ]
+  },
+  {
+    "id": "ch06-q012",
+    "file": "06-组网与架构/ch06-q012-5qi-gbr-non-gbr.md",
+    "url": "/06-组网与架构/ch06-q012-5qi-gbr-non-gbr",
+    "title": "5QI 标准化取值与 GBR/非 GBR 分类",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "5QI",
+      "QoS",
+      "GBR"
+    ]
+  },
+  {
+    "id": "ch06-q013",
+    "file": "06-组网与架构/ch06-q013-qos-flow-drb-session.md",
+    "url": "/06-组网与架构/ch06-q013-qos-flow-drb-session",
+    "title": "QoS flow、DRB、PDU session 的层级关系",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "QoS flow",
+      "DRB",
+      "PDU会话",
+      "SDAP"
+    ]
+  },
+  {
+    "id": "ch06-q014",
+    "file": "06-组网与架构/ch06-q014-dynamic-pcc-pcf.md",
+    "url": "/06-组网与架构/ch06-q014-dynamic-pcc-pcf",
+    "title": "动态 PCC 与 PCF 策略下发",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 14,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PCF",
+      "PCC",
+      "策略控制"
+    ]
+  },
+  {
+    "id": "ch06-q015",
+    "file": "06-组网与架构/ch06-q015-n26-interworking.md",
+    "url": "/06-组网与架构/ch06-q015-n26-interworking",
+    "title": "4G/5G 融合核心网与互操作（N26 接口）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 15,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "N26",
+      "互操作",
+      "EPS fallback",
+      "4G/5G融合"
+    ]
+  },
+  {
+    "id": "ch06-q016",
+    "file": "06-组网与架构/ch06-q016-ta-tai-list-registration-area.md",
+    "url": "/06-组网与架构/ch06-q016-ta-tai-list-registration-area",
+    "title": "跟踪区 TA/TAI 列表与注册区设计",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "移动性管理",
+      "跟踪区",
+      "注册区",
+      "寻呼"
+    ]
+  },
+  {
+    "id": "ch06-q017",
+    "file": "06-组网与架构/ch06-q017-nfv-cloud-gnb-core.md",
+    "url": "/06-组网与架构/ch06-q017-nfv-cloud-gnb-core",
+    "title": "NFV/云化对 gNB 与核心网部署的影响",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "NFV",
+      "云化",
+      "5GC",
+      "部署"
+    ]
+  },
+  {
+    "id": "ch06-q018",
+    "file": "06-组网与架构/ch06-q018-mec-upf-synergy.md",
+    "url": "/06-组网与架构/ch06-q018-mec-upf-synergy",
+    "title": "MEC 边缘计算架构与 UPF 下沉的协同",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 18,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "MEC",
+      "边缘计算",
+      "UPF",
+      "低时延"
+    ]
+  },
+  {
+    "id": "ch06-q019",
+    "file": "06-组网与架构/ch06-q019-ladn-ulcl-local-traffic.md",
+    "url": "/06-组网与架构/ch06-q019-ladn-ulcl-local-traffic",
+    "title": "本地分流方案（LADN 与 ULCL）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 19,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "本地分流",
+      "LADN",
+      "ULCL",
+      "边缘计算"
+    ]
+  },
+  {
+    "id": "ch06-q020",
+    "file": "06-组网与架构/ch06-q020-roaming-home-routed-lbo.md",
+    "url": "/06-组网与架构/ch06-q020-roaming-home-routed-lbo",
+    "title": "漫游架构（home-routed 与 LBO）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 20,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "漫游",
+      "home-routed",
+      "LBO",
+      "5GC"
+    ]
+  },
+  {
+    "id": "ch06-q021",
+    "file": "06-组网与架构/ch06-q021-oran-architecture-ric.md",
+    "url": "/06-组网与架构/ch06-q021-oran-architecture-ric",
+    "title": "O-RAN 架构概览（O-RU/O-DU/O-CU 与 RIC）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "O-RAN",
+      "开源架构",
+      "RIC",
+      "前传"
+    ]
+  },
+  {
+    "id": "ch06-q022",
+    "file": "06-组网与架构/ch06-q022-edge-cloud-scenarios.md",
+    "url": "/06-组网与架构/ch06-q022-edge-cloud-scenarios",
+    "title": "5G 与边缘云/云网协同的落地场景",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 22,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "边缘计算",
+      "云网协同",
+      "行业应用",
+      "低时延"
+    ]
+  },
+  {
+    "id": "ch06-q023",
+    "file": "06-组网与架构/ch06-q023-network-automation-son-intent.md",
+    "url": "/06-组网与架构/ch06-q023-network-automation-son-intent",
+    "title": "网络自动化（自优化/自愈合）与意图驱动网络",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "网络自动化",
+      "SON",
+      "意图网络",
+      "智能运维"
+    ]
+  },
+  {
+    "id": "ch06-q024",
+    "file": "06-组网与架构/ch06-q024-5gc-vs-epc-diff.md",
+    "url": "/06-组网与架构/ch06-q024-5gc-vs-epc-diff",
+    "title": "5GC 与 EPC 的核心差异总结（高频对比题）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 24,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "5GC",
+      "EPC",
+      "对比",
+      "架构"
+    ]
+  },
+  {
+    "id": "ch06-q025",
+    "file": "06-组网与架构/ch06-q025-cups-separation-value.md",
+    "url": "/06-组网与架构/ch06-q025-cups-separation-value",
+    "title": "控制面/用户面分离 CUPS 的思想与价值",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 25,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "CUPS",
+      "控制面",
+      "用户面",
+      "架构分离"
+    ]
+  },
+  {
+    "id": "ch06-q026",
+    "file": "06-组网与架构/ch06-q026-endc-core-anchoring-userplane.md",
+    "url": "/06-组网与架构/ch06-q026-endc-core-anchoring-userplane",
+    "title": "EN-DC 双连接下的核心网锚定与用户面走向",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 26,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "EN-DC",
+      "NSA",
+      "锚点",
+      "用户面"
+    ]
+  },
+  {
+    "id": "ch06-q027",
+    "file": "06-组网与架构/ch06-q027-slice-sla-private-network.md",
+    "url": "/06-组网与架构/ch06-q027-slice-sla-private-network",
+    "title": "网络切片 SLA 保障与企业专网运营",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 27,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "网络切片",
+      "SLA",
+      "企业专网",
+      "切片运营"
+    ]
+  },
+  {
+    "id": "ch06-q028",
+    "file": "06-组网与架构/ch06-q028-lmf-positioning-methods.md",
+    "url": "/06-组网与架构/ch06-q028-lmf-positioning-methods",
+    "title": "定位架构（LMF）与常见定位方法",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "定位",
+      "LMF",
+      "URLLC",
+      "NRPPa"
+    ]
+  },
+  {
+    "id": "ch06-q029",
+    "file": "06-组网与架构/ch06-q029-5gc-iot-nbiot-evolution.md",
+    "url": "/06-组网与架构/ch06-q029-5gc-iot-nbiot-evolution",
+    "title": "5GC 对 IoT 的支持（NB-IoT 演进路径）",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 29,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "IoT",
+      "NB-IoT",
+      "mMTC",
+      "物联网"
+    ]
+  },
+  {
+    "id": "ch06-q030",
+    "file": "06-组网与架构/ch06-q030-operator-deployment-billing.md",
+    "url": "/06-组网与架构/ch06-q030-operator-deployment-billing",
+    "title": "运营商 5GC 建设模式与计费话单链路简述",
+    "chapter": 6,
+    "chapterName": "组网与架构",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "5GC建设",
+      "计费",
+      "CHF",
+      "运营商"
+    ]
+  },
+  {
+    "id": "ch07-q001",
+    "file": "07-射频与网优/ch07-q001-site-equipment-evolution.md",
+    "url": "/07-射频与网优/ch07-q001-site-equipment-evolution",
+    "title": "5G 站点设备形态演进：BBU+AAU 与一体化基站",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "设备形态",
+      "AAU",
+      "基站架构"
+    ]
+  },
+  {
+    "id": "ch07-q002",
+    "file": "07-射频与网优/ch07-q002-aau-internal-structure.md",
+    "url": "/07-射频与网优/ch07-q002-aau-internal-structure",
+    "title": "AAU 的内部构成：64T64R、功放与滤波器一体化",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "AAU",
+      "功率放大器",
+      "滤波器",
+      "硬件架构"
+    ]
+  },
+  {
+    "id": "ch07-q003",
+    "file": "07-射频与网优/ch07-q003-rf-kpis-evm-aclr-spurious.md",
+    "url": "/07-射频与网优/ch07-q003-rf-kpis-evm-aclr-spurious",
+    "title": "射频关键指标 EVM/ACLR/杂散/接收灵敏度",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 3,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "射频指标",
+      "EVM",
+      "ACLR",
+      "灵敏度"
+    ]
+  },
+  {
+    "id": "ch07-q004",
+    "file": "07-射频与网优/ch07-q004-bs-power-class.md",
+    "url": "/07-射频与网优/ch07-q004-bs-power-class",
+    "title": "基站功率等级与实际发射功率",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 4,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "功率等级",
+      "发射功率",
+      "覆盖"
+    ]
+  },
+  {
+    "id": "ch07-q005",
+    "file": "07-射频与网优/ch07-q005-ue-power-class-pc2.md",
+    "url": "/07-射频与网优/ch07-q005-ue-power-class-pc2",
+    "title": "终端功率等级 PC1.5/PC2 与上行覆盖改善",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "UE功率等级",
+      "上行覆盖",
+      "HPUE"
+    ]
+  },
+  {
+    "id": "ch07-q006",
+    "file": "07-射频与网优/ch07-q006-link-budget.md",
+    "url": "/07-射频与网优/ch07-q006-link-budget",
+    "title": "链路预算的构成与典型 5G 链路预算计算",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 6,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "链路预算",
+      "覆盖规划",
+      "功率余量"
+    ]
+  },
+  {
+    "id": "ch07-q007",
+    "file": "07-射频与网优/ch07-q007-penetration-loss-indoor.md",
+    "url": "/07-射频与网优/ch07-q007-penetration-loss-indoor",
+    "title": "穿透损耗与室内覆盖设计（频段间差异）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 7,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "穿透损耗",
+      "室内覆盖",
+      "频段"
+    ]
+  },
+  {
+    "id": "ch07-q008",
+    "file": "07-射频与网优/ch07-q008-shadow-margin-coverage.md",
+    "url": "/07-射频与网优/ch07-q008-shadow-margin-coverage",
+    "title": "阴影衰落余量与边缘覆盖率的关系",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 8,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "阴影衰落",
+      "覆盖率",
+      "链路预算"
+    ]
+  },
+  {
+    "id": "ch07-q009",
+    "file": "07-射频与网优/ch07-q009-propagation-model-38901.md",
+    "url": "/07-射频与网优/ch07-q009-propagation-model-38901",
+    "title": "传播模型（3GPP TR 38.901 等）的概念与用法",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "传播模型",
+      "38.901",
+      "覆盖规划"
+    ]
+  },
+  {
+    "id": "ch07-q010",
+    "file": "07-射频与网优/ch07-q010-ul-dl-imbalance.md",
+    "url": "/07-射频与网优/ch07-q010-ul-dl-imbalance",
+    "title": "上下行覆盖不平衡的原因与解决手段",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 10,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "覆盖",
+      "上下行不平衡",
+      "网优"
+    ]
+  },
+  {
+    "id": "ch07-q011",
+    "file": "07-射频与网优/ch07-q011-sul-coverage-value.md",
+    "url": "/07-射频与网优/ch07-q011-sul-coverage-value",
+    "title": "SUL 上下行解耦的覆盖价值",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 11,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "SUL",
+      "上下行解耦",
+      "覆盖"
+    ]
+  },
+  {
+    "id": "ch07-q012",
+    "file": "07-射频与网优/ch07-q012-power-control-params.md",
+    "url": "/07-射频与网优/ch07-q012-power-control-params",
+    "title": "功控参数体系（P0/alpha/闭环修正）与优化思路",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 12,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "功控",
+      "P0",
+      "alpha",
+      "网优"
+    ]
+  },
+  {
+    "id": "ch07-q013",
+    "file": "07-射频与网优/ch07-q013-tilt-azimuth-planning.md",
+    "url": "/07-射频与网优/ch07-q013-tilt-azimuth-planning",
+    "title": "天线下倾角与方位角规划原则及计算",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 13,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "下倾角",
+      "方位角",
+      "天线",
+      "网优"
+    ]
+  },
+  {
+    "id": "ch07-q014",
+    "file": "07-射频与网优/ch07-q014-antenna-weight-optimization.md",
+    "url": "/07-射频与网优/ch07-q014-antenna-weight-optimization",
+    "title": "天线权值优化的方法与典型收益",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 14,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "天线权值",
+      "波束赋形",
+      "网优"
+    ]
+  },
+  {
+    "id": "ch07-q015",
+    "file": "07-射频与网优/ch07-q015-pci-planning.md",
+    "url": "/07-射频与网优/ch07-q015-pci-planning",
+    "title": "PCI 规划原则（冲突/混淆/模三）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 15,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "PCI",
+      "规划",
+      "干扰"
+    ]
+  },
+  {
+    "id": "ch07-q016",
+    "file": "07-射频与网优/ch07-q016-mod3-interference.md",
+    "url": "/07-射频与网优/ch07-q016-mod3-interference",
+    "title": "模三干扰的成因与优化方法",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 16,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "模三干扰",
+      "PCI",
+      "同频干扰"
+    ]
+  },
+  {
+    "id": "ch07-q017",
+    "file": "07-射频与网优/ch07-q017-cli-cross-slot-interference.md",
+    "url": "/07-射频与网优/ch07-q017-cli-cross-slot-interference",
+    "title": "交叉时隙干扰 CLI 与 TDD 帧同步要求",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "CLI",
+      "交叉时隙干扰",
+      "TDD",
+      "帧同步"
+    ]
+  },
+  {
+    "id": "ch07-q018",
+    "file": "07-射频与网优/ch07-q018-remote-interference-atmospheric-waveguide.md",
+    "url": "/07-射频与网优/ch07-q018-remote-interference-atmospheric-waveguide",
+    "title": "远端干扰（大气波导）的识别与抑制",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 18,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "大气波导",
+      "远端干扰",
+      "TDD",
+      "网优"
+    ]
+  },
+  {
+    "id": "ch07-q019",
+    "file": "07-射频与网优/ch07-q019-neighbor-planning-anr.md",
+    "url": "/07-射频与网优/ch07-q019-neighbor-planning-anr",
+    "title": "邻区规划原则与 ANR 自动邻区关系",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 19,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "邻区规划",
+      "ANR",
+      "移动性"
+    ]
+  },
+  {
+    "id": "ch07-q020",
+    "file": "07-射频与网优/ch07-q020-prach-planning-conflict.md",
+    "url": "/07-射频与网优/ch07-q020-prach-planning-conflict",
+    "title": "PRACH 根序列规划与冲突排查",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 20,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "PRACH",
+      "根序列",
+      "ZC序列",
+      "规划"
+    ]
+  },
+  {
+    "id": "ch07-q021",
+    "file": "07-射频与网优/ch07-q021-access-kpi-definitions.md",
+    "url": "/07-射频与网优/ch07-q021-access-kpi-definitions",
+    "title": "5G 接入类 KPI 的定义与统计口径",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "KPI",
+      "接入性",
+      "随机接入"
+    ]
+  },
+  {
+    "id": "ch07-q022",
+    "file": "07-射频与网优/ch07-q022-drop-rate-definition-causes.md",
+    "url": "/07-射频与网优/ch07-q022-drop-rate-definition-causes",
+    "title": "掉线率的定义与常见原因分析",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 22,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "KPI",
+      "掉线",
+      "保持性"
+    ]
+  },
+  {
+    "id": "ch07-q023",
+    "file": "07-射频与网优/ch07-q023-ho-success-rate-troubleshooting.md",
+    "url": "/07-射频与网优/ch07-q023-ho-success-rate-troubleshooting",
+    "title": "切换成功率的口径与切换失败定位思路",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "KPI",
+      "切换",
+      "移动性"
+    ]
+  },
+  {
+    "id": "ch07-q024",
+    "file": "07-射频与网优/ch07-q024-prb-utilization-capacity.md",
+    "url": "/07-射频与网优/ch07-q024-prb-utilization-capacity",
+    "title": "PRB 利用率与小区容量评估",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 24,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "KPI",
+      "容量",
+      "PRB"
+    ]
+  },
+  {
+    "id": "ch07-q025",
+    "file": "07-射频与网优/ch07-q025-rrc-connections-vs-active-users.md",
+    "url": "/07-射频与网优/ch07-q025-rrc-connections-vs-active-users",
+    "title": "RRC 连接数与在用户数等指标辨析",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 25,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "KPI",
+      "用户数",
+      "连接态"
+    ]
+  },
+  {
+    "id": "ch07-q026",
+    "file": "07-射频与网优/ch07-q026-site-cluster-network-optimization.md",
+    "url": "/07-射频与网优/ch07-q026-site-cluster-network-optimization",
+    "title": "单站验证/簇优化/全网优化的流程要点",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 26,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "网络优化",
+      "流程",
+      "单站验证"
+    ]
+  },
+  {
+    "id": "ch07-q027",
+    "file": "07-射频与网优/ch07-q027-complaint-weak-coverage.md",
+    "url": "/07-射频与网优/ch07-q027-complaint-weak-coverage",
+    "title": "投诉处理案例：弱覆盖问题的排查步骤",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 27,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "投诉处理",
+      "弱覆盖",
+      "案例分析"
+    ]
+  },
+  {
+    "id": "ch07-q028",
+    "file": "07-射频与网优/ch07-q028-complaint-upload-slow.md",
+    "url": "/07-射频与网优/ch07-q028-complaint-upload-slow",
+    "title": "投诉处理案例：上传速率慢的定位",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "投诉处理",
+      "上行速率",
+      "案例分析"
+    ]
+  },
+  {
+    "id": "ch07-q029",
+    "file": "07-射频与网优/ch07-q029-complaint-no-service-registration.md",
+    "url": "/07-射频与网优/ch07-q029-complaint-no-service-registration",
+    "title": "投诉处理案例：无服务/注册失败的排查",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 29,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "投诉处理",
+      "注册失败",
+      "案例分析"
+    ]
+  },
+  {
+    "id": "ch07-q030",
+    "file": "07-射频与网优/ch07-q030-rate-issue-four-quadrant.md",
+    "url": "/07-射频与网优/ch07-q030-rate-issue-four-quadrant",
+    "title": "速率类问题的通用定位框架（覆盖/干扰/容量/参数四象限）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 30,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "速率优化",
+      "定位框架",
+      "方法论"
+    ]
+  },
+  {
+    "id": "ch07-q031",
+    "file": "07-射频与网优/ch07-q031-ca-deployment-activation-rate.md",
+    "url": "/07-射频与网优/ch07-q031-ca-deployment-activation-rate",
+    "title": "载波聚合部署与 CA 激活率优化",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 31,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "载波聚合",
+      "容量",
+      "专题优化"
+    ]
+  },
+  {
+    "id": "ch07-q032",
+    "file": "07-射频与网优/ch07-q032-dss-impact-tuning.md",
+    "url": "/07-射频与网优/ch07-q032-dss-impact-tuning",
+    "title": "DSS 部署对 4G/5G 性能的影响与调优",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 32,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "DSS",
+      "动态频谱共享",
+      "频谱"
+    ]
+  },
+  {
+    "id": "ch07-q033",
+    "file": "07-射频与网优/ch07-q033-energy-saving-features.md",
+    "url": "/07-射频与网优/ch07-q033-energy-saving-features",
+    "title": "基站节能特性（通道/符号/载波关断）与节能效果",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 33,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "节能",
+      "符号关断",
+      "绿色网络"
+    ]
+  },
+  {
+    "id": "ch07-q034",
+    "file": "07-射频与网优/ch07-q034-massive-traffic-scenario.md",
+    "url": "/07-射频与网优/ch07-q034-massive-traffic-scenario",
+    "title": "大话务场景保障（演唱会/枢纽）优化要点",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 34,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "大话务",
+      "场景保障",
+      "容量"
+    ]
+  },
+  {
+    "id": "ch07-q035",
+    "file": "07-射频与网优/ch07-q035-highspeed-rail-doppler.md",
+    "url": "/07-射频与网优/ch07-q035-highspeed-rail-doppler",
+    "title": "高铁/高速场景的专网优化（多普勒/重叠覆盖）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 35,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "高铁专网",
+      "多普勒",
+      "移动性"
+    ]
+  },
+  {
+    "id": "ch07-q036",
+    "file": "07-射频与网优/ch07-q036-digital-indoor-system.md",
+    "url": "/07-射频与网优/ch07-q036-digital-indoor-system",
+    "title": "数字化室分的特点与优化要点",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 36,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "数字化室分",
+      "室内覆盖",
+      "网络优化"
+    ]
+  },
+  {
+    "id": "ch07-q037",
+    "file": "07-射频与网优/ch07-q037-700mhz-wide-coverage.md",
+    "url": "/07-射频与网优/ch07-q037-700mhz-wide-coverage",
+    "title": "700MHz 广域覆盖的特点与规划考虑",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 37,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "700MHz",
+      "广覆盖",
+      "低频"
+    ]
+  },
+  {
+    "id": "ch07-q038",
+    "file": "07-射频与网优/ch07-q038-lte-nr-cooperation-anchor.md",
+    "url": "/07-射频与网优/ch07-q038-lte-nr-cooperation-anchor",
+    "title": "4/5G 协同优化（互操作参数与锚点策略）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 38,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "4G/5G协同",
+      "互操作",
+      "锚点"
+    ]
+  },
+  {
+    "id": "ch07-q039",
+    "file": "07-射频与网优/ch07-q039-optimization-tools-overview.md",
+    "url": "/07-射频与网优/ch07-q039-optimization-tools-overview",
+    "title": "网优常用工具（路测/MDT/CHR/网管话统）概览",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 39,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "网优工具",
+      "路测",
+      "话统"
+    ]
+  },
+  {
+    "id": "ch07-q040",
+    "file": "07-射频与网优/ch07-q040-5ga-network-optimization-challenges.md",
+    "url": "/07-射频与网优/ch07-q040-5ga-network-optimization-challenges",
+    "title": "5G-A 时代网优的新挑战（万兆/低时延/通感）",
+    "chapter": 7,
+    "chapterName": "射频与网优",
+    "qnum": 40,
+    "difficulty": "难",
+    "frequency": "低",
+    "tags": [
+      "5G-A",
+      "通感一体",
+      "网络优化"
+    ]
+  },
+  {
+    "id": "ch08-q001",
+    "file": "08-场景与软技能/ch08-q001-star-self-introduction.md",
+    "url": "/08-场景与软技能/ch08-q001-star-self-introduction",
+    "title": "通信工程师面试自我介绍的 STAR 框架",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 1,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "软技能",
+      "自我介绍",
+      "STAR"
+    ]
+  },
+  {
+    "id": "ch08-q002",
+    "file": "08-场景与软技能/ch08-q002-project-story-refine.md",
+    "url": "/08-场景与软技能/ch08-q002-project-story-refine",
+    "title": "项目经历提炼：把网优/研发项目讲出彩的方法",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 2,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "软技能",
+      "项目经验",
+      "表达方法"
+    ]
+  },
+  {
+    "id": "ch08-q003",
+    "file": "08-场景与软技能/ch08-q003-5g-vs-4g-answer.md",
+    "url": "/08-场景与软技能/ch08-q003-5g-vs-4g-answer",
+    "title": "「5G 与 4G 的区别」3 分钟标准答案",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 3,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "软技能",
+      "LTE与NR",
+      "高频问答"
+    ]
+  },
+  {
+    "id": "ch08-q004",
+    "file": "08-场景与软技能/ch08-q004-draw-nr-frame-structure.md",
+    "url": "/08-场景与软技能/ch08-q004-draw-nr-frame-structure",
+    "title": "手撕题：画出 NR 帧结构并标注关键参数",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 4,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "手撕题",
+      "帧结构",
+      "物理层"
+    ]
+  },
+  {
+    "id": "ch08-q005",
+    "file": "08-场景与软技能/ch08-q005-draw-random-access-flow.md",
+    "url": "/08-场景与软技能/ch08-q005-draw-random-access-flow",
+    "title": "手撕题：画出随机接入完整流程并标注消息",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 5,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "手撕题",
+      "随机接入",
+      "信令流程"
+    ]
+  },
+  {
+    "id": "ch08-q006",
+    "file": "08-场景与软技能/ch08-q006-link-budget-whiteboard.md",
+    "url": "/08-场景与软技能/ch08-q006-link-budget-whiteboard",
+    "title": "手撕题：链路预算表逐项讲解",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 6,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "手撕题",
+      "链路预算",
+      "覆盖规划"
+    ]
+  },
+  {
+    "id": "ch08-q007",
+    "file": "08-场景与软技能/ch08-q007-shannon-spectral-efficiency.md",
+    "url": "/08-场景与软技能/ch08-q007-shannon-spectral-efficiency",
+    "title": "手撕题：香农公式与频谱效率估算",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 7,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "手撕题",
+      "香农公式",
+      "频谱效率"
+    ]
+  },
+  {
+    "id": "ch08-q008",
+    "file": "08-场景与软技能/ch08-q008-why-ldpc-for-data.md",
+    "url": "/08-场景与软技能/ch08-q008-why-ldpc-for-data",
+    "title": "开放题：为什么 NR 数据信道选择 LDPC 码",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 8,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "开放题",
+      "信道编码",
+      "LDPC"
+    ]
+  },
+  {
+    "id": "ch08-q009",
+    "file": "08-场景与软技能/ch08-q009-mmwave-sub6-standalone.md",
+    "url": "/08-场景与软技能/ch08-q009-mmwave-sub6-standalone",
+    "title": "开放题：为什么需要毫米波与 sub-6GHz 搭配组网",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 9,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "开放题",
+      "毫米波",
+      "组网",
+      "FR1FR2"
+    ]
+  },
+  {
+    "id": "ch08-q010",
+    "file": "08-场景与软技能/ch08-q010-how-5g-supports-low-latency.md",
+    "url": "/08-场景与软技能/ch08-q010-how-5g-supports-low-latency",
+    "title": "开放题：5G 如何支撑低时延（端到端全链路分析）",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 10,
+    "difficulty": "难",
+    "frequency": "高",
+    "tags": [
+      "开放题",
+      "低时延",
+      "URLLC"
+    ]
+  },
+  {
+    "id": "ch08-q011",
+    "file": "08-场景与软技能/ch08-q011-slice-isolation.md",
+    "url": "/08-场景与软技能/ch08-q011-slice-isolation",
+    "title": "开放题：网络切片如何保证隔离性",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 11,
+    "difficulty": "难",
+    "frequency": "中",
+    "tags": [
+      "开放题",
+      "网络切片",
+      "5GC"
+    ]
+  },
+  {
+    "id": "ch08-q012",
+    "file": "08-场景与软技能/ch08-q012-terms-access-mobility.md",
+    "url": "/08-场景与软技能/ch08-q012-terms-access-mobility",
+    "title": "高频英文术语中英对照（一）：接入与移动性",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 12,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "术语对照",
+      "接入",
+      "移动性"
+    ]
+  },
+  {
+    "id": "ch08-q013",
+    "file": "08-场景与软技能/ch08-q013-terms-phy-rf.md",
+    "url": "/08-场景与软技能/ch08-q013-terms-phy-rf",
+    "title": "高频英文术语中英对照（二）：物理层与射频",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 13,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "术语对照",
+      "物理层",
+      "射频"
+    ]
+  },
+  {
+    "id": "ch08-q014",
+    "file": "08-场景与软技能/ch08-q014-terms-core-business.md",
+    "url": "/08-场景与软技能/ch08-q014-terms-core-business",
+    "title": "高频英文术语中英对照（三）：核心网与业务",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 14,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "术语对照",
+      "核心网",
+      "业务"
+    ]
+  },
+  {
+    "id": "ch08-q015",
+    "file": "08-场景与软技能/ch08-q015-resume-tips-network-rnd.md",
+    "url": "/08-场景与软技能/ch08-q015-resume-tips-network-rnd",
+    "title": "简历撰写要点：网优岗与研发岗的差异",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 15,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "软技能",
+      "简历",
+      "求职"
+    ]
+  },
+  {
+    "id": "ch08-q016",
+    "file": "08-场景与软技能/ch08-q016-rf-optimization-interview-checklist.md",
+    "url": "/08-场景与软技能/ch08-q016-rf-optimization-interview-checklist",
+    "title": "网优岗面试侧重与准备清单",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 16,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "网优",
+      "面试准备",
+      "职业规划"
+    ]
+  },
+  {
+    "id": "ch08-q017",
+    "file": "08-场景与软技能/ch08-q017-r-d-interview-terminal-vendor.md",
+    "url": "/08-场景与软技能/ch08-q017-r-d-interview-terminal-vendor",
+    "title": "研发岗（终端/设备商）面试侧重与准备",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 17,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "研发岗",
+      "面试准备",
+      "协议栈"
+    ]
+  },
+  {
+    "id": "ch08-q018",
+    "file": "08-场景与软技能/ch08-q018-presale-solution-interview.md",
+    "url": "/08-场景与软技能/ch08-q018-presale-solution-interview",
+    "title": "售前/解决方案岗面试侧重与准备",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 18,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "售前",
+      "解决方案",
+      "面试准备"
+    ]
+  },
+  {
+    "id": "ch08-q019",
+    "file": "08-场景与软技能/ch08-q019-operator-vendor-terminal-difference.md",
+    "url": "/08-场景与软技能/ch08-q019-operator-vendor-terminal-difference",
+    "title": "运营商、设备商、终端厂的工作差异",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 19,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "行业认知",
+      "职业选择",
+      "产业链"
+    ]
+  },
+  {
+    "id": "ch08-q020",
+    "file": "08-场景与软技能/ch08-q020-stress-interview-follow-up.md",
+    "url": "/08-场景与软技能/ch08-q020-stress-interview-follow-up",
+    "title": "压力面试与连环追问的应对策略",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 20,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "压力面试",
+      "沟通技巧",
+      "心理素质"
+    ]
+  },
+  {
+    "id": "ch08-q021",
+    "file": "08-场景与软技能/ch08-q021-group-discussion-nsa-sa-debate.md",
+    "url": "/08-场景与软技能/ch08-q021-group-discussion-nsa-sa-debate",
+    "title": "群面/技术辩论题的应对（如 NSA 与 SA 之争）",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 21,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "群面",
+      "技术辩论",
+      "NSA",
+      "SA"
+    ]
+  },
+  {
+    "id": "ch08-q022",
+    "file": "08-场景与软技能/ch08-q022-questions-to-interviewer.md",
+    "url": "/08-场景与软技能/ch08-q022-questions-to-interviewer",
+    "title": "反问面试官的高质量问题",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 22,
+    "difficulty": "易",
+    "frequency": "中",
+    "tags": [
+      "反问环节",
+      "沟通技巧",
+      "面试准备"
+    ]
+  },
+  {
+    "id": "ch08-q023",
+    "file": "08-场景与软技能/ch08-q023-salary-negotiation-offer-comparison.md",
+    "url": "/08-场景与软技能/ch08-q023-salary-negotiation-offer-comparison",
+    "title": "谈薪与多 offer 比较框架",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 23,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "谈薪",
+      "offer比较",
+      "职业选择"
+    ]
+  },
+  {
+    "id": "ch08-q024",
+    "file": "08-场景与软技能/ch08-q024-career-plan-answer.md",
+    "url": "/08-场景与软技能/ch08-q024-career-plan-answer",
+    "title": "职业规划类问题的回答思路",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 24,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "职业规划",
+      "HR面",
+      "沟通技巧"
+    ]
+  },
+  {
+    "id": "ch08-q025",
+    "file": "08-场景与软技能/ch08-q025-5ga-6g-vision.md",
+    "url": "/08-场景与软技能/ch08-q025-5ga-6g-vision",
+    "title": "行业趋势：5G-A 与 6G 愿景陈述",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 25,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "行业趋势",
+      "5G-A",
+      "6G"
+    ]
+  },
+  {
+    "id": "ch08-q026",
+    "file": "08-场景与软技能/ch08-q026-redcap-ntn-isac-applications.md",
+    "url": "/08-场景与软技能/ch08-q026-redcap-ntn-isac-applications",
+    "title": "行业趋势：RedCap/NTN/通感一体的应用",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 26,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "RedCap",
+      "NTN",
+      "通感一体",
+      "行业趋势"
+    ]
+  },
+  {
+    "id": "ch08-q027",
+    "file": "08-场景与软技能/ch08-q027-cross-major-transition.md",
+    "url": "/08-场景与软技能/ch08-q027-cross-major-transition",
+    "title": "跨专业转通信岗的答题策略",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 27,
+    "difficulty": "中",
+    "frequency": "中",
+    "tags": [
+      "跨专业",
+      "转行",
+      "答题策略"
+    ]
+  },
+  {
+    "id": "ch08-q028",
+    "file": "08-场景与软技能/ch08-q028-english-interview-templates.md",
+    "url": "/08-场景与软技能/ch08-q028-english-interview-templates",
+    "title": "英文面试常见问题与作答模板",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 28,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "英文面试",
+      "模板",
+      "沟通技巧"
+    ]
+  },
+  {
+    "id": "ch08-q029",
+    "file": "08-场景与软技能/ch08-q029-honesty-answering-boundary.md",
+    "url": "/08-场景与软技能/ch08-q029-honesty-answering-boundary",
+    "title": "技术面试中的诚实表达与答题边界",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 29,
+    "difficulty": "易",
+    "frequency": "高",
+    "tags": [
+      "诚实表达",
+      "答题边界",
+      "面试技巧"
+    ]
+  },
+  {
+    "id": "ch08-q030",
+    "file": "08-场景与软技能/ch08-q030-interview-review-knowledge.md",
+    "url": "/08-场景与软技能/ch08-q030-interview-review-knowledge",
+    "title": "面试复盘与知识体系搭建方法",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 30,
+    "difficulty": "中",
+    "frequency": "低",
+    "tags": [
+      "复盘方法",
+      "知识体系",
+      "求职方法"
+    ]
+  }
+]

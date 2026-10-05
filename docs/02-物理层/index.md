@@ -1,0 +1,61 @@
+# 物理层
+
+本章覆盖帧结构与 Numerology、BWP、上下行信道与信号、调制编码等 NR 空口物理层核心机制，是面试考察最密集的章节。
+
+<!-- QUESTIONS-TOC:BEGIN -->
+- [NR 无线帧、子帧、时隙与符号的时间结构](/02-物理层/ch02-q001-frame-structure) — 难度易 · 频率高 · 帧结构 / 物理层
+- [参数集（Numerology）与子载波间隔的对应关系](/02-物理层/ch02-q002-numerology-scs) — 难度易 · 频率高 · Numerology / 子载波间隔
+- [不同子载波间隔下时隙与符号数的计算](/02-物理层/ch02-q003-scs-slot-calculation) — 难度中 · 频率高 · 帧结构 / 手算题
+- [NR 时隙格式与 TDD 上下行配置方式](/02-物理层/ch02-q004-slot-format-tdd) — 难度中 · 频率高 · 帧结构 / TDD
+- [上下行配比（如 DDDSU）对网络性能的影响](/02-物理层/ch02-q005-tdd-pattern-impact) — 难度易 · 频率高 · TDD / 帧结构 / 网络性能
+- [mini-slot 非时隙调度与 URLLC 短时延](/02-物理层/ch02-q006-mini-slot-urllc) — 难度中 · 频率中 · URLLC / 调度 / 低时延
+- [BWP 的概念、作用与四类 BWP 配置](/02-物理层/ch02-q007-bwp-basics) — 难度中 · 频率高 · BWP / 带宽部分
+- [BWP 激活与切换机制](/02-物理层/ch02-q008-bwp-switching) — 难度中 · 频率中 · BWP / 切换
+- [初始 BWP 与 SIB1 中 BWP 配置的关系](/02-物理层/ch02-q009-initial-bwp-sib1) — 难度难 · 频率中 · BWP / SIB1 / 小区选择
+- [SSB 的组成（PSS/SSS/PBCH）与时频位置](/02-物理层/ch02-q010-ssb-composition) — 难度易 · 频率高 · SSB / 同步 / 小区搜索
+- [SSB 突发集与波束扫描（L_max 与频段的对应）](/02-物理层/ch02-q011-ssb-burst-beam-sweep) — 难度中 · 频率高 · SSB / 波束赋形 / 波束扫描
+- [SSB 周期、GSCN 频栅与小区搜索的关系](/02-物理层/ch02-q012-ssb-period-gscn) — 难度中 · 频率中 · SSB / 小区搜索 / 同步栅格
+- [PBCH 内容（MIB）与 PBCH DMRS 设计](/02-物理层/ch02-q013-pbch-mib-dmrs) — 难度中 · 频率中 · PBCH / MIB / 参考信号
+- [PSS/SSS 序列设计与小区 ID 规划（1008 个 PCI）](/02-物理层/ch02-q014-pss-sss-pci-planning) — 难度难 · 频率中 · PCI / 同步信号 / 序列设计
+- [RMSI/SIB1 调度与 SSB 的时频复用关系](/02-物理层/ch02-q015-rmsi-sib1-ssb-mux) — 难度难 · 频率中 · SIB1 / RMSI / SSB
+- [系统信息 SI window 与 on-demand SI 机制](/02-物理层/ch02-q016-si-window-on-demand) — 难度中 · 频率低 · 系统信息 / SIB / 广播
+- [PDCCH 的 CORESET 与搜索空间（公共/专用）](/02-物理层/ch02-q017-pdcch-coreset-css) — 难度中 · 频率高 · PDCCH / CORESET / 搜索空间
+- [聚合等级与 PDCCH 盲检次数的限制](/02-物理层/ch02-q018-al-blind-decode) — 难度难 · 频率中 · PDCCH / 盲检 / 聚合等级
+- [DCI 常见格式（0_0/0_1/1_0/1_1）与调度信息字段](/02-物理层/ch02-q019-dci-formats) — 难度中 · 频率高 · DCI / PDCCH / 调度
+- [RNTI 类型（SI-RNTI/RA-RNTI/C-RNTI 等）与 PDCCH 加扰的作用](/02-物理层/ch02-q020-rnti-types-pdcch-scrambling) — 难度中 · 频率高 · RNTI / PDCCH / 加扰
+- [PUCCH 五种格式（Format 0-4）的区别与适用场景](/02-物理层/ch02-q021-pucch-formats) — 难度中 · 频率高 · PUCCH / UCI / 上行控制
+- [UCI 承载内容：SR/HARQ-ACK/CSI 的复用与编码](/02-物理层/ch02-q022-uci-content-mux-coding) — 难度难 · 频率高 · UCI / HARQ-ACK / CSI
+- [PUSCH 信道结构与 DMRS（类型1/类型2、前置 DMRS）](/02-物理层/ch02-q023-pusch-dmrs) — 难度中 · 频率高 · PUSCH / DMRS / 上行
+- [PDSCH 传输与 DMRS 配置（映射类型 A/B）](/02-物理层/ch02-q024-pdsch-dmrs-mapping-type) — 难度中 · 频率中 · PDSCH / DMRS / 映射类型
+- [PTRS 的作用与 FR2 相位噪声补偿](/02-物理层/ch02-q025-ptrs-fr2-phase-noise) — 难度难 · 频率中 · PTRS / 相位噪声 / FR2
+- [调制方式：上行 π/2-BPSK、DFT-s-OFDM 与高阶 QAM 的使用条件](/02-物理层/ch02-q026-modulation-pi2-bpsk-dfts-ofdm) — 难度中 · 频率中 · 调制 / DFT-s-OFDM / 覆盖
+- [LDPC 编码在 NR 数据信道的应用与码块分割](/02-物理层/ch02-q027-ldpc-cbs-data-channel) — 难度难 · 频率中 · LDPC / 编码 / 码块分割
+- [Polar 码用于 PBCH/PDCCH 的原因与特点](/02-物理层/ch02-q028-polar-pbch-pdcch) — 难度中 · 频率中 · Polar 码 / 编码 / 控制信道
+- [速率匹配与冗余版本 RV 在 HARQ 重传中的作用](/02-物理层/ch02-q029-rate-matching-rv-harq) — 难度难 · 频率高 · HARQ / 冗余版本 / 速率匹配
+- [CSI-RS 的资源配置与用途（测量/跟踪/零功率/移动性）](/02-物理层/ch02-q030-csi-rs-config-usage) — 难度中 · 频率高 · CSI-RS / 参考信号 / 测量
+- [CSI 上报量 CQI/PMI/RI/LI/CRI 的含义与关系](/02-物理层/ch02-q031-csi-report-quantities) — 难度中 · 频率高 · CQI / PMI / CSI
+- [CSI 报告的周期/半持续/非周期三种触发方式](/02-物理层/ch02-q032-csi-report-triggering) — 难度中 · 频率中 · CSI / 上报配置 / 触发
+- [SRS 的功能类型与天线切换发送（SRS 资源集）](/02-物理层/ch02-q033-srs-usage-antenna-switching) — 难度中 · 频率中 · SRS / 天线切换 / 上行参考
+- [宽带与子带 CQI 及频率选择性调度](/02-物理层/ch02-q034-wideband-subband-cqi) — 难度易 · 频率高 · CQI / 子带 / 调度
+- [HARQ 进程数与往返时延 RTT 的关系（手算题）](/02-物理层/ch02-q035-harq-process-rtt) — 难度难 · 频率高 · HARQ / RTT / 手算
+- [动态调度与半静态调度 SPS/CG 的应用场景](/02-物理层/ch02-q036-sps-cg-scheduling) — 难度中 · 频率高 · SPS / CG / 调度
+- [下行调度时序 K0/K1 与 UE 处理时间线](/02-物理层/ch02-q037-k0-k1-timing) — 难度难 · 频率高 · K0 / K1 / 调度时序
+- [上行调度时序 K2 与 PUSCH 准备时间 N2](/02-物理层/ch02-q038-k2-pusch-prep-time) — 难度中 · 频率中 · 上行调度 / K2 / PUSCH
+- [上行功控基本公式：开环路损补偿与闭环 TPC 修正](/02-物理层/ch02-q039-uplink-power-control) — 难度中 · 频率高 · 功控 / 上行 / 路损补偿
+- [功率余量报告 PHR 的类型、触发与作用](/02-物理层/ch02-q040-phr-types-trigger) — 难度中 · 频率中 · PHR / 功控 / MAC
+- [上行两种波形 CP-OFDM 与 DFT-s-OFDM 的选择](/02-物理层/ch02-q041-cp-ofdm-vs-dft-s-ofdm) — 难度易 · 频率高 · 波形 / CP-OFDM / DFT-s-OFDM
+- [PRACH 长格式与短格式的区别及适用场景](/02-物理层/ch02-q042-prach-long-short-format) — 难度中 · 频率高 · PRACH / 随机接入 / 前导格式
+- [PRACH 时频资源与 RACH occasion 的计算](/02-物理层/ch02-q043-prach-ro-calculation) — 难度难 · 频率中 · PRACH / RACH occasion / 资源计算
+- [测量间隙 GAP 的配置（per-UE/per-FR）与测量行为](/02-物理层/ch02-q044-measurement-gap-config) — 难度中 · 频率中 · 测量间隙 / GAP / 移动性
+- [定时提前 TA 的获取与调整（随机接入与 TA 命令）](/02-物理层/ch02-q045-timing-advance) — 难度中 · 频率高 · 定时提前 / TA / 上行同步
+- [C-DRX 的关键参数与功耗/时延折中](/02-物理层/ch02-q046-c-drx-parameters) — 难度中 · 频率高 · C-DRX / 功耗 / 非连续接收
+- [WUS/PEI 唤醒信号如何降低 PDCCH 监听功耗](/02-物理层/ch02-q047-wus-pei-wakeup) — 难度难 · 频率中 · WUS / PEI / 功耗
+- [RB/PRB/RE 的频域量化关系与带宽计算（手算题）](/02-物理层/ch02-q048-rb-re-bandwidth-calc) — 难度易 · 频率高 · RE / PRB / 带宽计算
+- [天线端口与准共址 QCL 的基本概念](/02-物理层/ch02-q049-antenna-port-qcl) — 难度中 · 频率高 · 天线端口 / QCL / 波束
+- [SSB 覆盖与数据信道覆盖的差异及边缘体验](/02-物理层/ch02-q050-ssb-vs-data-coverage) — 难度难 · 频率中 · SSB / 覆盖 / 边缘体验
+- [上行符号对齐与保护符号/GP 的设置](/02-物理层/ch02-q051-ul-alignment-guard-period) — 难度中 · 频率中 · TDD / 保护间隔 / GP
+- [SSB 与 PRACH 资源的关联及 RAR 波束指向](/02-物理层/ch02-q052-ssb-prach-association) — 难度难 · 频率中 · SSB / PRACH / 波束互指
+- [TDD 帧偏移与上下行交叉干扰的产生](/02-物理层/ch02-q053-tdd-frame-offset-cross-interference) — 难度难 · 频率中 · TDD / 交叉干扰 / 帧同步
+- [256QAM 的引入条件与 MCS、频谱效率的关系](/02-物理层/ch02-q054-256qam-mcs-spectral-efficiency) — 难度中 · 频率中 · 256QAM / MCS / 频谱效率
+- [香农公式与实际频谱效率的差距分析（理论计算题）](/02-物理层/ch02-q055-shannon-vs-actual-se) — 难度难 · 频率中 · 香农公式 / 频谱效率 / 理论计算
+<!-- QUESTIONS-TOC:END -->

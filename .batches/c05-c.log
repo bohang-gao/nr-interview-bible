@@ -1,0 +1,33 @@
+完成。本批 q030–q040 全部落盘，lint 0 error。
+
+**重要说明**：执行中发现另一会话已完成本批——q030–q040 共 11 题当时已全部存在（标题与本批清单逐题对应、内容合规完整）。我最初重写了其中 8 题，造成 title 重复 error，经逐题核对既有实现合规后，已将我误建的 8 个文件移至 `/tmp/`（未删除，可找回），保留既有实现。
+
+## 本批文件清单（第 5 章 q030–q040，全部就绪）
+
+| 题号 | 文件 | 来源 |
+|---|---|---|
+| 30 | ch05-q030-rrc-reestablishment.md | 既有（RRC 重建立流程详解） |
+| 31 | ch05-q031-connection-deactivation.md | 既有（连接去激活流程与两侧状态保持） |
+| 32 | ch05-q032-tau-tracking-update.md | 既有（TAU 跟踪区更新与周期性 TAU） |
+| 33 | ch05-q033-bfr-signaling.md | 既有（波束失败恢复 BFR 的信令流程） |
+| 34 | ch05-q034-scg-failure-report.md | 本会话新增（SCG failure 流程与失败信息上报） |
+| 35 | ch05-q035-nr-paging-flow.md | 既有（NR 寻呼完整流程） |
+| 36 | ch05-q036-endc-nr-measurement.md | 既有（EN-DC 下 NR 的测量与 B1/B2 事件使用） |
+| 37 | ch05-q037-ul-out-of-sync.md | 既有（上行失步的判定与恢复流程） |
+| 38 | ch05-q038-rrc-reconfig-fallback.md | 既有（RRC 重配置流程与失败后的回退行为） |
+| 39 | ch05-q039-ra-failure-troubleshooting.md | 既有（随机接入失败的综合定位思路） |
+| 40 | ch05-q040-full-call-flow.md | 既有（完整呼通流程串讲） |
+
+## lint 输出结尾
+
+```
+警告（warning）：
+  - 第6章题量不足：15/30（分批构建中允许）
+  - 第7章题量不足：14/40（分批构建中允许）
+  - 第8章题量不足：0/30（分批构建中允许）
+
+校验通过：0 error，3 个 warning
+```
+
+第 5 章 40/40 ✓；仅存 warning 为其他章节分批构建中的正常题量提示（按任务要求不改）。
+EXIT_CODE=0

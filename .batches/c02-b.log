@@ -1,0 +1,35 @@
+全部完成。本批 18 题落盘且 lint 0 error。
+
+## 本批创建文件清单（docs/02-物理层/）
+
+| 题号 | 文件 | 主题 |
+|---|---|---|
+| 020 | ch02-q020-rnti-types-pdcch-scrambling.md | RNTI 类型与 PDCCH CRC 加扰 |
+| 021 | ch02-q021-pucch-formats.md | PUCCH Format 0-4 对比与选型 |
+| 022 | ch02-q022-uci-content-mux-coding.md | SR/HARQ-ACK/CSI 复用与编码 |
+| 023 | ch02-q023-pusch-dmrs.md | PUSCH 结构与 DMRS 类型1/2 |
+| 024 | ch02-q024-pdsch-dmrs-mapping-type.md | PDSCH 映射类型 A/B |
+| 025 | ch02-q025-ptrs-fr2-phase-noise.md | PTRS 与 FR2 相位噪声 |
+| 026 | ch02-q026-modulation-pi2-bpsk-dfts-ofdm.md | π/2-BPSK、DFT-s-OFDM、高阶 QAM |
+| 027 | ch02-q027-ldpc-cbs-data-channel.md | LDPC 与码块分割 |
+| 028 | ch02-q028-polar-pbch-pdcch.md | Polar 码用于控制信道 |
+| 029 | ch02-q029-rate-matching-rv-harq.md | 速率匹配与冗余版本 |
+| 030 | ch02-q030-csi-rs-config-usage.md | CSI-RS 配置与用途 |
+| 031 | ch02-q031-csi-report-quantities.md | CQI/PMI/RI/LI/CRI 依赖链 |
+| 032 | ch02-q032-csi-report-triggering.md | CSI 三种触发方式 |
+| 033 | ch02-q033-srs-usage-antenna-switching.md | SRS 四种 usage 与天线切换 |
+| 034 | ch02-q034-wideband-subband-cqi.md | 宽带/子带 CQI 与频选调度 |
+| 035 | ch02-q035-harq-process-rtt.md | HARQ 进程数手算 |
+| 036 | ch02-q036-sps-cg-scheduling.md | 动态调度 vs SPS/CG |
+| 037 | ch02-q037-k0-k1-timing.md | K0/K1 与 UE 处理时间线 |
+
+难度分布：易 1 / 中 11 / 难 6（全章累计 5易/22中/10难，后续批次可回调至 30/50/20 目标比例）；频率：高 10 / 中 8。关联考点跨章链接指向了已存在的 ch01/ch03 文件（LDPC-Polar、PTRS、SRS 互易性、CSI 码本等），第 4/5 章相关点用纯文字标注。
+
+## lint 输出结尾
+
+```
+校验通过：0 error，6 个 warning
+```
+
+warning 均为分批构建中的题量提示（第 2 章 37/55，第 4-8 章待生成），属正常。
+EXIT_CODE=0

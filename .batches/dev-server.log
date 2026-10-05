@@ -1,0 +1,16 @@
+
+> docs:dev
+> npm run docs:index && vitepress dev docs
+
+
+> docs:index
+> node scripts/gen-index.mjs && node scripts/gen-chapter-toc.mjs
+
+[gen-index] 已生成 D:\Download\code\hermes_prj\docs\.vitepress\generated\questions.json，共 300 题
+[gen-chapter-toc] 更新 8 章，跳过 0 章
+Port 5173 is in use, trying another one...
+
+  [32m[1mvitepress[22m v1.6.4[39m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m

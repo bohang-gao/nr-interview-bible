@@ -1,0 +1,46 @@
+本批完成。第 7 章 40 题已齐，全站 300 题已齐。
+
+## 本批创建文件（20 个，docs/07-射频与网优/）
+
+| 题号 | 文件 | 难度/频率 |
+|---|---|---|
+| 021 | ch07-q021-access-kpi-definitions.md | 中/高 |
+| 022 | ch07-q022-drop-rate-definition-causes.md | 中/高 |
+| 023 | ch07-q023-ho-success-rate-troubleshooting.md | 中/高 |
+| 024 | ch07-q024-prb-utilization-capacity.md | 中/中 |
+| 025 | ch07-q025-rrc-connections-vs-active-users.md | 中/中 |
+| 026 | ch07-q026-site-cluster-network-optimization.md | 易/中 |
+| 027 | ch07-q027-complaint-weak-coverage.md | 易/高 |
+| 028 | ch07-q028-complaint-upload-slow.md | 中/中 |
+| 029 | ch07-q029-complaint-no-service-registration.md | 中/中 |
+| 030 | ch07-q030-rate-issue-four-quadrant.md | 难/高 |
+| 031 | ch07-q031-ca-deployment-activation-rate.md | 中/中 |
+| 032 | ch07-q032-dss-impact-tuning.md | 难/低 |
+| 033 | ch07-q033-energy-saving-features.md | 中/中 |
+| 034 | ch07-q034-massive-traffic-scenario.md | 中/中 |
+| 035 | ch07-q035-highspeed-rail-doppler.md | 难/中 |
+| 036 | ch07-q036-digital-indoor-system.md | 中/中 |
+| 037 | ch07-q037-700mhz-wide-coverage.md | 中/中 |
+| 038 | ch07-q038-lte-nr-cooperation-anchor.md | 中/高 |
+| 039 | ch07-q039-optimization-tools-overview.md | 易/中 |
+| 040 | ch07-q040-5ga-network-optimization-challenges.md | 难/低 |
+
+难度比例：易 3 / 中 13 / 难 4（约 15%/65%/20%，中略偏多、易略偏少，属规范允许的大致比例范围）。全部遵守四节结构、frontmatter 五字段、术语首现给全称；未引用不确定的规范表号。
+
+## lint 输出结尾
+
+```
+共扫描题目 300 道，期望 300 道
+
+各章题量（当前/期望）：
+  第1章  30/30  ✓
+  第2章  55/55  ✓
+  第3章  35/35  ✓
+  第4章  40/40  ✓
+  第5章  40/40  ✓
+  第6章  30/30  ✓
+  第7章  40/40  ✓
+  第8章  30/30  ✓
+
+校验通过：0 error，0 个 warning
+```
