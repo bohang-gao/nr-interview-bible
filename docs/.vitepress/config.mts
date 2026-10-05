@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // 8 个章节目录名（与 PLAN.md 第 5 节一致）
 const chapters = [
@@ -25,6 +26,7 @@ export default withMermaid(defineConfig({
       { text: '题库', link: '/bank' },
       { text: '每日一题', link: '/daily' },
       { text: '自测', link: '/selftest' },
+      { text: '模拟面试', link: '/interview' },
       { text: '打印/PDF', link: '/print' }
     ],
     sidebar: [
@@ -35,6 +37,7 @@ export default withMermaid(defineConfig({
           { text: '题库', link: '/bank' },
           { text: '每日一题', link: '/daily' },
           { text: '自测', link: '/selftest' },
+          { text: '模拟面试', link: '/interview' },
           { text: '打印/PDF', link: '/print' }
         ]
       },
@@ -80,6 +83,28 @@ export default withMermaid(defineConfig({
     mermaidPlugin: {
       class: 'mermaid'
     }
+  },
+
+  vite: {
+    plugins: [VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['icon.svg'],
+      manifest: {
+        name: 'NR通信面试宝典',
+        short_name: 'NR宝典',
+        description: '5G NR 通信面试知识库：9 大知识域、320 题',
+        theme_color: '#3e63dd',
+        background_color: '#ffffff',
+        display: 'standalone',
+        icons: [
+          { src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }
+        ]
+      },
+      workbox: {
+        globPatterns: ['**/*.{css,js,html,svg,png,woff2}'],
+        maximumFileSizeToCacheInBytes: 4000000
+      }
+    })]
   }
 }))
 

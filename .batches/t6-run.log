@@ -1,0 +1,27 @@
+diff 边界清晰：config.mts/theme/index.ts 中 PWA 相关改动是会话开始前已存在的未提交内容（并行会话所留），本次改动仅为「模拟面试」相关行。
+
+## 改动清单
+
+1. **docs/.vitepress/components/MockInterview.vue**（新建）
+   - 配置面板：方向三选一（研发/网优/通用，按章节映射权重：研发 ch2物理层/ch3MIMO/ch4协议栈 权重3；网优 ch6组网/ch7射频网优 权重3、ch8软技能权重2；通用全 1）；时长 15/30 分钟
+   - quiz.json 无独立 tags 字段，权重以章节归属为 tag 依据（已在配置面板与本文说明）
+   - 流程：加权无放回抽题 → 章节+难度+频率徽标、题目标题 → 「参考要点」默认折叠（点开展示 brief HTML）→ 每题建议用时（易90s/中120s/难180s）+ 倒计时条（最后 20% 变红，超时自动记「超时」进下一题）→ 自评 ✓/✗/跳过
+   - 总时长倒计时独立运行，时间到自动结束（未作答题记「超时」）
+   - 结束页：结束方式（时间到/答完/手动）、总题数、答上/没答/跳过/超时计数、正确率、没答+超时列表（withBase 链接原题）、分档鼓励语（≥90/≥70/≥50/其余）、「再模拟一场」
+   - localStorage `nrb-mock-v1`：历史场次 {时间/方向/题数/答上/正确率}，最多 20 条，结束页展示最近 5 场文字+进度条趋势（无第三方库）
+   - 样式复用 SelfTest 的 CSS 变量与类名风格；`Math.random`/`Date`/localStorage 全部客户端执行，SSR 构建期只渲染配置面板；onUnmounted 清理定时器
+2. **docs/interview.md**（新建）：frontmatter `title: 模拟面试` + `<MockInterview />`
+3. **docs/.vitepress/theme/index.ts**：import + `app.component('MockInterview', …)`
+4. **docs/.vitepress/config.mts**：nav 与 sidebar「开始」组均在「自测」后追加 `{ text: '模拟面试', link: '/interview' }`
+
+## 构建结尾
+
+```
+vitepress v1.6.4
+✓ building client + server bundles...
+✓ rendering pages...
+build complete in 23.38s.
+```
+
+构建成功，0 死链。约束遵守：仅改指定四处，SelfTest 及其他文件未动。
+EXIT_CODE=0
