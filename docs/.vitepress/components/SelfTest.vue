@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { withBase } from 'vitepress/client'
 import quiz from '../generated/quiz.json'
 
 const difficulties = ['易', '中', '难']
@@ -230,7 +231,7 @@ function restart() {
         <section v-html="current.sections.detail"></section>
         <section v-html="current.sections.followups"></section>
         <p class="more">
-          完整页面：<a :href="current.url">{{ current.url }}</a>
+          完整页面：<a :href="withBase(current.url)">{{ current.title }}</a>
         </p>
       </template>
       <p v-else class="actions">
@@ -278,7 +279,7 @@ function restart() {
         <ul class="wrong">
           <li v-for="{ q } in wrongList" :key="q.id">
             <span :class="['badge', difficultyClass[q.difficulty]]">{{ q.difficulty }}</span>
-            <a :href="q.url">{{ q.title }}</a>
+            <a :href="withBase(q.url)">{{ q.title }}</a>
             <span class="chapter-name">{{ q.chapterName }}</span>
           </li>
         </ul>

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, ref } from 'vue'
+import { withBase } from 'vitepress/client'
 import questions from '../generated/questions.json'
 
 const difficultyClass = { 易: 'easy', 中: 'mid', 难: 'hard' }
@@ -146,7 +147,7 @@ function toggleTag(t) {
         <ul>
           <li v-for="q in c.items" :key="q.id">
             <span class="qnum">{{ q.qnum }}</span>
-            <a :href="q.url" class="qtitle">{{ q.title }}</a>
+            <a :href="withBase(q.url)" class="qtitle">{{ q.title }}</a>
             <span class="badges">
               <span :class="['badge', difficultyClass[q.difficulty]]"
                 >{{ q.difficulty }}</span

@@ -1,5 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
+import { withBase } from 'vitepress/client'
 import questions from '../generated/questions.json'
 
 const difficultyClass = { 易: 'easy', 中: 'mid', 难: 'hard' }
@@ -56,7 +57,7 @@ function shuffle() {
         <span class="badge chapter">{{ current.chapterName }}</span>
       </p>
       <h2 class="qtitle">
-        <a :href="current.url">{{ current.title }}</a>
+        <a :href="withBase(current.url)">{{ current.title }}</a>
       </h2>
       <div class="badges">
         <span :class="['badge', difficultyClass[current.difficulty]]"
@@ -68,7 +69,7 @@ function shuffle() {
         <span v-for="t in current.tags" :key="t" class="badge tag">{{ t }}</span>
       </div>
       <p class="actions">
-        <a :href="current.url" class="btn primary">查看完整解析</a>
+        <a :href="withBase(current.url)" class="btn primary">查看完整解析</a>
         <button type="button" class="btn" @click="shuffle">随机一题</button>
       </p>
     </template>
