@@ -1,0 +1,33 @@
+完成。构建成功，无死链。
+
+**改动要点清单**（仅 `docs/.vitepress/components/SelfTest.vue`）：
+
+1. **localStorage 持久化**（key `nrb-selftest-v1`）
+   - `loadStore`/`saveStore`，读前判空、`JSON.parse` 容错（损坏按空状态），写入 try/catch 兜底隐私模式/超额
+   - `wrongBook`：Set 存「不会」的题 id，去重；答「会」即时移出
+   - `mastered`：Set 存「会」的题 id
+   - `stats`：累计练习次数、对/错总数、最近练习时间（`toLocaleString`）
+
+2. **错题重练模式**：配置面板「练习方式」新增 chip（仅错题本非空且客户端挂载后显示，含错题数）；抽题范围 = 错题本 ∩ 章节/难度筛选；答「会」实时移出错题本（结束页不再列入），「不会」保留；按钮文案/禁用/warn 均按模式切换
+
+3. **「跳过已掌握」开关**（默认关，仅随机模式显示）：开启后抽题排除 mastered 集合；变更时 watch 持久化
+
+4. **结束页增强**：错题本总数 + 「清空错题本」按钮（`window.confirm` 确认后清空 Set 并即时刷新界面）；累计统计一行（对/错/次数/最近时间）
+
+5. **SSR 安全**：所有 localStorage 访问经 `safeStorage()`（`typeof localStorage === 'undefined'` + try/catch）；初始化在 `onMounted` 中执行，SSR 构建期只渲染静态骨架；`window.confirm` 前有 `typeof window` 守卫
+
+6. **样式**：新增 `.toggle`/`.persist-row`/`.stats-line`/`.btn.danger`，全部复用现有 CSS 变量与既有类名风格，未动其他文件
+
+**构建结尾输出**：
+
+```
+[gen-index] 已生成 ...\questions.json，共 320 题
+[gen-chapter-toc] 更新 9 章，跳过 0 章
+[gen-quiz] 已生成 ...\quiz.json，共 320 题（sections: brief/detail/followups）
+[gen-print] 已生成 docs\print.md，共 320 题
+vitepress v1.6.4
+✓ building client + server bundles...
+✓ rendering pages...
+build complete in 12.43s.
+```
+EXIT_CODE=0

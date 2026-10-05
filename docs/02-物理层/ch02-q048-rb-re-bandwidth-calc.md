@@ -20,12 +20,12 @@ tags: [RE, PRB, 带宽计算]
 
 **常用换算表（背下来直接用）**：
 
-| SCS | 1 个 PRB 带宽 | 20 MHz（48 PRB 量级） | 100 MHz |
+| SCS | 1 个 PRB 带宽 | 20 MHz（106 PRB @15 kHz / 51 PRB @30 kHz） | 100 MHz |
 |---|---|---|---|
-| 15 kHz | 180 kHz | 51 PRB（0 MHz 段内） | —（FR1 最大约 2700+ 子载波，20 MHz 下 106 PRB @15k） |
+| 15 kHz | 180 kHz | 106 PRB | —（FR1） |
 | 30 kHz | 360 kHz | 51 PRB | 273 PRB |
 | 60 kHz | 720 kHz | — | 135 PRB |
-| 120 kHz | 1.44 MHz | —（FR2） | 264 PRB（FR2 100 MHz 上下） |
+| 120 kHz | 1.44 MHz | —（FR2） | 100 MHz（FR2）→ 66 PRB；264 PRB 对应 200 MHz@60 kHz 或 400 MHz@120 kHz（FR2-2, R17） |
 
 **标准手算例**：
 

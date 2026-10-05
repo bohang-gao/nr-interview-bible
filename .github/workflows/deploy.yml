@@ -28,6 +28,8 @@ jobs:
       - uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci || npm install
+      - name: Lint content (gate)
+        run: python3 scripts/lint-content.py --strict
       - name: Build with base path for project pages
         run: |
           npm run docs:index

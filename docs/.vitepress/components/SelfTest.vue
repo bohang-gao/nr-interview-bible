@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress/client'
 import quiz from '../generated/quiz.json'
 
@@ -7,12 +7,70 @@ const difficulties = ['易', '中', '难']
 const difficultyClass = { 易: 'easy', 中: 'mid', 难: 'hard' }
 const frequencyClass = { 高: 'high', 中: 'mid', 低: 'low' }
 const counts = [5, 10, 20]
+const STORAGE_KEY = 'nrb-selftest-v1'
 
 // 抽题与判分仅客户端进行（SSR 构建期只渲染配置面板）
 const phase = ref('config') // config | quiz | result
 const selectedChapters = ref([])
 const selectedDifficulties = ref([...difficulties])
 const countChoice = ref(10)
+const skipMastered = ref(false)
+
+// ---------- 错题本 / 统计（仅客户端，localStorage 持久化） ----------
+const storageReady = ref(false)
+const wrongBook = ref(new Set()) // 不会的题 id（去重）
+const mastered = ref(new Set()) // 答会的题 id
+const stats = ref({ sessions: 0, correct: 0, wrong: 0, lastAt: '' })
+
+function safeStorage() {
+  try {
+    if (typeof localStorage === 'undefined') return null
+    return localStorage
+  } catch {
+    return null
+  }
+}
+
+function loadStore() {
+  const ls = safeStorage()
+  if (!ls) return
+  try {
+    const raw = ls.getItem(STORAGE_KEY)
+    if (!raw) return
+    const data = JSON.parse(raw)
+    if (data && typeof data === 'object') {
+      if (Array.isArray(data.wrong)) wrongBook.value = new Set(data.wrong)
+      if (Array.isArray(data.mastered)) mastered.value = new Set(data.mastered)
+      if (data.stats && typeof data.stats === 'object') {
+        stats.value = {
+          sessions: Number(data.stats.sessions) || 0,
+          correct: Number(data.stats.correct) || 0,
+          wrong: Number(data.stats.wrong) || 0,
+          lastAt: typeof data.stats.lastAt === 'string' ? data.stats.lastAt : ''
+        }
+      }
+    }
+  } catch {
+    /* 数据损坏则忽略，按空状态使用 */
+  }
+}
+
+function saveStore() {
+  const ls = safeStorage()
+  if (!ls) return
+  try {
+    ls.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        wrong: [...wrongBook.value],
+        mastered: [...mastered.value],
+        stats: stats.value
+      })
+    )
+  } catch {
+    /* 写入失败（隐私模式/超额）不影响交互 */
+  }
+}
 
 const allChapters = computed(() => {
   const map = new Map()
@@ -30,6 +88,11 @@ const pool = computed(() =>
       selectedChapters.value.includes(q.chapter) &&
       selectedDifficulties.value.includes(q.difficulty)
   )
+)
+
+// 错题重练抽题范围 = 错题本 ∩ 当前章节/难度筛选
+const wrongPool = computed(() =>
+  pool.value.filter((q) => wrongBook.value.has(q.id))
 )
 
 function toggleChapter(id) {
@@ -51,13 +114,21 @@ const revealed = ref([])
 const marks = ref([]) // true=会, false=不会, null=未作答
 
 const current = computed(() => questions.value[index.value] || null)
+const mode = ref('normal') // normal | wrong
+const wrongModeAvailable = computed(
+  () => storageReady.value && wrongBook.value.size > 0
+)
 const progress = computed(() => `${index.value + 1}/${questions.value.length}`)
 const answered = computed(
   () => marks.value[index.value] === true || marks.value[index.value] === false
 )
 
 function start() {
-  const poolCopy = [...pool.value]
+  let source = pool.value
+  if (mode.value === 'wrong') source = wrongPool.value
+  else if (skipMastered.value)
+    source = source.filter((q) => !mastered.value.has(q.id))
+  const poolCopy = [...source]
   // Fisher–Yates 无放回随机抽题
   for (let i = poolCopy.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -72,6 +143,18 @@ function start() {
 
 function setMark(v, next = true) {
   marks.value[index.value] = v
+  // 错题本 / 已掌握实时更新并持久化
+  const q = questions.value[index.value]
+  if (q) {
+    if (v === false) {
+      wrongBook.value.add(q.id)
+      mastered.value.delete(q.id)
+    } else {
+      mastered.value.add(q.id)
+      wrongBook.value.delete(q.id)
+    }
+    saveStore()
+  }
   if (next && index.value < questions.value.length - 1) index.value++
 }
 
@@ -88,6 +171,7 @@ function showAnswer() {
 }
 
 const score = computed(() => marks.value.filter((m) => m === true).length)
+// 结束页错题列表：本次标记「不会」的题（错题重练中答会者已实时移出错题本，也不会出现在此）
 const wrongList = computed(() =>
   questions.value
     .map((q, i) => ({ q, i }))
@@ -95,12 +179,34 @@ const wrongList = computed(() =>
 )
 
 function finish() {
+  // 累计统计并持久化
+  stats.value = {
+    sessions: stats.value.sessions + 1,
+    correct: stats.value.correct + score.value,
+    wrong: stats.value.wrong + (questions.value.length - score.value),
+    lastAt: new Date().toLocaleString()
+  }
+  saveStore()
   phase.value = 'result'
+}
+
+function clearWrongBook() {
+  if (typeof window !== 'undefined' && !window.confirm('确定清空全部错题吗？')) return
+  wrongBook.value = new Set()
+  saveStore()
 }
 
 function restart() {
   phase.value = 'config'
 }
+
+onMounted(() => {
+  loadStore()
+  storageReady.value = true
+})
+
+// 开关「跳过已掌握」变更时持久化
+watch(skipMastered, saveStore)
 </script>
 
 <template>
@@ -185,20 +291,55 @@ function restart() {
         </div>
       </div>
 
+      <div class="field">
+        <p class="label">练习方式</p>
+        <div class="chips" role="group" aria-label="练习方式单选">
+          <button
+            type="button"
+            class="chip"
+            :class="{ active: mode === 'normal' }"
+            @click="mode = 'normal'"
+          >
+            随机抽题
+          </button>
+          <button
+            v-if="wrongModeAvailable"
+            type="button"
+            class="chip"
+            :class="{ active: mode === 'wrong' }"
+            @click="mode = 'wrong'"
+          >
+            错题重练（{{ wrongBook.size }}）
+          </button>
+        </div>
+      </div>
+
+      <div v-if="mode === 'normal'" class="field toggle-field">
+        <label class="toggle">
+          <input v-model="skipMastered" type="checkbox" />
+          跳过已掌握（已答「会」{{ mastered.size }} 题不再抽到）
+        </label>
+      </div>
+
       <p class="matched">
-        符合条件：<strong>{{ matchedCount }}</strong> 题
+        符合条件：<strong>{{ mode === 'wrong' ? wrongPool.length : matchedCount }}</strong> 题
       </p>
       <p class="actions">
         <button
           type="button"
           class="btn primary"
-          :disabled="matchedCount === 0"
+          :disabled="mode === 'wrong' ? wrongPool.length === 0 : matchedCount === 0"
           @click="start"
         >
-          开始自测
+          {{ mode === 'wrong' ? '开始错题重练' : '开始自测' }}
         </button>
       </p>
-      <p v-if="matchedCount === 0" class="warn">当前筛选无题目，请调整章节或难度</p>
+      <p v-if="mode === 'normal' && matchedCount === 0" class="warn">
+        当前筛选无题目，请调整章节或难度
+      </p>
+      <p v-else-if="mode === 'wrong' && wrongPool.length === 0" class="warn">
+        当前筛选下错题本为空，请调整章节或难度
+      </p>
     </div>
 
     <!-- 逐题作答 -->
@@ -275,7 +416,7 @@ function restart() {
       </p>
 
       <template v-if="wrongList.length">
-        <h3>错题（标记「不会」）</h3>
+        <h3>{{ mode === 'wrong' ? '本次仍不会（保留在错题本）' : '错题（标记「不会」）' }}</h3>
         <ul class="wrong">
           <li v-for="{ q } in wrongList" :key="q.id">
             <span :class="['badge', difficultyClass[q.difficulty]]">{{ q.difficulty }}</span>
@@ -284,7 +425,27 @@ function restart() {
           </li>
         </ul>
       </template>
-      <p v-else class="perfect">全部掌握，太棒了！</p>
+      <p v-else class="perfect">
+        {{ mode === 'wrong' ? '本次错题全部攻克，已移出错题本！' : '全部掌握，太棒了！' }}
+      </p>
+
+      <div class="persist-row">
+        <p class="stats-line">
+          错题本 <strong>{{ wrongBook.size }}</strong> 题
+          <template v-if="storageReady">
+            ｜累计练习 {{ stats.sessions }} 次（对 {{ stats.correct }} / 错 {{ stats.wrong }}）
+            <template v-if="stats.lastAt">｜最近练习：{{ stats.lastAt }}</template>
+          </template>
+        </p>
+        <button
+          v-if="wrongBook.size > 0"
+          type="button"
+          class="btn danger"
+          @click="clearWrongBook"
+        >
+          清空错题本
+        </button>
+      </div>
 
       <p class="actions">
         <button type="button" class="btn primary" @click="restart">再来一轮</button>
@@ -533,6 +694,48 @@ function restart() {
 .perfect {
   color: var(--vp-c-green-1);
   font-weight: 600;
+}
+.toggle-field {
+  font-size: 0.88rem;
+}
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: var(--vp-c-text-2);
+}
+.toggle input {
+  cursor: pointer;
+}
+.persist-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--vp-c-divider);
+}
+.stats-line {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.85rem;
+}
+.stats-line strong {
+  color: var(--vp-c-text-1);
+}
+.btn.danger {
+  border-color: var(--vp-c-red-1);
+  color: var(--vp-c-red-1);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.8rem;
+}
+.btn.danger:hover:not(:disabled) {
+  border-color: var(--vp-c-red-1);
+  color: var(--vp-c-red-1);
+  opacity: 0.8;
 }
 @media print {
   .self-test {
