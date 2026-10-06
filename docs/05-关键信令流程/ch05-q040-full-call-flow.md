@@ -34,6 +34,41 @@ tags: [呼通流程, 注册, 业务建立]
 
 - NAS 安全（注册流程内，AMF-UE 之间）与 AS 安全（gNB-UE 之间，RRC/UP 加密完整性保护）分别激活，密钥体系从 K 分层推导（KAMF/KgNB），呼通流程中两次安全激活不可混淆顺序。
 
+**完整信令时序（开机 → msg1 → 业务收发）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    participant UPF as UPF
+
+    Note over UE,gNB: 空闲态：搜索同步/小区选择/读SIB1（IDLE）
+    UE->>gNB: msg1 PRACH 前导（CBRA）
+    gNB-->>UE: msg2 RAR：TA + UL grant + TC-RNTI
+    UE->>gNB: msg3 PUSCH：RRCSetupRequest
+    gNB-->>UE: msg4 竞争解决：RRCSetup
+    Note over UE,gNB: SRB1 建立，进入 CONNECTED
+    UE->>gNB: RRCSetupComplete 携带 RegistrationRequest（N1 NAS）
+    gNB->>AMF: Initial UE Message（N2）
+    AMF-->>gNB: Downlink NAS Transport：Authentication Request
+    gNB-->>UE: DL Information Transfer：Authentication Request
+    UE->>AMF: Authentication Response（经 gNB 转发）
+    AMF-->>UE: NAS Security Mode Command
+    UE->>AMF: Security Mode Complete + Registration Complete
+    Note over UE,AMF: NAS 安全激活，获得 5G-GUTI 与 TAI list
+    AMF->>gNB: PDU Session Resource Setup Request（N2，含 QoS flow）
+    gNB-->>UE: SecurityModeCommand（AS 安全）
+    UE->>gNB: SecurityModeComplete
+    gNB-->>UE: RRCReconfiguration：建立 DRB
+    UE->>gNB: RRCReconfigurationComplete
+    gNB->>AMF: PDU Session Resource Setup Response
+    gNB->>UPF: 用户面 GTE 隧道就绪（N3）
+    Note over UE,UPF: 业务收发：UL BSR/SR 触发调度，数据经 DRB→UPF→DN
+```
+
+
 **4. 排障视角（面试加分点）**
 
 - 卡在 ①–②：覆盖/同步问题（看 RSRP、S 准则差多少）；
