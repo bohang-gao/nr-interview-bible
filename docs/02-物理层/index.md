@@ -58,4 +58,5 @@
 - [TDD 帧偏移与上下行交叉干扰的产生](/02-物理层/ch02-q053-tdd-frame-offset-cross-interference) — 难度难 · 频率中 · TDD / 交叉干扰 / 帧同步
 - [256QAM 的引入条件与 MCS、频谱效率的关系](/02-物理层/ch02-q054-256qam-mcs-spectral-efficiency) — 难度中 · 频率中 · 256QAM / MCS / 频谱效率
 - [香农公式与实际频谱效率的差距分析（理论计算题）](/02-物理层/ch02-q055-shannon-vs-actual-se) — 难度难 · 频率中 · 香农公式 / 频谱效率 / 理论计算
+- [BWP 与载波聚合（CA）的区别与联系](/02-物理层/ch02-q056-bwp-vs-carrier-aggregation) — 难度中 · 频率高 · BWP / 载波聚合 / CA
 <!-- QUESTIONS-TOC:END -->

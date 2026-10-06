@@ -1368,6 +1368,22 @@
     ]
   },
   {
+    "id": "ch02-q056",
+    "file": "02-物理层/ch02-q056-bwp-vs-carrier-aggregation.md",
+    "url": "/02-物理层/ch02-q056-bwp-vs-carrier-aggregation",
+    "title": "BWP 与载波聚合（CA）的区别与联系",
+    "chapter": 2,
+    "chapterName": "物理层",
+    "qnum": 56,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "BWP",
+      "载波聚合",
+      "CA"
+    ]
+  },
+  {
     "id": "ch03-q001",
     "file": "03-MIMO与波束管理/ch03-q001-massive-mimo-definition.md",
     "url": "/03-MIMO与波束管理/ch03-q001-massive-mimo-definition",

@@ -1,6 +1,6 @@
 {
-  "count": 320,
-  "generatedAt": "2026-10-06T02:00:50.704Z",
+  "count": 321,
+  "generatedAt": "2026-10-06T03:14:08.603Z",
   "items": [
     {
       "id": "ch01-q001",
@@ -517,7 +517,7 @@
       "sections": {
         "brief": "<p>BWP（Bandwidth Part，带宽部分）是载波内一段连续的公共资源块集合，终端实际只需在激活的 BWP 上收发。四类配置：初始 BWP（接入用）、专用 BWP、激活 BWP 与默认 BWP，分别服务不同阶段与场景，核心价值是省电、支持窄能力终端、实现载波内参数集/资源隔离。</p>",
         "detail": "<p>NR 载波最宽可达数百 MHz（FR2 单载波 400 MHz），若终端射频带宽始终全开，功耗不可接受。BWP 让 UE 在载波中&quot;局部工作&quot;：每个 BWP 有独立的参数集、CP 类型、起始位置与带宽，终端同一时刻每个方向（收/发）只有一个激活 BWP。</p>\n<p><strong>四类配置的角色</strong>：</p>\n<table>\n<thead>\n<tr>\n<th>类型</th>\n<th>定义</th>\n<th>用途</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>初始 BWP（initial）</td>\n<td>SIB1 中配置，含 CORESET#0/SIB1 所在资源</td>\n<td>小区搜索后接入、驻留、读系统信息</td>\n</tr>\n<tr>\n<td>专用 BWP（dedicated）</td>\n<td>RRC 专属信令为该 UE 配置的一组 BWP</td>\n<td>业务态按需工作，不同 BWP 可配不同参数集</td>\n</tr>\n<tr>\n<td>激活 BWP（active）</td>\n<td>当前正在收发的那个</td>\n<td>任意时刻收/发各最多一个（R15 单 BWP 激活）</td>\n</tr>\n<tr>\n<td>默认 BWP（default）</td>\n<td>超时后回落的目标 BWP</td>\n<td>BWP 非激活定时器到期切到默认 BWP 省电</td>\n</tr>\n</tbody>\n</table>\n<p><strong>三大作用</strong>：</p>\n<ol>\n<li><strong>终端省电</strong>：业务间隙把 UE 从大带宽专用 BWP 切回窄的默认 BWP，射频链路只覆盖窄带。</li>\n<li><strong>支持窄带宽能力终端</strong>：低档终端射频带宽不足整载波时，只需支持一个不超其能力的 BWP 即可接入大载波。</li>\n<li><strong>载波内资源/参数隔离</strong>：不同 BWP 可配不同 SCS，一载波同时服务广覆盖（15 kHz）与低时延（60 kHz）业务。</li>\n</ol>\n<p><strong>约束</strong>：每个方向最多配置 4 个 BWP（R15），激活/切换通过 DCI、定时器或 RRC 完成（见关联考点）。</p>",
-        "followups": "<ul>\n<li><strong>BWP 和载波聚合（CA）的区别？</strong> —— BWP 是一个载波内部的局部带宽切换，终端同一时刻只在一个激活 BWP 上收发；CA 是同时聚合多个载波、多载波并行收发，两者解决的是不同维度的问题。</li>\n<li><strong>UE 能同时激活上下行各一个 BWP 吗？</strong> —— R15 中收、发各一个激活 BWP，且两者参数集需满足协议规定的对应关系（TDD 频段通常上下行 BWP 中心一致）。</li>\n<li><strong>为什么说 BWP 是&quot;数字域&quot;的带宽适应？</strong> —— 通过 FFT 窗口/资源映射只在配置带宽内处理信号，不必像 LTE 那样终端射频必须支持全载波带宽，是 NR 解耦&quot;载波带宽&quot;与&quot;终端带宽&quot;的设计。</li>\n</ul>"
+        "followups": "<ul>\n<li><strong>BWP 和载波聚合（CA）的区别？</strong> —— BWP 是一个载波内部的局部带宽切换，终端同一时刻只在一个激活 BWP 上收发；CA 是同时聚合多个载波、多载波并行收发，两者解决的是不同维度的问题。详见 <a href=\"/02-%E7%89%A9%E7%90%86%E5%B1%82/ch02-q056-bwp-vs-carrier-aggregation\">BWP 与载波聚合（CA）的区别与联系</a>。</li>\n<li><strong>UE 能同时激活上下行各一个 BWP 吗？</strong> —— R15 中收、发各一个激活 BWP，且两者参数集需满足协议规定的对应关系（TDD 频段通常上下行 BWP 中心一致）。</li>\n<li><strong>为什么说 BWP 是&quot;数字域&quot;的带宽适应？</strong> —— 通过 FFT 窗口/资源映射只在配置带宽内处理信号，不必像 LTE 那样终端射频必须支持全载波带宽，是 NR 解耦&quot;载波带宽&quot;与&quot;终端带宽&quot;的设计。</li>\n</ul>"
       }
     },
     {
@@ -1190,6 +1190,20 @@
         "brief": "<p>香农公式 C = B·log2(1 + S/N) 给出有噪信道无差错传输的容量上界（bit/s），频谱效率上界 η = log2(1 + SNR)（bit/s/Hz）；NR 实际系统通过&quot;高阶调制 + 高码率 LDPC + 多流 MIMO&quot;逼近但永远达不到该上界——差距来自实现余量（译码距离信道容量约 1 dB 量级）、导频/控制开销、有限调制星座的整形损失与信道估计误差。计算题的核心技能：给定 SNR 算香农上界，再与实际 MCS 频谱效率对比估算&quot;逼近程度&quot;。</p>",
         "detail": "<p><strong>公式与基本换算</strong>：</p>\n<ul>\n<li>信道容量：C = B·log2(1 + S/N)（线性功率比）；S/N 用 dB 表达时先换算：SNR_linear = 10^(SNR_dB/10)。</li>\n<li>频谱效率上界：η_max = log2(1 + SNR_linear) bit/s/Hz。</li>\n</ul>\n<p><strong>手算对照表（背下量级）</strong>：</p>\n<table>\n<thead>\n<tr>\n<th>SNR (dB)</th>\n<th>SNR 线性</th>\n<th>η 香农上界 (bit/s/Hz)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>0</td>\n<td>1</td>\n<td>1.00</td>\n</tr>\n<tr>\n<td>5</td>\n<td>3.16</td>\n<td>2.08</td>\n</tr>\n<tr>\n<td>10</td>\n<td>10</td>\n<td>3.46</td>\n</tr>\n<tr>\n<td>15</td>\n<td>31.6</td>\n<td>5.17</td>\n</tr>\n<tr>\n<td>20</td>\n<td>100</td>\n<td>6.66</td>\n</tr>\n<tr>\n<td>25</td>\n<td>316</td>\n<td>8.32</td>\n</tr>\n</tbody>\n</table>\n<p><strong>实际系统逐项折损</strong>：</p>\n<ol>\n<li><strong>编码增益上限</strong>：LDPC 长码距香农限约 0.5~1 dB，但短码块（首传 TBS 小）损失更大。</li>\n<li><strong>调制星座限制</strong>：有限星座（QAM）在相同 SNR 下达不到高斯整形容量，256QAM 在其可用区间的损失约 1~2 dB 量级。</li>\n<li><strong>开销</strong>：DMRS/PTRS、PDCCH/UCI、SSB/CSI-RS、同步与保护——下行典型 14%、上行 18% 量级的 RE 开销直接从 η 里扣除。</li>\n<li><strong>信道状态不完美</strong>：CQI 误差与反馈时延使 MCS 保守选择（留 BLER 余量，典型目标首传误块率 10%），再损失十分之几 dB 到 1 dB。</li>\n<li><strong>实现余量</strong>：相位噪声、EVM、信道估计残差、调度不理想。</li>\n</ol>\n<p><strong>典型对照例</strong>：SINR = 25 dB → 香农 η ≈ 8.32 bit/s/Hz。实际 NR：选 256QAM、码率约 0.9 → η ≈ 8×0.9 = 7.2，扣开销 14% → 约 6.2 bit/s/Hz 有效值，约为上界的 75%——这个&quot;七成多&quot;的逼近度是高 SINR 区的典型水平；低 SNR 区（如 0 dB）实际 QPSK 低码率 η 约 0.3~0.5，与上界 1.0 的差距比例更大（余量/开销占比更高）。</p>\n<p><strong>MIMO 维度</strong>：多流并行时容量按&quot;各流 SINR 之和&quot;增长，η 总量 = Σ log2(1 + SNR_i)；空间复用把香农公式从&quot;单信道&quot;推广为&quot;并行信道组&quot;，这是 massive MIMO 提升频谱效率的理论根基。</p>\n<p><strong>答题模板</strong>：① SNR_dB → 线性值；② 代入 log2(1+SNR) 得上界；③ 实际 η = 调制阶数×码率×(1−开销)×(多流再×流数折算)；④ 对比给差距与原因归位（编码/星座/开销/CSI 余量）。</p>",
         "followups": "<ul>\n<li><strong>为什么低 SNR 时实际系统离香农界更远？</strong> —— 有限调制星座（最低 QPSK）与固定开销占比的&quot;地板效应&quot;：QPSK+低码率的 η 只能降到某值以下不能再降，而香农公式在低 SNR 是连续可缩的；开销（DMRS/控制）在低速率下占比也更突出。</li>\n<li><strong>BLER 目标 10% 是不是离香农太远？</strong> —— 这是 HARQ 体系的设计选择：允许首传 10% 失败、由重传以增量冗余快速纠回，首传 MCS 可更激进，整体吞吐反而高于追求 0% 首传误块的保守方案——&quot;用 HARQ 换 MCS 余量&quot;。</li>\n<li><strong>如何在现网验证频谱效率逼近香农？</strong> —— 采样近点用户（高 SINR 且干扰受控）的 MCS 分布、码率与有效 TBS/带宽/时长，折算实际 η 并与该 SINR 的香农上界对比；商用网高 SINR 区逼近度约 70%~80%，主要损耗在开销与 CSI 余量。</li>\n</ul>"
+      }
+    },
+    {
+      "id": "ch02-q056",
+      "title": "BWP 与载波聚合（CA）的区别与联系",
+      "url": "/02-物理层/ch02-q056-bwp-vs-carrier-aggregation",
+      "chapter": 2,
+      "chapterName": "物理层",
+      "difficulty": "中",
+      "frequency": "高",
+      "sections": {
+        "brief": "<p>两者都是协调终端收发带宽与大系统带宽的手段：载波聚合（CA, Carrier Aggregation）把多个成员载波聚合起来<strong>并行</strong>收发，做&quot;加法&quot;，目标是提升峰值速率与容量；BWP（Bandwidth Part，带宽部分）把一个载波分割成多段<strong>分时</strong>激活，做&quot;减法&quot;，目标是省电和适配窄带宽终端。BWP 工作在载波内，CA 工作在载波间，两者可叠加使用。</p>",
+        "detail": "<p><strong>核心对比</strong>：</p>\n<table>\n<thead>\n<tr>\n<th>维度</th>\n<th>BWP</th>\n<th>CA</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>操作对象</td>\n<td>单个载波内的一段连续公共资源块（CRB, Common Resource Block）</td>\n<td>多个成员载波（CC, Component Carrier，R15 最多 16 个）</td>\n</tr>\n<tr>\n<td>同时收发范围</td>\n<td>每方向同一时刻仅 1 个激活 BWP</td>\n<td>所有激活的成员载波并行收发</td>\n</tr>\n<tr>\n<td>峰值速率</td>\n<td>不提升（同一时刻仍只用一段带宽，不叠加资源）</td>\n<td>成倍提升（多载波资源叠加）</td>\n</tr>\n<tr>\n<td>调度/HARQ</td>\n<td>单载波一套调度与混合自动重传请求（HARQ, Hybrid Automatic Repeat reQuest）实体</td>\n<td>1 个 MAC 层，每成员载波独立调度、独立 HARQ 进程</td>\n</tr>\n<tr>\n<td>射频要求</td>\n<td>同一时刻只需覆盖当前激活 BWP 的带宽，可远小于载波带宽</td>\n<td>需要射频链路同时覆盖多个成员载波</td>\n</tr>\n<tr>\n<td>配置与激活</td>\n<td>RRC 配置初始/专用 BWP，下行控制信息（DCI, Downlink Control Information）字段/定时器/RRC 切换</td>\n<td>RRC 添加辅小区（SCell, Secondary Cell），MAC 控制单元（MAC CE, MAC Control Element）激活/去激活</td>\n</tr>\n<tr>\n<td>解决的问题</td>\n<td>省电、窄带宽能力终端接入大载波、载波内参数集隔离</td>\n<td>频谱资源横向扩展、峰值速率与容量提升</td>\n</tr>\n</tbody>\n</table>\n<p><strong>联系</strong>：</p>\n<ol>\n<li><strong>设计目标同源</strong>：NR 载波最宽 400 MHz（FR2），终端不必、也不能都全程覆盖全部带宽。BWP 与 CA 从&quot;载波内&quot;与&quot;载波间&quot;两个正交方向解决&quot;终端能力 vs 系统带宽&quot;的匹配问题。</li>\n<li><strong>BWP 常被类比&quot;载波内的伪 CA&quot;</strong>：频域上把一个大载波的不同部分分给不同 UE 或不同业务，形态上类似 CA 把多个载波聚合给同一 UE——但 BWP 是分时的，CA 是并行的。</li>\n<li><strong>可叠加</strong>：CA 的每个成员载波（主小区 PCell、辅小区 SCell）都可独立配置最多 4 个 BWP；组网上&quot;CA 管载波间扩容、BWP 管载波内省电与灵活&quot;是常见组合。</li>\n<li><strong>配置体系一致</strong>：都由 gNB 通过 RRC 专属信令配置、DCI 调度；区别在激活手段——BWP 用 DCI 字段/定时器切换，SCell 用 MAC CE 激活。</li>\n</ol>\n<p><strong>一句话记忆</strong>：BWP 是&quot;一个载波，分时切着用&quot;；CA 是&quot;多个载波，同时一起用&quot;。</p>",
+        "followups": "<ul>\n<li><strong>BWP 能提升峰值速率吗？</strong> —— 不能。同一时刻每方向只有 1 个激活 BWP，本质是分时使用载波的一段带宽；提升瞬时峰值速率要靠 CA 多载波并行收发（或多流 MIMO）。</li>\n<li><strong>UE 能同时配置 CA 和 BWP 吗？</strong> —— 能，两者正交：CA 管载波间（哪些成员载波可用），BWP 管载波内（每个成员载波用哪段带宽），每个成员载波都有自己独立的 BWP 配置。</li>\n<li><strong>BWP 切换能替代频间切换吗？</strong> —— 不能。BWP 切换只在同一载波内改变频域位置，无需测量事件与随机接入；跨载波必须走 CA 配置或测量上报 + 切换流程，两者不互替。</li>\n</ul>"
       }
     },
     {

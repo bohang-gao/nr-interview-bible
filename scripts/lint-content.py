@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 DOCS = Path(__file__).resolve().parent.parent / "docs"
-EXPECTED_COUNTS = {1: 30, 2: 55, 3: 35, 4: 40, 5: 40, 6: 30, 7: 40, 8: 30, 9: 20}
+EXPECTED_COUNTS = {1: 30, 2: 56, 3: 35, 4: 40, 5: 40, 6: 30, 7: 40, 8: 30, 9: 20}
 FILENAME_RE = re.compile(r"^ch\d{2}-q\d{3}-[a-z0-9-]+\.md$")
 FM_KEYS = ("title", "chapter", "difficulty", "frequency", "tags")
 REQUIRED_SECTIONS = ("一句话答案", "详细展开", "关联考点", "面试追问")
