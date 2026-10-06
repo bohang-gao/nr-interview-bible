@@ -34,6 +34,26 @@ SN Addition（辅节点添加）是主节点（MN）为 UE 增加辅节点（SN�
 
 SA（NR 独立组网）下的对应概念是"NR 内 SN Addition"（CU/DU 架构或 NR-NR 双连接），信令逻辑同构：MN 通过 Xn 请求、SN 回容器、MN 融合后经 RRCReconfiguration 下发、UE 在 PSCell 随机接入完成。
 
+**标准信令时序（MN ↔ UE ↔ SN）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant MN as MN
+    participant UE as UE
+    participant SN as SN
+    Note over MN: LTE 侧收到 B1 事件测量报告（NR 邻区好于门限）触发添加
+    MN->>SN: X2/Xn SgNB Addition Request：UE 能力 + SCG 承载需求 + S-KgNB 衍生输入 + 测量结果
+    Note over SN: 接纳控制，分配 SpCell/SCG SCell 与随机接入配置，生成 SCG 配置容器
+    SN->>MN: X2/Xn SgNB Addition Request Acknowledge：SCG 配置容器
+    MN->>UE: RRCConnectionReconfiguration（LTE RRC）：nr-SecondaryCellGroupConfig + SCG 承载配置
+    Note over UE: 按 CFRA 专用随机接入配置在 PSCell 上发起接入，与 NR 取得上行同步
+    UE->>SN: PSCell 免竞争随机接入（CFRA）
+    UE->>MN: RRCConnectionReconfigurationComplete
+    MN->>SN: X2/Xn SgNB Reconfiguration Complete：含 UE 在 NR 侧的 C-RNTI
+    Note over MN,SN: SN 开始调度，split/SCG 承载数据分叉启动
+```
+
 ## 关联考点
 
 - SCG 流程总览：[SCG 添加、修改、变更与失败的典型流程](../01-无线基础与演进/ch01-q008-scg-procedures.md)

@@ -7748,6 +7748,26 @@ MIB、SIB1 走周期性广播（SIB1 由 SI-RNTI 加扰的 PDCCH 调度），其
 
 - 竞争解决定时器超时 / msg4 不匹配 / msg2 超窗：按 preambleTransMax 判断是否放弃，超限后触发 RLF 上报或重建。
 
+**标准信令时序（UE ↔ gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: 按 SSB-RO 映射与 RSRP 阈值选 RO 和前导索引
+    UE->>gNB: msg1 PRACH 前导（preamble id + RO，功率爬升）
+    Note over UE,gNB: ra-ResponseWindow 内 UE 用 RA-RNTI 盲检 PDCCH
+    gNB->>UE: msg2 RAR（PDSCH 上的 MAC RAR）：TA + UL grant + TC-RNTI
+    UE->>gNB: msg3 PUSCH：CCCH SDU，初始接入为 RRCSetupRequest
+    Note over UE,gNB: ra-ContentionResolutionTimer 内 UE 用 TC-RNTI 盲检 PDCCH
+    gNB->>UE: msg4 竞争解决（PDCCH 用 TC-RNTI 加扰）：回显 msg3 内容如 RRCSetup
+    Note over UE: 内容匹配则竞争解决成功，TC-RNTI 升级为正式 C-RNTI
+    alt 竞争解决失败（定时器超时或 msg4 不匹配）
+        UE->>UE: 按 preambleTransMax 判断放弃，超限触发 RLF 上报或重建
+    end
+```
+
 ## 关联考点
 
 - 触发场景：[随机接入的触发场景枚举](./05-关键信令流程/ch05-q006-ra-trigger-scenarios.md)
@@ -8010,6 +8030,22 @@ UE                          gNB
 - NR 的建立原因值集基本沿用 LTE 并在 R16 增加了 mo-VoiceCall / mo-SMS 的细分，便于语音/短消息业务识别。
 - NR 的 RRCSetupRequest 走 SRB0（CCCH），成功后才建 SRB1，与 LTE 一致。
 
+**标准信令时序（UE ↔ gNB，SRB0 → SRB1 转换）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE,gNB: 建立在四步随机接入之上，RRC 层起始于 msg3
+    UE->>gNB: msg3 RRCSetupRequest（SRB0/CCCH）：UE 标识 + establishmentCause
+    Note over gNB: 接入控制 UAC 按 cause 判定准入
+    gNB->>UE: msg4 RRCSetup（SRB0/CCCH）：仅配置 SRB1
+    Note over UE: SRB0 → SRB1 转换，此后 RRC 消息走 SRB1
+    UE->>gNB: RRCSetupComplete（SRB1）：selectedPLMN-Identity + registeredAMF 等
+    Note over gNB: 触发 NG 口 Initial UE Message，进入 NAS 注册或服务请求
+```
+
 ## 关联考点
 
 - 随机接入：[CBRA 竞争随机接入四步流程](./05-关键信令流程/ch05-q007-cbra-four-step.md)
@@ -8064,6 +8100,28 @@ UE → AMF        : Registration Complete
 | mobility registration updating | 移出注册区域、TAI list 失效、能力/参数变更 |
 | periodic registration updating | T3512 定时器到期（保活） |
 | emergency registration | 紧急注册（无卡/受限） |
+
+**标准信令时序（UE ↔ gNB ↔ AMF）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    Note over UE,gNB: 先完成 RRC 建立（RRCSetupRequest → RRCSetup → RRCSetupComplete）
+    UE->>gNB: RRCSetupComplete（SRB1）携带 NAS Registration Request，type=initial registration
+    gNB->>AMF: NGAP Initial UE Message 转发 Registration Request
+    Note over AMF: AMF 选择与上下文获取（可能重定向到目标 AMF）
+    AMF->>UE: 下行 NAS Transport：Authentication Request（5G-AKA）
+    UE->>AMF: 上行 NAS Transport：Authentication Response
+    Note over AMF: 一致性校验通过后激活 NAS 安全
+    AMF->>UE: 下行 NAS Transport：Security Mode Command（完整性/加密算法）
+    UE->>AMF: 上行 NAS Transport：Security Mode Complete
+    Note over AMF: 向 UDM 注册并获取签约/接入移动性数据
+    AMF->>UE: 下行 NAS Transport：Registration Accept（5G-GUTI、TAI List、允许 NSSAI）
+    UE->>AMF: 上行 NAS Transport：Registration Complete
+```
 
 ## 关联考点
 
@@ -8249,6 +8307,28 @@ RAN → AMF: Initial Context Setup Response → 用户面隧道建立（N3）
 
 - Service Request 是"NAS 连接级"恢复：不重建 PDU 会话，只重建 N3 隧道与空口 DRB。
 - 原因值（mt-Access vs mo-Data）沿 RRC 建立原因传递，影响准入与话统。
+
+**标准信令时序（UE ↔ gNB ↔ AMF，以寻呼响应为例）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    Note over AMF: 下行数据到达，5GC → RAN 寻呼 UE（主叫场景则由数据/信令主动触发）
+    Note over UE: 收到寻呼，触发 RRC 建立
+    UE->>gNB: RRCSetupRequest（SRB0/CCCH）：establishmentCause=mt-Access
+    gNB->>UE: RRCSetup（SRB0）
+    UE->>gNB: RRCSetupComplete（SRB1）携带 NAS SERVICE REQUEST，用 5G-S-TMSI 标识
+    gNB->>AMF: N2 Initial UE Message 转发 SERVICE REQUEST
+    Note over AMF: 校验 5G-S-TMSI 找到 UE 上下文，需要时先执行鉴权与 NAS 安全模式
+    AMF->>gNB: N2 Initial Context Setup Request：安全算法、PDU 会话信息、QoS flow
+    gNB->>UE: AS Security Mode Command + RRCReconfiguration（建 SRB2/DRB）
+    UE->>gNB: RRCReconfigurationComplete
+    gNB->>AMF: N2 Initial Context Setup Response
+    Note over gNB,AMF: N3 隧道建立，UPF 数据面恢复打通
+```
 
 ## 关联考点
 
@@ -8616,6 +8696,33 @@ Xn 切换是源 gNB 与目标 gNB 之间直接通过 Xn 接口协商完成的切
 | SN Status Transfer | 传递 PDCP 收发序列号状态，目标侧据此继续按序处理，实现无损且有顺序保障 |
 | Path Switch | 用户面下行终结点从源 gNB 换到目标 gNB，上行因 UE 已直接发给目标，无需切换路径 |
 
+**标准信令时序（源 gNB ↔ UE ↔ 目标 gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant SRCgNB as 源 gNB
+    participant UE as UE
+    participant TGTgNB as 目标 gNB
+    participant AMF as AMF
+    UE->>SRCgNB: Measurement Report（A3/A5 事件，含目标小区测量结果）
+    Note over SRCgNB: 依据测量上报判决切换
+    SRCgNB->>TGTgNB: XnAP Handover Request：目标小区 ID + UE 上下文（AS 安全、QoS flow、PDCP 配置）
+    Note over TGTgNB: 接纳控制，预留资源（含 CFRA 专用前导）
+    TGTgNB->>SRCgNB: XnAP Handover Request Acknowledge：RRC 重配置容器 + 前转参数
+    SRCgNB->>UE: RRCReconfiguration：目标 PCI + rach-ConfigDedicated + 目标小区专用配置
+    Note over SRCgNB,TGTgNB: 源侧启动下行数据前转，UE 接入成功前继续收发
+    Note over UE: 脱离源小区，按专用 CFRA 接入目标小区
+    UE->>TGTgNB: 随机接入目标小区（CFRA 专用前导）
+    UE->>TGTgNB: RRCReconfigurationComplete
+    TGTgNB->>SRCgNB: XnAP SN Status Transfer：下行/上行 PDCP SN 与 HFN 状态
+    TGTgNB->>AMF: NGAP Path Switch Request：告知新下行终结点
+    Note over AMF: 通知 UPF 将下行路径切换到目标 gNB
+    AMF->>TGTgNB: NGAP Path Switch Response
+    TGTgNB->>SRCgNB: XnAP UE Context Release
+    Note over SRCgNB: 释放 UE 上下文，残留前转数据按指示丢弃或清空
+```
+
 ## 关联考点
 
 - 与 NG 切换对比：[NG 接口切换与 Xn 切换的差异](./05-关键信令流程/ch05-q024-ng-vs-xn-handover.md)
@@ -8825,6 +8932,26 @@ SN Addition（辅节点添加）是主节点（MN）为 UE 增加辅节点（SN�
 
 SA（NR 独立组网）下的对应概念是"NR 内 SN Addition"（CU/DU 架构或 NR-NR 双连接），信令逻辑同构：MN 通过 Xn 请求、SN 回容器、MN 融合后经 RRCReconfiguration 下发、UE 在 PSCell 随机接入完成。
 
+**标准信令时序（MN ↔ UE ↔ SN）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant MN as MN
+    participant UE as UE
+    participant SN as SN
+    Note over MN: LTE 侧收到 B1 事件测量报告（NR 邻区好于门限）触发添加
+    MN->>SN: X2/Xn SgNB Addition Request：UE 能力 + SCG 承载需求 + S-KgNB 衍生输入 + 测量结果
+    Note over SN: 接纳控制，分配 SpCell/SCG SCell 与随机接入配置，生成 SCG 配置容器
+    SN->>MN: X2/Xn SgNB Addition Request Acknowledge：SCG 配置容器
+    MN->>UE: RRCConnectionReconfiguration（LTE RRC）：nr-SecondaryCellGroupConfig + SCG 承载配置
+    Note over UE: 按 CFRA 专用随机接入配置在 PSCell 上发起接入，与 NR 取得上行同步
+    UE->>SN: PSCell 免竞争随机接入（CFRA）
+    UE->>MN: RRCConnectionReconfigurationComplete
+    MN->>SN: X2/Xn SgNB Reconfiguration Complete：含 UE 在 NR 侧的 C-RNTI
+    Note over MN,SN: SN 开始调度，split/SCG 承载数据分叉启动
+```
+
 ## 关联考点
 
 - SCG 流程总览：[SCG 添加、修改、变更与失败的典型流程](./01-无线基础与演进/ch01-q008-scg-procedures.md)
@@ -8987,6 +9114,29 @@ RRC 重建立（RRC Reestablishment）是 UE 在无线链路失败（RLF）或�
 - 重建立与 CHO/普通切换失败互为出口：切换失败→重建恢复；
 - 重建立过程中若 T311 超时或所选小区不合适，UE 进入空闲态走重选；
 - 网络可通过拒绝重建立（回 RRCSetup）实现"软掉话"控制。
+
+**标准信令时序（UE ↔ gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: RLF/切换失败触发，停止收发，启动 T311，选可能持有上下文的小区
+    UE->>gNB: CBRA 随机接入所选小区
+    UE->>gNB: RRCReestablishmentRequest（SRB0）：ue-Identity 为原 C-RNTI + 源小区 PCI
+    Note over gNB: 经 Xn/NG 向源 gNB 取回 UE 上下文与密钥（KgNB 与 NextHop 参数）
+    alt 上下文取回且校验成功
+        gNB->>UE: RRCReestablishment（SRB0 下发）：重建 SRB1
+        Note over UE: 重新激活 AS 安全（完整性 + 加密，基于更新后的密钥）
+        gNB->>UE: RRCReconfiguration（SRB1）：恢复 SRB2/DRB、测量配置
+        UE->>gNB: RRCReconfigurationComplete
+        Note over UE: NAS 无感知，业务快速恢复
+    else 上下文取不到或校验失败
+        gNB->>UE: 回 RRCSetup 引导 UE 走全新建立
+        Note over UE: 视为掉话重连，重新走注册/服务请求全链路
+    end
+```
 
 ## 关联考点
 
@@ -9956,6 +10106,32 @@ PDU 会话建立由 UE 发起 NAS 消息（PDU Session Establishment Request）�
 - PDU 会话 ID 由 UE 分配并保持稳定，是移动性流程中会话关联的钥匙。
 - 会话建立在**注册完成之后**（异常时允许注册中夹带），NAS 层会话消息与注册消息分属不同过程。
 - gNB 只在 ⑦⑧ 才知道会话存在：核心网先选好 UPF 再通知空口，说明**锚点选择与空口资源建立是解耦的**。
+
+**标准信令时序（UE ↔ gNB ↔ AMF ↔ SMF ↔ UPF）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    participant SMF as SMF
+    participant UPF as UPF
+    UE->>gNB: UL NAS TRANSPORT 携带 PDU Session Establishment Request：DNN、S-NSSAI、请求类型、PDU 会话 ID
+    gNB->>AMF: N2 转发 NAS 消息
+    AMF->>SMF: Nsmf_PDUSession_CreateSMContext，N11，AMF 已按 S-NSSAI 与 DNN 选好 SMF
+    Note over SMF: 经 N10 向 UDM 取会话签约，经 N7 向 PCF 取 PCC 规则
+    SMF->>UPF: N4 PFCP Session Establishment：下发 PDR/FAR/QER
+    UPF->>SMF: N4 响应
+    SMF->>AMF: Nsmf 响应，携带 N2 SM 信息：N3 隧道 UPF 端 TEID、QoS profile
+    AMF->>gNB: NGAP PDU Session Resource Setup Request，N2
+    Note over gNB: RRC 重配建立 DRB，并完成与 UPF 的 N3 GTP-U 隧道
+    gNB->>AMF: PDU Session Resource Setup Response：gNB 侧隧道信息
+    AMF->>SMF: N11 更新会话
+    SMF->>UPF: N4 修改，完成会话激活
+    AMF->>UE: DL NAS TRANSPORT：PDU Session Establishment Accept，UE IP、QoS 规则、DNN
+    Note over UE,UPF: 端到端通路打通
+```
 
 ## 关联考点
 

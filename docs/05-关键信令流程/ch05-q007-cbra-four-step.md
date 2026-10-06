@@ -41,6 +41,26 @@ tags: [随机接入, CBRA, RAR]
 
 - 竞争解决定时器超时 / msg4 不匹配 / msg2 超窗：按 preambleTransMax 判断是否放弃，超限后触发 RLF 上报或重建。
 
+**标准信令时序（UE ↔ gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: 按 SSB-RO 映射与 RSRP 阈值选 RO 和前导索引
+    UE->>gNB: msg1 PRACH 前导（preamble id + RO，功率爬升）
+    Note over UE,gNB: ra-ResponseWindow 内 UE 用 RA-RNTI 盲检 PDCCH
+    gNB->>UE: msg2 RAR（PDSCH 上的 MAC RAR）：TA + UL grant + TC-RNTI
+    UE->>gNB: msg3 PUSCH：CCCH SDU，初始接入为 RRCSetupRequest
+    Note over UE,gNB: ra-ContentionResolutionTimer 内 UE 用 TC-RNTI 盲检 PDCCH
+    gNB->>UE: msg4 竞争解决（PDCCH 用 TC-RNTI 加扰）：回显 msg3 内容如 RRCSetup
+    Note over UE: 内容匹配则竞争解决成功，TC-RNTI 升级为正式 C-RNTI
+    alt 竞争解决失败（定时器超时或 msg4 不匹配）
+        UE->>UE: 按 preambleTransMax 判断放弃，超限触发 RLF 上报或重建
+    end
+```
+
 ## 关联考点
 
 - 触发场景：[随机接入的触发场景枚举](ch05-q006-ra-trigger-scenarios.md)

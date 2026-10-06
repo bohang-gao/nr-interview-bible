@@ -49,6 +49,22 @@ UE                          gNB
 - NR 的建立原因值集基本沿用 LTE 并在 R16 增加了 mo-VoiceCall / mo-SMS 的细分，便于语音/短消息业务识别。
 - NR 的 RRCSetupRequest 走 SRB0（CCCH），成功后才建 SRB1，与 LTE 一致。
 
+**标准信令时序（UE ↔ gNB，SRB0 → SRB1 转换）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE,gNB: 建立在四步随机接入之上，RRC 层起始于 msg3
+    UE->>gNB: msg3 RRCSetupRequest（SRB0/CCCH）：UE 标识 + establishmentCause
+    Note over gNB: 接入控制 UAC 按 cause 判定准入
+    gNB->>UE: msg4 RRCSetup（SRB0/CCCH）：仅配置 SRB1
+    Note over UE: SRB0 → SRB1 转换，此后 RRC 消息走 SRB1
+    UE->>gNB: RRCSetupComplete（SRB1）：selectedPLMN-Identity + registeredAMF 等
+    Note over gNB: 触发 NG 口 Initial UE Message，进入 NAS 注册或服务请求
+```
+
 ## 关联考点
 
 - 随机接入：[CBRA 竞争随机接入四步流程](ch05-q007-cbra-four-step.md)

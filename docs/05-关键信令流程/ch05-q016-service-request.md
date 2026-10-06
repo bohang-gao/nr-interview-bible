@@ -46,6 +46,28 @@ RAN → AMF: Initial Context Setup Response → 用户面隧道建立（N3）
 - Service Request 是"NAS 连接级"恢复：不重建 PDU 会话，只重建 N3 隧道与空口 DRB。
 - 原因值（mt-Access vs mo-Data）沿 RRC 建立原因传递，影响准入与话统。
 
+**标准信令时序（UE ↔ gNB ↔ AMF，以寻呼响应为例）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    Note over AMF: 下行数据到达，5GC → RAN 寻呼 UE（主叫场景则由数据/信令主动触发）
+    Note over UE: 收到寻呼，触发 RRC 建立
+    UE->>gNB: RRCSetupRequest（SRB0/CCCH）：establishmentCause=mt-Access
+    gNB->>UE: RRCSetup（SRB0）
+    UE->>gNB: RRCSetupComplete（SRB1）携带 NAS SERVICE REQUEST，用 5G-S-TMSI 标识
+    gNB->>AMF: N2 Initial UE Message 转发 SERVICE REQUEST
+    Note over AMF: 校验 5G-S-TMSI 找到 UE 上下文，需要时先执行鉴权与 NAS 安全模式
+    AMF->>gNB: N2 Initial Context Setup Request：安全算法、PDU 会话信息、QoS flow
+    gNB->>UE: AS Security Mode Command + RRCReconfiguration（建 SRB2/DRB）
+    UE->>gNB: RRCReconfigurationComplete
+    gNB->>AMF: N2 Initial Context Setup Response
+    Note over gNB,AMF: N3 隧道建立，UPF 数据面恢复打通
+```
+
 ## 关联考点
 
 - RRC 建立：[RRC 建立流程与建立原因值](ch05-q012-rrc-establishment.md)

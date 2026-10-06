@@ -38,6 +38,33 @@ Xn 切换是源 gNB 与目标 gNB 之间直接通过 Xn 接口协商完成的切
 | SN Status Transfer | 传递 PDCP 收发序列号状态，目标侧据此继续按序处理，实现无损且有顺序保障 |
 | Path Switch | 用户面下行终结点从源 gNB 换到目标 gNB，上行因 UE 已直接发给目标，无需切换路径 |
 
+**标准信令时序（源 gNB ↔ UE ↔ 目标 gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant SRCgNB as 源 gNB
+    participant UE as UE
+    participant TGTgNB as 目标 gNB
+    participant AMF as AMF
+    UE->>SRCgNB: Measurement Report（A3/A5 事件，含目标小区测量结果）
+    Note over SRCgNB: 依据测量上报判决切换
+    SRCgNB->>TGTgNB: XnAP Handover Request：目标小区 ID + UE 上下文（AS 安全、QoS flow、PDCP 配置）
+    Note over TGTgNB: 接纳控制，预留资源（含 CFRA 专用前导）
+    TGTgNB->>SRCgNB: XnAP Handover Request Acknowledge：RRC 重配置容器 + 前转参数
+    SRCgNB->>UE: RRCReconfiguration：目标 PCI + rach-ConfigDedicated + 目标小区专用配置
+    Note over SRCgNB,TGTgNB: 源侧启动下行数据前转，UE 接入成功前继续收发
+    Note over UE: 脱离源小区，按专用 CFRA 接入目标小区
+    UE->>TGTgNB: 随机接入目标小区（CFRA 专用前导）
+    UE->>TGTgNB: RRCReconfigurationComplete
+    TGTgNB->>SRCgNB: XnAP SN Status Transfer：下行/上行 PDCP SN 与 HFN 状态
+    TGTgNB->>AMF: NGAP Path Switch Request：告知新下行终结点
+    Note over AMF: 通知 UPF 将下行路径切换到目标 gNB
+    AMF->>TGTgNB: NGAP Path Switch Response
+    TGTgNB->>SRCgNB: XnAP UE Context Release
+    Note over SRCgNB: 释放 UE 上下文，残留前转数据按指示丢弃或清空
+```
+
 ## 关联考点
 
 - 与 NG 切换对比：[NG 接口切换与 Xn 切换的差异](ch05-q024-ng-vs-xn-handover.md)

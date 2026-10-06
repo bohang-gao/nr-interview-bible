@@ -43,6 +43,28 @@ UE → AMF        : Registration Complete
 | periodic registration updating | T3512 定时器到期（保活） |
 | emergency registration | 紧急注册（无卡/受限） |
 
+**标准信令时序（UE ↔ gNB ↔ AMF）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    Note over UE,gNB: 先完成 RRC 建立（RRCSetupRequest → RRCSetup → RRCSetupComplete）
+    UE->>gNB: RRCSetupComplete（SRB1）携带 NAS Registration Request，type=initial registration
+    gNB->>AMF: NGAP Initial UE Message 转发 Registration Request
+    Note over AMF: AMF 选择与上下文获取（可能重定向到目标 AMF）
+    AMF->>UE: 下行 NAS Transport：Authentication Request（5G-AKA）
+    UE->>AMF: 上行 NAS Transport：Authentication Response
+    Note over AMF: 一致性校验通过后激活 NAS 安全
+    AMF->>UE: 下行 NAS Transport：Security Mode Command（完整性/加密算法）
+    UE->>AMF: 上行 NAS Transport：Security Mode Complete
+    Note over AMF: 向 UDM 注册并获取签约/接入移动性数据
+    AMF->>UE: 下行 NAS Transport：Registration Accept（5G-GUTI、TAI List、允许 NSSAI）
+    UE->>AMF: 上行 NAS Transport：Registration Complete
+```
+
 ## 关联考点
 
 - 鉴权细节：[5G-AKA 鉴权流程概览](ch05-q014-5g-aka.md)

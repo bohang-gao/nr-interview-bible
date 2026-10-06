@@ -43,6 +43,29 @@ RRC 重建立（RRC Reestablishment）是 UE 在无线链路失败（RLF）或�
 - 重建立过程中若 T311 超时或所选小区不合适，UE 进入空闲态走重选；
 - 网络可通过拒绝重建立（回 RRCSetup）实现"软掉话"控制。
 
+**标准信令时序（UE ↔ gNB）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    Note over UE: RLF/切换失败触发，停止收发，启动 T311，选可能持有上下文的小区
+    UE->>gNB: CBRA 随机接入所选小区
+    UE->>gNB: RRCReestablishmentRequest（SRB0）：ue-Identity 为原 C-RNTI + 源小区 PCI
+    Note over gNB: 经 Xn/NG 向源 gNB 取回 UE 上下文与密钥（KgNB 与 NextHop 参数）
+    alt 上下文取回且校验成功
+        gNB->>UE: RRCReestablishment（SRB0 下发）：重建 SRB1
+        Note over UE: 重新激活 AS 安全（完整性 + 加密，基于更新后的密钥）
+        gNB->>UE: RRCReconfiguration（SRB1）：恢复 SRB2/DRB、测量配置
+        UE->>gNB: RRCReconfigurationComplete
+        Note over UE: NAS 无感知，业务快速恢复
+    else 上下文取不到或校验失败
+        gNB->>UE: 回 RRCSetup 引导 UE 走全新建立
+        Note over UE: 视为掉话重连，重新走注册/服务请求全链路
+    end
+```
+
 ## 关联考点
 
 - 重建与 SRB0：[RRC 重建的条件、流程与 SRB0 的使用](../04-空口协议栈/ch04-q031-rrc-reestablishment-srb0.md)

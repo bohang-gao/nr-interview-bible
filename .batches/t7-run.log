@@ -1,0 +1,34 @@
+构建通过，全部完成。
+
+## 修改清单（8 文件，每题一图，均插入「详细展开」末尾、关联考点之前）
+
+| # | 文件 | 泳道 | 图要点 |
+|---|---|---|---|
+| 1 | docs/05-关键信令流程/ch05-q007-cbra-four-step.md | 2（UE/gNB） | msg1-4 + ra-ResponseWindow/ra-ContentionResolutionTimer 两定时器 Note + alt 失败回退（preambleTransMax→RLF/重建），与 ch08-q005 图独立成图（alt 分支、autonumber、内容措辞均不同） |
+| 2 | docs/05-关键信令流程/ch05-q012-rrc-establishment.md | 2（UE/gNB） | RRCSetupRequest（SRB0/CCCH，establishmentCause）→RRCSetup→Complete，Note 标注 SRB0→SRB1 转换与 UAC 准入 |
+| 3 | docs/05-关键信令流程/ch05-q013-nas-registration-flow.md | 3（UE/gNB/AMF） | RRCSetupComplete 携带 RegistrationRequest→Initial UE Message→鉴权对/安全模式对（下行/上行 NAS Transport）→Registration Accept/Complete |
+| 4 | docs/05-关键信令流程/ch05-q016-service-request.md | 3（UE/gNB/AMF） | 寻呼触发（mt-Access）→Complete 携带 SERVICE REQUEST（5G-S-TMSI）→Initial Context Setup→AS 安全+DRB→N3 打通 |
+| 5 | docs/05-关键信令流程/ch05-q023-xn-handover-procedure.md | 4（SRCgNB/UE/TGTgNB/AMF） | 测量上报→HO Request/ACK→RRCReconfiguration（CFRA）→随机接入→SN Status Transfer→Path Switch→UE Context Release |
+| 6 | docs/05-关键信令流程/ch05-q027-sn-addition.md | 3（MN/UE/SN） | B1 事件→SgNB Addition Request/ACK（S-KgNB、SCG 容器）→RRCConnectionReconfiguration→PSCell CFRA→Reconfiguration Complete→数据分叉启动 |
+| 7 | docs/05-关键信令流程/ch05-q030-rrc-reestablishment.md | 2（UE/gNB） | ReestablishmentRequest（C-RNTI+PCI，SRB0）→alt 成功支（Reestablishment→AS 安全重启→ReconfigurationComplete）/失败支（RRCSetup 回退） |
+| 8 | docs/06-组网与架构/ch06-q008-pdu-session-establishment.md | 5（UE/gNB/AMF/SMF/UPF） | UL NAS TRANSPORT→N11 CreateSMContext→N4 PFCP 建立→N2 Resource Setup（RRC 重配建 DRB）→N4 修改→Accept，标注 N2/N4/N11 |
+
+- 数值/术语核对：全部取自各题正文（消息名、IE、定时器、接口名均与正文逐条对应），**未发现图文冲突**。
+- 未改动任何 frontmatter/四节结构/原有正文文字，仅插入图段。
+- participant id 全英文（UE/gNB/AMF/SMF/UPF/SRCgNB/TGTgNB/MN/SN），autonumber 均开启，消息文本不含整句 () 包裹，alt/else 与跨泳道 Note 为保守语法。
+
+## 构建结尾输出
+
+```
+[gen-index] 已生成 questions.json，共 320 题
+[gen-chapter-toc] 更新 9 章，跳过 0 章
+[gen-quiz] 已生成 quiz.json，共 320 题
+[gen-print] 已生成 print.md，共 320 题
+vitepress v1.6.4
+✓ building client + server bundles...
+✓ rendering pages...
+build complete in 30.58s.
+```
+
+构建 0 报错、0 死链（仅既有的 chunk 体积警告，与本次改动无关）。
+EXIT_CODE=0

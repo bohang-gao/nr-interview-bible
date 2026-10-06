@@ -47,6 +47,32 @@ PDU 会话建立由 UE 发起 NAS 消息（PDU Session Establishment Request）�
 - 会话建立在**注册完成之后**（异常时允许注册中夹带），NAS 层会话消息与注册消息分属不同过程。
 - gNB 只在 ⑦⑧ 才知道会话存在：核心网先选好 UPF 再通知空口，说明**锚点选择与空口资源建立是解耦的**。
 
+**标准信令时序（UE ↔ gNB ↔ AMF ↔ SMF ↔ UPF）**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant UE as UE
+    participant gNB as gNB
+    participant AMF as AMF
+    participant SMF as SMF
+    participant UPF as UPF
+    UE->>gNB: UL NAS TRANSPORT 携带 PDU Session Establishment Request：DNN、S-NSSAI、请求类型、PDU 会话 ID
+    gNB->>AMF: N2 转发 NAS 消息
+    AMF->>SMF: Nsmf_PDUSession_CreateSMContext，N11，AMF 已按 S-NSSAI 与 DNN 选好 SMF
+    Note over SMF: 经 N10 向 UDM 取会话签约，经 N7 向 PCF 取 PCC 规则
+    SMF->>UPF: N4 PFCP Session Establishment：下发 PDR/FAR/QER
+    UPF->>SMF: N4 响应
+    SMF->>AMF: Nsmf 响应，携带 N2 SM 信息：N3 隧道 UPF 端 TEID、QoS profile
+    AMF->>gNB: NGAP PDU Session Resource Setup Request，N2
+    Note over gNB: RRC 重配建立 DRB，并完成与 UPF 的 N3 GTP-U 隧道
+    gNB->>AMF: PDU Session Resource Setup Response：gNB 侧隧道信息
+    AMF->>SMF: N11 更新会话
+    SMF->>UPF: N4 修改，完成会话激活
+    AMF->>UE: DL NAS TRANSPORT：PDU Session Establishment Accept，UE IP、QoS 规则、DNN
+    Note over UE,UPF: 端到端通路打通
+```
+
 ## 关联考点
 
 - AMF/SMF 协作：[AMF 与 SMF 的职责区分及协作](ch06-q004-amf-smf-responsibilities.md)
