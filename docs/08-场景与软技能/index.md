@@ -33,4 +33,5 @@
 - [英文面试常见问题与作答模板](/08-场景与软技能/ch08-q028-english-interview-templates) — 难度中 · 频率低 · 英文面试 / 模板 / 沟通技巧
 - [技术面试中的诚实表达与答题边界](/08-场景与软技能/ch08-q029-honesty-answering-boundary) — 难度易 · 频率高 · 诚实表达 / 答题边界 / 面试技巧
 - [面试复盘与知识体系搭建方法](/08-场景与软技能/ch08-q030-interview-review-knowledge) — 难度中 · 频率低 · 复盘方法 / 知识体系 / 求职方法
+- [开放题：基站节能怎么做（符号关断/通道关断/深度休眠与 AI 节能）](/08-场景与软技能/ch08-q031-base-station-energy-saving) — 难度中 · 频率高 · 开放题 / 基站节能 / 绿色网络
 <!-- QUESTIONS-TOC:END -->

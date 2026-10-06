@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 把 301 题合并生成 docs/print.md（打印 / 导出 PDF 专用页，构建期生成物，勿手改）
+// 把全部题目合并生成 docs/print.md（打印 / 导出 PDF 专用页，构建期生成物，勿手改）
 // 链接处理：相对 .md 链接改写为相对 docs/ 根的路径（保留 .md 后缀，VitePress 编译期重写）；
 // 站内绝对链接（/xx 开头）不动。
 import fs from 'node:fs';
@@ -63,7 +63,7 @@ const header = [
   'outline: [2]',
   '---',
   '',
-  '本页收录全部 301 题的完整解析，专供打印或导出 PDF 离线使用。',
+  `本页收录全部 ${questions.length} 题的完整解析，专供打印或导出 PDF 离线使用。`,
   '',
   '<PrintExport />',
   '',

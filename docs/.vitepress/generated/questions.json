@@ -4873,6 +4873,22 @@
     ]
   },
   {
+    "id": "ch08-q031",
+    "file": "08-场景与软技能/ch08-q031-base-station-energy-saving.md",
+    "url": "/08-场景与软技能/ch08-q031-base-station-energy-saving",
+    "title": "开放题：基站节能怎么做（符号关断/通道关断/深度休眠与 AI 节能）",
+    "chapter": 8,
+    "chapterName": "场景与软技能",
+    "qnum": 31,
+    "difficulty": "中",
+    "frequency": "高",
+    "tags": [
+      "开放题",
+      "基站节能",
+      "绿色网络"
+    ]
+  },
+  {
     "id": "ch09-q001",
     "file": "09-NTN卫星通信/ch09-q001-ntn-concept-r17-motivation.md",
     "url": "/09-NTN卫星通信/ch09-q001-ntn-concept-r17-motivation",
