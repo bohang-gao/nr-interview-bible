@@ -1,7 +1,8 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress/client'
 import questions from '../generated/questions.json'
+import { loadNotes } from '../utils/notes'
 
 const difficultyClass = { 易: 'easy', 中: 'mid', 难: 'hard' }
 const frequencyClass = { 高: 'high', 中: 'mid', 低: 'low' }
@@ -58,6 +59,18 @@ function toggleTag(t) {
   if (i >= 0) selectedTags.value.splice(i, 1)
   else selectedTags.value.push(t)
 }
+
+// 有笔记的题目显示徽标（onMounted 后读，SSR 安全；重新挂载时自然刷新）
+const notedIds = ref(new Set())
+
+onMounted(() => {
+  notedIds.value = new Set(
+    Object.keys(loadNotes()).filter((id) => {
+      const n = loadNotes()[id]
+      return n && n.text.trim()
+    })
+  )
+})
 </script>
 
 <template>
@@ -148,6 +161,7 @@ function toggleTag(t) {
           <li v-for="q in c.items" :key="q.id">
             <span class="qnum">{{ q.qnum }}</span>
             <a :href="withBase(q.url)" class="qtitle">{{ q.title }}</a>
+            <span v-if="notedIds.has(q.id)" class="note-badge" title="有笔记">📝</span>
             <span class="badges">
               <span :class="['badge', difficultyClass[q.difficulty]]"
                 >{{ q.difficulty }}</span
@@ -271,6 +285,11 @@ function toggleTag(t) {
   flex: 1 1 auto;
   min-width: 12rem;
   font-weight: 500;
+}
+.note-badge {
+  flex: none;
+  font-size: 0.8rem;
+  cursor: default;
 }
 .badges {
   display: inline-flex;

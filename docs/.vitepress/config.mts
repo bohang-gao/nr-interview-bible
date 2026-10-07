@@ -27,6 +27,7 @@ export default withMermaid(defineConfig({
       { text: '每日一题', link: '/daily' },
       { text: '自测', link: '/selftest' },
       { text: '模拟面试', link: '/interview' },
+      { text: '笔记', link: '/notes' },
       { text: '打印/PDF', link: '/print' }
     ],
     sidebar: [
@@ -38,6 +39,7 @@ export default withMermaid(defineConfig({
           { text: '每日一题', link: '/daily' },
           { text: '自测', link: '/selftest' },
           { text: '模拟面试', link: '/interview' },
+          { text: '笔记', link: '/notes' },
           { text: '打印/PDF', link: '/print' }
         ]
       },
