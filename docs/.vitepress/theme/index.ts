@@ -1,8 +1,10 @@
 import DefaultTheme from 'vitepress/theme'
 import QuestionBank from '../components/QuestionBank.vue'
 import DailyQuestion from '../components/DailyQuestion.vue'
+import DailySrs from '../components/DailySrs.vue'
 import SelfTest from '../components/SelfTest.vue'
 import MockInterview from '../components/MockInterview.vue'
+import Dashboard from '../components/Dashboard.vue'
 import PrintExport from '../components/PrintExport.vue'
 import Layout from '../components/Layout.vue'
 
@@ -15,8 +17,10 @@ export default {
   enhanceApp({ app }) {
     app.component('QuestionBank', QuestionBank)
     app.component('DailyQuestion', DailyQuestion)
+    app.component('DailySrs', DailySrs)
     app.component('SelfTest', SelfTest)
     app.component('MockInterview', MockInterview)
+    app.component('Dashboard', Dashboard)
     app.component('PrintExport', PrintExport)
   },
   setup() {

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 import {
   formatTime,
@@ -29,6 +29,34 @@ let saveTimer = null
 let savedHintTimer = null
 
 const charCount = computed(() => text.value.replace(/\s/g, '').length)
+
+// 费曼三段模板：点击在光标处（或末尾）插入前缀占位
+const TEMPLATES = [
+  { label: '用我的话解释', prefix: '【我的解释】\n' },
+  { label: '关键数字', prefix: '【关键数字】\n' },
+  { label: '易错点', prefix: '【易错点】\n' }
+]
+const textareaRef = ref(null)
+const hasFeynman = computed(() => text.value.includes('【'))
+
+function insertTemplate(prefix) {
+  const el = textareaRef.value
+  if (!el) {
+    text.value += prefix
+    onInput()
+    return
+  }
+  const start = el.selectionStart ?? text.value.length
+  const end = el.selectionEnd ?? start
+  text.value = text.value.slice(0, start) + prefix + text.value.slice(end)
+  onInput()
+  // 插入后把光标移到占位行尾，方便直接续写
+  nextTick(() => {
+    const pos = start + prefix.length
+    el.focus()
+    el.setSelectionRange(pos, pos)
+  })
+}
 
 onMounted(() => {
   mounted.value = true
@@ -91,6 +119,7 @@ function removeNote() {
       @click="expanded = !expanded"
     >
       <span class="qn-title">📝 笔记</span>
+      <span v-if="hasFeynman" class="qn-feynman" title="包含【】结构标记">✓ 用了费曼结构</span>
       <span v-if="!expanded && charCount > 0" class="qn-meta">
         · {{ noteCount || text.length }} 字
         <template v-if="savedAt">· {{ formatTime(savedAt) }}</template>
@@ -100,7 +129,20 @@ function removeNote() {
 
     <div v-if="expanded" class="qn-body">
       <p class="qn-question">{{ title }}</p>
+      <div v-if="!text" class="qn-templates">
+        <button
+          v-for="t in TEMPLATES"
+          :key="t.prefix"
+          type="button"
+          class="qn-template-btn"
+          @click="insertTemplate(t.prefix)"
+        >
+          {{ t.label }}
+        </button>
+      </div>
+      <p class="qn-hint">写不出来=还没懂。试试先口述再落笔</p>
       <textarea
+        ref="textareaRef"
         v-model="text"
         class="qn-textarea"
         rows="4"
@@ -141,6 +183,11 @@ function removeNote() {
 .qn-title {
   font-weight: 600;
 }
+.qn-feynman {
+  font-size: 0.75rem;
+  color: var(--vp-c-green-1);
+  white-space: nowrap;
+}
 .qn-meta {
   color: var(--vp-c-text-2);
   font-size: 0.8rem;
@@ -157,6 +204,31 @@ function removeNote() {
   margin: 0 0 0.5rem;
   font-size: 0.85rem;
   color: var(--vp-c-text-2);
+}
+.qn-templates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.qn-template-btn {
+  padding: 0.15rem 0.65rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.qn-template-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+.qn-hint {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
 }
 .qn-textarea {
   width: 100%;

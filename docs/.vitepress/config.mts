@@ -24,9 +24,11 @@ export default withMermaid(defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '题库', link: '/bank' },
-      { text: '每日一题', link: '/daily' },
+      { text: '每日复习', link: '/daily' },
+      { text: '仪表盘', link: '/dashboard' },
       { text: '自测', link: '/selftest' },
       { text: '模拟面试', link: '/interview' },
+      { text: '专题学习', link: '/paths/' },
       { text: '笔记', link: '/notes' },
       { text: '打印/PDF', link: '/print' }
     ],
@@ -36,7 +38,8 @@ export default withMermaid(defineConfig({
         items: [
           { text: '首页', link: '/' },
           { text: '题库', link: '/bank' },
-          { text: '每日一题', link: '/daily' },
+          { text: '每日复习', link: '/daily' },
+          { text: '学习仪表盘', link: '/dashboard' },
           { text: '自测', link: '/selftest' },
           { text: '模拟面试', link: '/interview' },
           { text: '笔记', link: '/notes' },
@@ -46,7 +49,19 @@ export default withMermaid(defineConfig({
       ...chapters.map((dir) => ({
         text: dir.slice(3),
         link: `/${dir}/index`
-      }))
+      })),
+      {
+        text: '专题学习',
+        items: [
+          { text: '专题总览', link: '/paths/index' },
+          { text: '随机接入专题', link: '/paths/ra-random-access' },
+          { text: '移动性与切换专题', link: '/paths/mobility-handover' },
+          { text: '功率控制与覆盖专题', link: '/paths/power-coverage' },
+          { text: '安全与密钥专题', link: '/paths/security-keys' },
+          { text: 'QoS与会话专题', link: '/paths/qos-session' },
+          { text: 'NTN入门到实战', link: '/paths/ntn-deep-dive' }
+        ]
+      }
     ],
     search: {
       provider: 'local',

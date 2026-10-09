@@ -2,6 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { withBase } from 'vitepress/client'
 import quiz from '../generated/quiz.json'
+import { loadNotes, saveNotes } from '../utils/notes'
 
 const difficulties = ['易', '中', '难']
 const difficultyClass = { 易: 'easy', 中: 'mid', 难: 'hard' }
@@ -15,6 +16,10 @@ const selectedChapters = ref([])
 const selectedDifficulties = ref([...difficulties])
 const countChoice = ref(10)
 const skipMastered = ref(false)
+
+// 默答模式：先自己写要点再对照答案，输入内容不判分，对照时沉淀为笔记
+const blankMode = ref(true)
+const BLANK_MODE_KEY = 'nrb-selftest-blank-mode-v1'
 
 // ---------- 错题本 / 统计（仅客户端，localStorage 持久化） ----------
 const storageReady = ref(false)
@@ -41,6 +46,7 @@ function loadStore() {
     if (data && typeof data === 'object') {
       if (Array.isArray(data.wrong)) wrongBook.value = new Set(data.wrong)
       if (Array.isArray(data.mastered)) mastered.value = new Set(data.mastered)
+      if (typeof data.blankMode === 'boolean') blankMode.value = data.blankMode
       if (data.stats && typeof data.stats === 'object') {
         stats.value = {
           sessions: Number(data.stats.sessions) || 0,
@@ -64,6 +70,7 @@ function saveStore() {
       JSON.stringify({
         wrong: [...wrongBook.value],
         mastered: [...mastered.value],
+        blankMode: blankMode.value,
         stats: stats.value
       })
     )
@@ -112,6 +119,8 @@ const questions = ref([])
 const index = ref(0)
 const revealed = ref([])
 const marks = ref([]) // true=会, false=不会, null=未作答
+const blankInput = ref('') // 当前题默答输入（不判分）
+const blankFocused = ref(false) // 获焦自动展开（textarea 增高）
 
 const current = computed(() => questions.value[index.value] || null)
 const mode = ref('normal') // normal | wrong
@@ -138,6 +147,7 @@ function start() {
   index.value = 0
   revealed.value = questions.value.map(() => false)
   marks.value = questions.value.map(() => null)
+  blankInput.value = ''
   phase.value = 'quiz'
 }
 
@@ -158,16 +168,56 @@ function setMark(v, next = true) {
   if (next && index.value < questions.value.length - 1) index.value++
 }
 
+function showAnswer() {
+  revealed.value[index.value] = true
+}
+
+// ---------- 默答模式 ----------
+function todayStr() {
+  const d = new Date()
+  const p = (n) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`
+}
+
+function saveBlankToNotes() {
+  const q = questions.value[index.value]
+  const content = blankInput.value.trim()
+  if (!q || !content) return
+  const tag = `【默答 ${todayStr()}】`
+  const notes = loadNotes()
+  const cur = notes[q.id]
+  // 去重：同一题当天已存过默答则跳过
+  if (cur && cur.text.includes(tag)) return
+  const entry = `${tag}${content}\n`
+  notes[q.id] = {
+    text: cur ? `${cur.text}${cur.text.endsWith('\n') ? '' : '\n'}${entry}` : entry,
+    updatedAt: Date.now()
+  }
+  saveNotes(notes)
+}
+
+function confirmBlank() {
+  saveBlankToNotes()
+  showAnswer()
+}
+
+function loadBlankInput() {
+  blankInput.value = ''
+  blankFocused.value = false
+}
+
 function prev() {
-  if (index.value > 0) index.value--
+  if (index.value > 0) {
+    index.value--
+    loadBlankInput()
+  }
 }
 
 function next() {
-  if (index.value < questions.value.length - 1) index.value++
-}
-
-function showAnswer() {
-  revealed.value[index.value] = true
+  if (index.value < questions.value.length - 1) {
+    index.value++
+    loadBlankInput()
+  }
 }
 
 const score = computed(() => marks.value.filter((m) => m === true).length)
